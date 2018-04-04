@@ -10,6 +10,7 @@
 #### Checkliste:
 - [] Titel
 - [] Beschreibung
+- [] Projekt
 - [] Meilenstein
 - [] Label
 - [] Assignement
