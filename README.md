@@ -9,3 +9,19 @@ Website mit Datenbank Anbindung zu Lernzwecken
 
  -  https://blackrockdigital.github.io/startbootstrap-modern-business/
  -  https://www.tessemaes.com/
+
+### Liste aller Seiten
+ 1. Startseite
+ 2. Mixer
+ 3. Registrierung
+ 4. Anmeldung
+ 5. Warenkorb
+ 6. Bestellung
+ 7. Produkt-info
+ 8. Profil
+ 9. Konto-Verwaltung
+ 10. Entdecken
+ 11. Impressum
+ 12. Kontakt
+ 13. Über uns
+ 
