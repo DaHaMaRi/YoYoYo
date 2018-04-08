@@ -1,4 +1,4 @@
-# YoYoYo
+# Yummy Yogurt
 Website mit Datenbank Anbindung zu Lernzwecken 
 
 ### Aktuell:
@@ -24,4 +24,7 @@ Website mit Datenbank Anbindung zu Lernzwecken
  11. Impressum
  12. Kontakt
  13. Über uns
+
+### News
+Macht mal was ihr Wixxas !!!!1111elf
  
