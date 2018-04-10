@@ -1,5 +1,5 @@
 # Yummy Yogurt
-Website mit Datenbank Anbindung zu Lernzwecken 
+Website mit Datenbank Anbindung zu Lernzwecken
 
 ### Aktuell:
 - Stylevorlagen sind erlaubt
@@ -26,5 +26,4 @@ Website mit Datenbank Anbindung zu Lernzwecken
  13. Über uns
 
 ### News
-Macht mal was ihr Wixxas !!!!1111elf
- 
+Macht mal was ihr netten Menschen
