@@ -31,8 +31,8 @@ body {
 /* Own designs----------------------------------------------------------------*/
 .button {
     background: transparent;
-    border: 1px solid rgb(32, 56, 100);
-    color: rgb(68, 84, 106);
+    border: 1px solid rgb(87, 127, 189);
+    color: rgb(87, 127, 189);
     letter-spacing: 3px;
     margin: 15px 0;
     cursor: pointer;
@@ -41,8 +41,8 @@ body {
 }
 
 .button:hover {
-    color: rgb(244, 244, 244);
-    background-color: rgb(68, 84, 106);
+    color: rgb(236, 236, 237);
+    background-color: rgb(87, 127, 189);
 }
 
 
