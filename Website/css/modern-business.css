@@ -45,3 +45,47 @@ body {
     color: rgb(244, 244, 244);
     background-color: rgb(68, 84, 106);
 }
+
+.bg-vanilla{
+    background-color: rgb(254, 242, 190);
+}
+
+.bg-cream{
+    background-color: rgb(255, 233, 192);
+}
+
+.bg-sunflower{
+    background-color: rgb(250, 254, 153);
+}
+
+.bg-salmon{
+    background-color: rgb(254, 205, 172);
+}
+
+.bg-flamingo{
+    background-color: rgb(253, 203, 230);
+}
+
+.bg-rose{
+    background-color: rgb(248, 180, 219);
+}
+
+.bg-pistachio{
+    background-color: rgb(210, 236, 189);
+}
+
+.bg-middle-green{
+    background-color: rgb(180, 222, 156);
+}
+
+.bg-ice-blue{
+    background-color: rgb(87, 127, 189);
+}
+
+.bg-sky{
+    background-color: rgb(167, 222, 219);
+}
+
+.bg-middle-blue{
+    background-color: rgb(93, 158, 190);
+}
