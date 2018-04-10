@@ -10,6 +10,10 @@ Website mit Datenbank Anbindung zu Lernzwecken
  -  https://blackrockdigital.github.io/startbootstrap-modern-business/
  -  https://www.tessemaes.com/
 
+### Software:
+ - Atom v1.25.0
+ - Eclipse Oxygen v4.7.3
+
 ### Liste aller Seiten
  1. Startseite
  2. Mixer
