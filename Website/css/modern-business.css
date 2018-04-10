@@ -3,7 +3,6 @@
  * Copyright 2013-2017 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-logomodern-business-nav/blob/master/LICENSE)
  */
-
 body {
     background-color: rgb(236, 236, 237);
     padding-top: 54px;
@@ -29,7 +28,7 @@ body {
   margin-bottom: 30px;
 }
 
-
+/* Own designs----------------------------------------------------------------*/
 .button {
     background: transparent;
     border: 1px solid rgb(32, 56, 100);
@@ -46,95 +45,94 @@ body {
     background-color: rgb(68, 84, 106);
 }
 
-//background-colors
 
-.bg-vanilla{
+/*background-colors-----------------------------------------------------------*/
+.bg-vanilla {
     background-color: rgb(254, 242, 190);
 }
 
-.bg-cream{
+.bg-cream {
     background-color: rgb(255, 233, 192);
 }
 
-.bg-sunflower{
+.bg-sunflower {
     background-color: rgb(250, 254, 153);
 }
 
-.bg-salmon{
+.bg-salmon {
     background-color: rgb(254, 205, 172);
 }
 
-.bg-flamingo{
+.bg-flamingo {
     background-color: rgb(253, 203, 230);
 }
 
-.bg-rose{
+.bg-rose {
     background-color: rgb(248, 180, 219);
 }
 
-.bg-pistachio{
+.bg-pistachio {
     background-color: rgb(210, 236, 189);
 }
 
-.bg-middle-green{
+.bg-middle-green {
     background-color: rgb(180, 222, 156);
 }
 
-.bg-ice-blue{
+.bg-ice-blue {
     background-color: rgb(87, 127, 189);
 }
 
-.bg-sky{
+.bg-sky {
     background-color: rgb(167, 222, 219);
 }
 
-.bg-middle-blue{
+.bg-middle-blue {
     background-color: rgb(93, 158, 190);
 }
 
-// Text-colors
 
-
-.text-vanilla{
+/* Text-colors----------------------------------------------------------------*/
+.text-vanilla {
     color: rgb(254, 242, 190);
 }
 
-.text-cream{
+.text-cream {
     color: rgb(255, 233, 192);
 }
 
-.text-sunflower{
+.text-sunflower {
     color: rgb(250, 254, 153);
 }
 
-.text-salmon{
+.text-salmon {
     color: rgb(254, 205, 172);
 }
 
-.text-flamingo{
+.text-flamingo {
     color: rgb(253, 203, 230);
 }
 
-.text-rose{
+.text-rose {
     color: rgb(248, 180, 219);
 }
 
-.text-pistachio{
+.text-pistachio {
     color: rgb(210, 236, 189);
 }
 
-.text-middle-green{
+.text-middle-green {
     color: rgb(180, 222, 156);
 }
 
-.text-ice-blue{
+.text-ice-blue {
     color: rgb(87, 127, 189);
 }
 
-.text-sky{
+.text-sky {
     color: rgb(167, 222, 219);
 }
 
-.text-middle-blue{
+.text-middle-blue {
     color: rgb(93, 158, 190);
 }
