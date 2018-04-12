@@ -29,6 +29,14 @@ body {
 }
 
 /* Own designs----------------------------------------------------------------*/
+.non-hover-button {
+    background: rgb(87, 127, 189);
+    color: white;
+    letter-spacing: 3px;
+    margin: 15px 0;
+    cursor: pointer;
+}
+
 .button {
     background: transparent;
     border: 1px solid rgb(87, 127, 189);
