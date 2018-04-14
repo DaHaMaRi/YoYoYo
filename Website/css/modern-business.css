@@ -144,3 +144,48 @@ body {
 .text-middle-blue {
     color: rgb(93, 158, 190);
 }
+
+/* costom-badges--------------------------------------------------------------*/
+.badge-nuts {
+  color: #fff;
+  background-color: #f99b2f;
+}
+
+.badge-nuts[href]:hover, .badge-nuts[href]:focus {
+  color: #fff;
+  text-decoration: none;
+  background-color: #bf6d0f;
+}
+
+.badge-chocolate {
+  color: #fff;
+  background-color: #442400;
+}
+
+.badge-chocolate[href]:hover, .badge-chocolate[href]:focus {
+  color: #fff;
+  text-decoration: none;
+  background-color: #231300;
+}
+
+.badge-fruits {
+  color: #fff;
+  background-color: #ff3838;
+}
+
+.badge-fruits[href]:hover, .badge-fruits[href]:focus {
+  color: #fff;
+  text-decoration: none;
+  background-color: #f71818;
+}
+
+.badge-vegan {
+  color: #fff;
+  background-color: #56ff49;
+}
+
+.badge-vegan[href]:hover, .badge-vegan[href]:focus {
+  color: #fff;
+  text-decoration: none;
+  background-color: #40bc36;
+}
