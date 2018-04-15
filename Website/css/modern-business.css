@@ -53,6 +53,11 @@ body {
     background-color: rgb(87, 127, 189);
 }
 
+.rating_bar {
+    width: 55px;
+    background: url(/img/star.gif) 0 0 repeat-x;
+}
+
 .buttonbutton {
     background: transparent;
     border: 1px solid rgb(87, 127, 189);
