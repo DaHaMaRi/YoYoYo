@@ -69,6 +69,28 @@ body {
     transition: color 0.5s;
     transition: background-color 0.5s;
 }
+
+.center-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    height: 350px;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.span-center {
+    text-align: center;
+}
+.ul-center{
+    display: table;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 /*background-colors-----------------------------------------------------------*/
 .bg-vanilla {
     background-color: rgb(254, 242, 190);
