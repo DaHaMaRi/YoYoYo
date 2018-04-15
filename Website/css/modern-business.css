@@ -68,7 +68,7 @@ body {
     cursor: pointer;
     transition: color 0.5s;
     transition: background-color 0.5s;
-
+}
 /*background-colors-----------------------------------------------------------*/
 .bg-vanilla {
     background-color: rgb(254, 242, 190);
