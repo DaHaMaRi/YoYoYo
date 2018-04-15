@@ -68,36 +68,34 @@
 
             <div class="row">
                 <div class="col-sm-6">
-                    <h5>
-                        Ich besitze bereits ein Yummy-Joghurt Konto
-                    </h5>
-                    <div class="control-group form-group">
-                        <div class="controls">
-                            <label> Benutzername: </label>
-                            <input type="text" class="form-control" id="Benutzername" placeholder="Benutzername eingeben" >
+                    <h5 class="my-4">Ich besitze bereits ein Yummy-Joghurt Konto</h5>
+                    <form name="logIn" id="logInForm">
+                        <div class="control-group form-group">
+                            <div class="controls">
+                                <label> Benutzername: </label>
+                                <input type="text" class="form-control" id="Benutzername" placeholder="Benutzername eingeben" >
+                            </div>
                         </div>
-                        <div class="controls">
-                            <label> Passwort: </label>
-                            <input type="password" class="form-control" id="Passwort" placeholder="Passwort eingeben">
-                        </div>
-                        <hr>
-                        <a class="buttonbutton" href="sign-up.html">Anmelden</a>
-                    </div>
-                </div>
-                <div class="col-sm-6"</div>
-                    <h5>
-                        Ich besitze noch kein Yummy-Joghurt Konto
-                    </h5>
-                    <div class="controls">
-                        <hr>
-                        <a class="buttonbutton" href="sign-up.html">Jetzt Registrieren</a>
-                    </div>
-            </div>
 
+                        <div class="control-group form-group">
+                            <div class="controls">
+                                <label> Passwort: </label>
+                                <input type="password" class="form-control" id="Passwort" placeholder="Passwort eingeben">
+                            </div>
+                        </div>
+                        <button type="submit" class="button">Senden</button>
+                    </form>
+
+                    <hr>
+
+                    <h5 class="my-4">Ich besitze noch kein Yummy-Joghurt Konto</h5>
+                    <a class="buttonbutton" href="sign-up.html">Jetzt Registrieren</a>
+                </div>
+            </div>
         </div>
 
         <!-- Footer -->
-        <footer class="pt-2 pb-5 bg-secondary text-center">
+        <footer class="pt-2 pb-5 bg-secondary text-center fixed-bottom">
             <div class="container">
                 <div class="mt-2">
                     <a class="social-media-icon fa fa-linkedin" href="#" target="_blank"></a>
