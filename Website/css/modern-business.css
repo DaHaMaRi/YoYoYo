@@ -150,6 +150,15 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
+.y-scroll {
+    height:600px;
+    overflow-y: scroll;
+}
+
+ul.no-bullets {
+  list-style-type: none;
+}
+
 /*background-colors-----------------------------------------------------------*/
 .bg-vanilla {
     background-color: rgb(254, 242, 190);
