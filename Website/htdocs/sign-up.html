@@ -67,59 +67,59 @@
             </ol>
 
             <div class="row">
-                <table class="table table-bordered">
-                    <tr>
+                <div class="col-md-6">
+                    <div class="control-group form-group">
+                        <strong>Vorname:</strong>
+                        <input type="text" class="form-control" id="Vorname" value="Dardan">
+                    </div>
 
-                        <td colspan="1"> Herr <input type="radio" class="" id="Herr" value="Herr" checked> </td>
+                    <div class="control-group form-group">
+                        <strong>Nachname:</strong>
+                        <input type="text" class="form-control" id="Nachname" value="Rrafshi">
+                    </div>
 
-                        <td colspan="1"> Frau <input type="radio" class="" id="Frau" value="Frau"></td>
-                    </tr>
-                    <tr>
-                        <td>Vorname:</td>
-                        <td><input type="text" class="form-control" id="Vorname" placeholder="Vornamen eingeben" ></td>
-                        <td>Nachname:</td>
-                        <td><input type="text" class="form-control" id="Nachname" placeholder="Nachnahmen eingeben" ></td>
-                    </tr>
-                    <tr>
-                        <td>Username:</td>
-                        <td><input type="text" class="form-control" id="Username" placeholder="Username eingeben" ></td>
-                        <td>E-mail:</td>
-                        <td><input type="email" class="form-control" id="E-mail" placeholder="E-mail eingeben" ></td>
-                    </tr>
-                    <tr>
-                        <td colspan="1"> <label> Geburtsdatum: </label> </td>
-                        <td> <input type="date" class="form-control" id="gebdat"> </td>
-                        <td> PLZ: </td>
-                        <td><input type="text" class="form-control" id="PLZ" placeholder="PLZ eingeben" ></td>
-                    </tr>
-                    <tr>
-                        <td> Ort: </td>
-                        <td><input type="text" class="form-control" id="Ort" placeholder="Ort eingeben" ></td>
-                        <td> Straße: </td>
-                        <td><input type="text" class="form-control" id="Straße" placeholder="Straße eingeben" ></td>
-                    </tr>
-                    <tr>
-                        <td> Hausnummer: </td>
-                        <td><input type="text" class="form-control" id="Hausnummer" placeholder="Hausnummer eingeben" ></td>
-                        <td> Zusatz: </td>
-                        <td><input type="text" class="form-control" id="Zusatz" placeholder="Zusatz eingeben" ></td>
-                    </tr>
-                    <tr>
-                        <td> Neues Passwort: </td>
-                        <td><input type="password" class="form-control" id="Passwort" placeholder="Passwort eingeben" ></td>
-                    </tr>
-                    <tr>
-                        <td> Neues Passwort wiederholen: </td>
-                        <td><input type="password" class="form-control" id="Passwortwiederholen" placeholder="Passwort erneut eingeben" ></td>
-                    </tr>
-                </table>
+                    <div class="control-group form-group">
+                        <strong>Username:</strong>
+                        <input type="text" class="form-control" id="Username" value="Don Colon">
+                    </div>
 
-            </div>
-            <div class="controls">
-                <hr>
-                <p><a class="link" href="impressum.html">AGB´s</a> akzeptieren: <input type="radio" class="" id="Herr" value="AGB´s" ></p><br><br>
-                <a class="buttonbutton" href="profile.html">Registrieren</a>
-                <hr>
+                    <div class="control-group form-group">
+                        <strong>E-Mail:</strong>
+                        <input type="text" class="form-control" id="E-Mail" value="drrafshi@hotmail.de">
+                    </div>
+
+                    <hr />
+                    <div class="control-group form-group">
+                        <div class="">
+                            <strong>Adresse: </strong>
+                        </div>
+
+                        <div class="">
+                            <input type="text" class="form-control" id="strasse" value="Bei der Schule" placeholder="Straße">
+                            <input type="text" class="form-control my-2" id="hausnummer" value="12" placeholder="Hausnummer">
+                            <input type="text" class="form-control my-2" id="zusatz" value="" placeholder="Zusatz">
+                        </div>
+
+                        <div class="">
+                            <input type="text" class="form-control my-2" id="plz" value="88515" placeholder="PLZ">
+                            <input type="text" class="form-control my-2" id="ort" value="Langenenslingen" placeholder="Ort">
+                        </div>
+                    </div>
+
+                    <hr />
+                    <div class="control-group form-group">
+                        <strong>Passwort:</strong>
+                        <input type="text" class="form-control my-2" id="passwort" value="" placeholder="Passwort">
+                        <input type="text" class="form-control my-2" id="passwort-bestaetigen" value="" placeholder="Paswort bestätigen">
+                        <input type="submit" class="button" id="register" value="Registrieren">
+                    </div>
+                </div>
+
+                <div class="col-6">
+                        <img class="center-img img-fluid" src="http://placehold.it/300x200" alt="Profilbild">
+                        <input type="button" class="button center" id="upload-new-image" value="Profilbild ändern">
+
+                </div>
             </div>
         </div>
 
