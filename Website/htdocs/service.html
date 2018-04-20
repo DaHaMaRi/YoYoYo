@@ -51,7 +51,7 @@
         </nav>
 
         <!-- Page Content -->
-        <div class="container">
+        <main class="container">
 
             <!-- Page Heading/Breadcrumbs -->
             <h1 class="mt-4 mb-3">Mixer</h1>
@@ -64,58 +64,297 @@
             </ol>
 
             <div class="row">
-                <div class="col-md-12">
-                    <div class="btn-toolbar mb-4 ul-center" role="toolbar" aria-label="Toolbar with button groups">
-                        <div class="btn-group btn-group-toggle mr-2" role="group" aria-label="First group">
-                            <button type="button" class="btn btn-secondary bg-middle-blue">Joghurtbasis</button>
-                            <button type="button" class="btn btn-secondary bg-middle-blue">Süßigkeiten</button>
-                            <button type="button active" class="btn btn-secondary bg-middle-blue">Nüsse & Kerne</button>
-                            <button type="button" class="btn btn-secondary bg-middle-blue">Früchte</button>
-                            <button type="button" class="btn btn-secondary bg-middle-blue">Schokolade</button>
-                            <button type="button" class="btn btn-secondary bg-middle-blue">Soße</button>
+                <div class="col-md-8">
+                    <form>
+                        <div class="control-group form-group">
+                            <div class="controls">
+                                <input type="text" class="form-control" id="yogurtname" placeholder="Geben Sie Ihrer Kreation einen Namen" required data-validation-required-message="Bitte geben Sie Ihrer Kreation einen Namen">
+                            </div>
                         </div>
-                    </div>
+
+                        <section class="mb-4">
+                            <h4>Joghurtbasis</h4>
+                            <hr />
+
+                            <div class="btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-primary mb-2 active">
+                                    <input type="radio" name="options" id="option1" autocomplete="off" checked> Bananen-Joghurt
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="radio" name="options" id="option1" autocomplete="off"> Ananas-Joghurt
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="radio" name="options" id="option2" autocomplete="off"> Pfirsich-Joghurt
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="radio" name="options" id="option2" autocomplete="off"> Aprikose-Joghurt
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="radio" name="options" id="option2" autocomplete="off"> Mango-Joghurt
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="radio" name="options" id="option2" autocomplete="off"> Maracuja-Joghurt
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="radio" name="options" id="option3" autocomplete="off"> Erdbeer-Joghurt
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="radio" name="options" id="option1" autocomplete="off"> Kirsch-Joghurt
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="radio" name="options" id="option1" autocomplete="off"> Himbeer-Joghurt
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="radio" name="options" id="option4" autocomplete="off"> Apfel-Joghurt
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="radio" name="options" id="option5" autocomplete="off"> Birne-Joghurt
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="radio" name="options" id="option6" autocomplete="off"> Nuccio-Joghurt
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="radio" name="options" id="option7" autocomplete="off"> Schoko-Joghurt
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="radio" name="options" id="option8" autocomplete="off"> Vanille-Joghurt
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="radio" name="options" id="option9" autocomplete="off"> Light-Joghurt
+                                </label>
+                            </div>
+                        </section>
+
+                        <section class="mb-4">
+                            <h4>Früchte</h4>
+                            <hr />
+
+                            <div class="btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Banane
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Ananas
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Birne
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Apfel
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Pfirsich
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Aprikose
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Mango
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Maracuja
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Pflaume
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Himbeere
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Erdbeere
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Johannesbeere
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Blaubeere
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Brombeeren
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Kirsche
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Granatapfel
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Rosinen
+                                </label>
+                            </div>
+                        </section>
+
+                        <section class="mb-4">
+                            <h4>Nüsse & Kerne</h4>
+                            <hr />
+
+                            <div class="btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Haselnuss
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Walnuss
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Macadamia
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Mandeln
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Pistazie
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Cashewkerne
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Paranüsse
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Pekannüsse
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Tigernüsse
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Hanfnüsse
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Sonnenblumenkerne
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Kürbiskerne
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Kokoschips
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Kokosraspeln
+                                </label>
+                            </div>
+                        </section>
+
+                        <section class="mb-4">
+                            <h4>Schoko</h4>
+                            <hr />
+
+                            <div class="btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Schokostreußel
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Schokobomben
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Schokoplättchen
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Weiße Schokoplättchen
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Chocolate Boons
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Kakaosplitter
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Schoko-Cornflakes
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Schokoherzen
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Schokoholic-Crunchy
+                                </label>
+                            </div>
+                        </section>
+
+                        <section class="mb-4">
+                            <h4>Süßigkeiten</h4>
+                            <hr />
+
+                            <div class="btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Froot Loops
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Haribo
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Saure Schlangen
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> M&M
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Marshmallows
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Oreo
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Smarties
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Toffifee
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Raffaello
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Ferero Küsschen
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Mon Cherie
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Ferero Rocher
+                                </label>
+                            </div>
+                        </section>
+
+                        <section class="mb-4">
+                            <h4>Soße</h4>
+                            <hr />
+
+                            <div class="btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Schokosoße
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Nougatsoße
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Karamell
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Zitronensoße
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Erdbeersoße
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Himbeersoße
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Kirschsoße
+                                </label>
+                                <label class="btn btn-primary mb-2">
+                                    <input type="checkbox" autocomplete="off"> Eierlikör
+                                </label>
+                            </div>
+                        </section>
+
+                        <hr />
+                        <h5><strong>Preis: 5,40 €</strong></h5>
+                        <p><small>inkl. MwSt. von 1,10€, zzgl. Versand</small></p>
+                        <button class="button" type="submit" id="saveFrozenYogurtAndOrder">Fertig</button>
+                    </form>
+
                 </div>
             </div>
 
-            <!-- Content Row -->
-            <div class="row">
-                <!-- Sidebar Column -->
-                <div class="col-lg-3 mb-4">
-                    <div class="list-group y-scroll">
-                        <a href="" class="list-group-item">Deez Nuts</a>
-                        <a href="" class="list-group-item">Nic Nac</a>
-                        <a href="" class="list-group-item active">Macadamia</a>
-                        <a href="" class="list-group-item">Taube Nüsschen</a>
-                        <a href="" class="list-group-item">Summer Nuts</a>
-                        <a href="" class="list-group-item">Haselnuss</a>
-                        <a href="" class="list-group-item">Walnuss</a>
-                        <a href="" class="list-group-item">Erdnuss</a>
-                        <a href="" class="list-group-item">Pistazie</a>
-                        <a href="" class="list-group-item">Mandeln</a>
-                        <a href="" class="list-group-item">Pekannüsse</a>
-                        <a href="" class="list-group-item">Cashewkerne</a>
-                        <a href="" class="list-group-item">Paranüsse</a>
-                    </div>
-                </div>
-
-                <!-- Content Column -->
-                <div class="col-lg-9 mb-4">
-                    <input type="text" class="form-control center my-4 text-center w-50" id="Vorname" value="Name Eingeben">
-
-                    <h4 class="text-center">Zutaten:</h4>
-                    <ul class="ul-center no-bullets">
-                        <li><span class="fa fa-times"></span> Taube Nuss</li>
-                        <li><span class="fa fa-times"></span> Taube Nuss</li>
-                        <li><span class="fa fa-times"></span> Nuss</li>
-                        <li><span class="fa fa-times"></span> Taube Nuss</li>
-                    </ul>
-                    <div class="span-center mt-4"><span><strong>3,99€</strong></span></div>
-                    <input type="button" class="button center" id="Mixer-Bestätigung" value="Fertig">
-                </div>
-            </div>
-            <!-- /.row -->
-        </div>
+        </main>
         <!-- /.container -->
 
         <!-- Footer -->
