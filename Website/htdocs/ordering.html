@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="de">
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="author" content="Dardan Rrafshi">
-        <meta name="keywords" content="Frozen Yogurt, Joghurt, Eis, Toppings, Mixen">
-        <meta name="description" content="Eine Website um sich seinen eigenen Frozen Yogurt zu mixen">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="author" content="Dardan Rrafshi, Martin Hafner" />
+        <meta name="keywords" content="Frozen Yogurt, Joghurt, Eis, Toppings, Mixen" />
+        <meta name="description" content="Eine Website um sich seinen eigenen Frozen Yogurt zu mixen" />
 
         <title>Yummy Yogurt - Bestellung</title>
 
         <!-- Bootstrap core CSS -->
-        <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
         <!-- Custom styles for this template -->
-        <link href="../css/modern-business.css" rel="stylesheet">
-        <link href="../css/icon.css" rel="stylesheet">
+        <link href="../css/modern-business.css" rel="stylesheet" />
+        <link href="../css/icon.css" rel="stylesheet" />
     </head>
 
     <body>
@@ -28,32 +28,25 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item"><a class="nav-link" href="about.html">Über uns</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Kontakt</a></li>
-                        <li class="nav-item"><a class="nav-link" href="services.html">Mixer</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Kontakt  <span class="fa fa-address-book"></span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="service.html">Mixer</a></li>
                         <li class="nav-item"><a class="nav-link" href="discover.html">Entdecken  <span class="fa fa-search"></span></a></li>
                         <li class="nav-item"><a class="nav-link" href="shopping-cart.html">Warenkorb  <span class="fa fa-shopping-cart"></span></a></li>
 
                         <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Anmelden  <span class="fa fa-user"></span>
-                          </a>
-
-                          <div class="dropdown-menu dropdown-menu-right p-2" aria-labelledby="navbarDropdownPortfolio">
-                            <form action="index.html" method="post">
-                                <label>Benutzername</label>
-                                <input type="text" name="hallo" value="">
-
-                                <label>Passwort</label>
-                                <input type="text" name="hallo" value="">
-
-                                <button type="submit" class="button">Anmelden</button>
-                            </form>
-                            <a class="" href="#"><small>Ich habe noch keinen Account</small></a>
-                          </div>
+                            <a class="nav-link dropdown-toggle text-ice-blue" href="#" id="navbarDropdownLogIn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Dardan Rrafshi  <span class="fa fa-user-circle"></span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right p-2" aria-labelledby="navbarDropdownLogIn">
+                                <a class="dropdown-item" href="profile.html">Profil</a>
+                                <a class="dropdown-item" href="profile-setting.html">Einstellungen</a>
+                                <a class="dropdown-item" href="index.html">Abmelden</a>
+                            </div>
                         </li>
 
                     </ul>
                 </div>
+
             </div>
         </nav>
 
@@ -63,26 +56,102 @@
             <h1 class="mt-4 mb-3">Bestellung</h1>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="shopping-cart.html">Warenkorb</a></li>
                 <li class="breadcrumb-item active">Bestellung</li>
             </ol>
 
             <div class="row">
+                <div class="col-md-8">
+                    <h2 class="mt-4 mb-3">Lieferadresse</h2>
+                    <p>
+                        Dardan Rrafshi<br/>
+                        An der Schule 1<br/>
+                        80085 München
+                    </p>
+                    <button class="button" href="profile-setting.html" type="button" name="button">Adresse ändern</button>
 
+                    <h2 class="mt-4 mb-3">Zahlungsmethode</h2>
+                    <form>
+                        <div class="radio">
+                            <label><input type="radio" name="optradio" checked="checked">PayPal</label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="optradio">Kreditkarte</label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="optradio">Lastschrift</label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="optradio">Bitcoin</label>
+                        </div>
+                    </form>
+
+                    <h2 class="mt-4 mb-3">Artikel</h2>
+                    <div class="table-responsive-md">
+
+                    <table class="table table-bordered table-light table-sm">
+                        <thead>
+                            <tr>
+                                <td>Artikel</td>
+                                <td>Menge</td>
+                                <td>Preis</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Blutbad Becher</td>
+                                <td>1</td>
+                                <td class="text-right">3,35€</td>
+                            </tr>
+                            <tr>
+                                <td>Gold Becher</td>
+                                <td>1</td>
+                                <td class="text-right">3,35€</td>
+                            </tr>
+                            <tr>
+                                <td>Fit Becher</td>
+                                <td>1</td>
+                                <td class="text-right">3,35€</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr class="bg-sky">
+                                <td></td>
+                                <td>Zwischensumme:</td>
+                                <td class="text-right">10,05€</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Mehrwertsteuer:</td>
+                                <td class="text-right">1,92€</td>
+                            </tr>
+                            <tr class="bg-ice-blue">
+                                <td></td>
+                                <td>Gesamtpreis:</td>
+                                <td class="text-right">11,97€</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    </div>
+                    <a class="btn non-hover-button" href="thanks.html">Kaufen!</a>
+                </div>
             </div>
+
+
         </div>
 
         <!-- Footer -->
-        <footer class="pt-2 pb-5 bg-secondary text-light">
+        <footer class="nice-fix pt-2 pb-5 bg-secondary text-center">
             <div class="container">
-                <div class="mt-2 text-center">
+                <div class="mt-2">
                     <a class="social-media-icon fa fa-linkedin" href="#" target="_blank"></a>
                     <a class="social-media-icon fa fa-twitter-square" href="#" target="_blank"></a>
                     <a class="social-media-icon fa fa-facebook-square" href="https://www.facebook.com/dardan.rrafshi.31" target="_blank"></a>
                     <a class="social-media-icon fa fa-instagram" href="https://www.instagram.com/dr.kolumbus/" target="_blank"></a>
                     <a class="social-media-icon fa fa-youtube" href="https://www.youtube.com/channel/UCoOaD0du25LCn8NOBgV7rCw" target="_blank"></a>
                 </div>
-                <p class="mt-2 text-center"><small>Copyright &copy; Your Website 2018</small></p>
-                <div class="mt-2 text-center">
+                <p class="mt-2 text-white"><small>Copyright &copy; DaHaMaRi 2018</small></p>
+                <div class="mt-2">
                     <a class="mr-2 text-white" href="contact.html">Kontakt</a>
                     <a class="mr-2 text-white" href="impressum.html">Impressum</a>
                     <a class="mr-2 text-white" href="about.html">Über uns</a>
