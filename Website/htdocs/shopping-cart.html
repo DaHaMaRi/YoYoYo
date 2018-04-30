@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="de">
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="author" content="Dardan Rrafshi">
-        <meta name="keywords" content="Frozen Yogurt, Joghurt, Eis, Toppings, Mixen">
-        <meta name="description" content="Eine Website um sich seinen eigenen Frozen Yogurt zu mixen">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="author" content="Dardan Rrafshi, Martin Hafner" />
+        <meta name="keywords" content="Frozen Yogurt, Joghurt, Eis, Toppings, Mixen" />
+        <meta name="description" content="Eine Website um sich seinen eigenen Frozen Yogurt zu mixen" />
 
         <title>Yummy Yogurt - Warenkorb</title>
 
         <!-- Bootstrap core CSS -->
-        <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
         <!-- Custom styles for this template -->
-        <link href="../css/modern-business.css" rel="stylesheet">
-        <link href="../css/icon.css" rel="stylesheet">
+        <link href="../css/modern-business.css" rel="stylesheet" />
+        <link href="../css/icon.css" rel="stylesheet" />
     </head>
 
     <body>
@@ -28,32 +28,25 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item"><a class="nav-link" href="about.html">Über uns</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Kontakt</a></li>
-                        <li class="nav-item"><a class="nav-link" href="services.html">Mixer</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Kontakt  <span class="fa fa-address-book"></span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="service.html">Mixer</a></li>
                         <li class="nav-item"><a class="nav-link" href="discover.html">Entdecken  <span class="fa fa-search"></span></a></li>
                         <li class="nav-item"><a class="nav-link active" href="shopping-cart.html">Warenkorb  <span class="fa fa-shopping-cart"></span></a></li>
 
                         <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Anmelden  <span class="fa fa-user"></span>
-                          </a>
-
-                          <div class="dropdown-menu dropdown-menu-right p-2" aria-labelledby="navbarDropdownPortfolio">
-                            <form action="index.html" method="post">
-                                <label>Benutzername</label>
-                                <input type="text" name="hallo" value="">
-
-                                <label>Passwort</label>
-                                <input type="text" name="hallo" value="">
-
-                                <button type="submit" class="button">Anmelden</button>
-                            </form>
-                            <a class="" href="#"><small>Ich habe noch keinen Account</small></a>
-                          </div>
+                            <a class="nav-link dropdown-toggle text-ice-blue" href="#" id="navbarDropdownLogIn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Dardan Rrafshi  <span class="fa fa-user-circle"></span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right p-2" aria-labelledby="navbarDropdownLogIn">
+                                <a class="dropdown-item" href="profile.html">Profil</a>
+                                <a class="dropdown-item" href="profile-setting.html">Einstellungen</a>
+                                <a class="dropdown-item" href="index.html">Abmelden</a>
+                            </div>
                         </li>
 
                     </ul>
                 </div>
+
             </div>
         </nav>
 
@@ -66,23 +59,142 @@
                 <li class="breadcrumb-item active">Warenkorb</li>
             </ol>
 
-            <div class="row">
 
+            <table class="border rounded bg-light mb-3">
+                <tbody>
+                    <tr>
+                        <td class="col-2 w-25 px-0 align-top"><a href="product-info.html"><img class="img-fluid" src="../images/Yogurt1.jpg" height="200px" alt=""></a></td>
+                        <td class="col-6 align-text-top">
+                            <h3><a href="product-info.html">Blutbad Becher</a></h3>
+                            <p>Erdbeer Yogurt, Kirschen, Cocosflocken, Schokosoße</p>
+                            <span class="badge badge-chocolate">Schokolade</span>
+                            <span class="badge badge-fruits">Früchte</span>
+                        </td>
+                        <td class="col-3">
+                            <ul style="list-style-type: none">
+                                <li><strong class="mr-5">Einzelpreis: </strong></li>
+                                <li><strong class="mr-5">Menge: </strong></li>
+                                <li><strong class="mr-5">Summe: </strong></li>
+                                <li><strong class="mr-5">inkl. 19% MwSt:</strong></li>
+                            </ul>
+                        </td>
+                        <td class="col-1">
+                            <ul style="list-style-type: none">
+                                <li><strong class="mr-5">3,99€</strong></li>
+                                <li><input class="w-50" type="number" value="1" min="1" max="2000" step="1" /></li>
+                                <li><strong class="mr-5">3,99€</strong></li>
+                                <li><strong class="mr-5">0,75€</strong></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="border rounded bg-light mb-3">
+                <tbody>
+                    <tr>
+                        <td class="col-2 w-25 px-0 align-top"><a href="product-info.html"><img class="img-fluid" src="../images/Yogurt2.jpg" height="200px" alt=""></a></td>
+                        <td class="col-6 align-text-top">
+                            <h3><a href="product-info.html">Gold Becher</a></h3>
+                            <p>Vanille Yogurt, Apfelstücke, Pistazien, Karamell, Au</p>
+                            <span class="badge badge-nuts">Nüsse & Samen</span>
+                            <span class="badge badge-fruits">Früchte</span>
+                        </td>
+                        <td class="col-3">
+                            <ul style="list-style-type: none">
+                                <li><strong class="mr-5">Einzelpreis: </strong></li>
+                                <li><strong class="mr-5">Menge: </strong></li>
+                                <li><strong class="mr-5">Summe: </strong></li>
+                                <li><strong class="mr-5">inkl. 19% MwSt:</strong></li>
+                            </ul>
+                        </td>
+                        <td class="col-1">
+                            <ul style="list-style-type: none">
+                                <li><strong class="mr-5">3,99€</strong></li>
+                                <li><input class="w-50" type="number" value="1" min="1" max="2000" step="1" /></li>
+                                <li><strong class="mr-5">3,99€</strong></li>
+                                <li><strong class="mr-5">0,75€</strong></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="border rounded bg-light mb-3">
+                <tbody>
+                    <tr>
+                        <td class="col-2 w-25 px-0 align-top"><a href="product-info.html"><img class="img-fluid" src="../images/Yogurt3.jpg" height="200px" alt=""></a></td>
+                        <td class="col-6 align-text-top">
+                            <h3><a href="product-info.html">Fit Becher</a></h3>
+                            <p>Light Nogurt, Apfelstücke, Erdbeeren, Bananen</p>
+                            <span class="badge badge-fruits">Früchte</span>
+                            <span class="badge badge-vegan">Vegan</span>
+                        </td>
+                        <td class="col-3">
+                            <ul style="list-style-type: none">
+                                <li><strong class="mr-5">Einzelpreis: </strong></li>
+                                <li><strong class="mr-5">Menge: </strong></li>
+                                <li><strong class="mr-5">Summe: </strong></li>
+                                <li><strong class="mr-5">inkl. 19% MwSt:</strong></li>
+                            </ul>
+                        </td>
+                        <td class="col-1">
+                            <ul style="list-style-type: none">
+                                <li><strong class="mr-5">3,99€</strong></li>
+                                <li><input class="w-50" type="number" value="1" min="1" max="2000" step="1" /></li>
+                                <li><strong class="mr-5">3,99€</strong></li>
+                                <li><strong class="mr-5">0,75€</strong></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="border rounded bg-light mb-3">
+                <tbody>
+                    <tr>
+                        <td class="col-2 w-25 px-0 align-top"></td>
+                        <td class="col-6 align-text-top"></td>
+                        <td class="col-3">
+                            <ul style="list-style-type: none">
+                                <li><strong class="mr-5">Gesamtsumme: </strong></li>
+                                <li><strong class="mr-5">inkl. MwSt (19 %):</strong></li>
+                                <li><strong class="mr-5">Endsumme:</strong></li>
+                            </ul>
+                        </td>
+                        <td class="col-1 text-right">
+                            <ul style="list-style-type: none">
+                                <li><strong class="mr-5">11,97€</strong></li>
+                                <li><strong class="mr-5">2,27€</strong></li>
+                                <li><strong class="mr-5">11,97€</strong></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+            <div class="row">
+                <div class="col-md-9">
+                </div>
+                <div class="col-2">
+                    <a class="btn non-hover-button" href="ordering.html">Jetzt bestellen!</a>
+                </div>
             </div>
         </div>
 
         <!-- Footer -->
-        <footer class="pt-2 pb-5 bg-secondary text-light">
+        <footer class="nice-fix pt-2 pb-5 bg-secondary text-center">
             <div class="container">
-                <div class="mt-2 text-center">
+                <div class="mt-2">
                     <a class="social-media-icon fa fa-linkedin" href="#" target="_blank"></a>
                     <a class="social-media-icon fa fa-twitter-square" href="#" target="_blank"></a>
                     <a class="social-media-icon fa fa-facebook-square" href="https://www.facebook.com/dardan.rrafshi.31" target="_blank"></a>
                     <a class="social-media-icon fa fa-instagram" href="https://www.instagram.com/dr.kolumbus/" target="_blank"></a>
                     <a class="social-media-icon fa fa-youtube" href="https://www.youtube.com/channel/UCoOaD0du25LCn8NOBgV7rCw" target="_blank"></a>
                 </div>
-                <p class="mt-2 text-center"><small>Copyright &copy; Your Website 2018</small></p>
-                <div class="mt-2 text-center">
+                <p class="mt-2 text-white"><small>Copyright &copy; DaHaMaRi 2018</small></p>
+                <div class="mt-2">
                     <a class="mr-2 text-white" href="contact.html">Kontakt</a>
                     <a class="mr-2 text-white" href="impressum.html">Impressum</a>
                     <a class="mr-2 text-white" href="about.html">Über uns</a>

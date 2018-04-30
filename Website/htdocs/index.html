@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="de">
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="author" content="">
-        <meta name="keywords" content="Frozen Yogurt, Joghurt, Eis, Toppings, Mixen">
-        <meta name="description" content="Eine Website um sich seinen eigenen Frozen Yogurt zu mixen">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="author" content="Dardan Rrafshi" />
+        <meta name="keywords" content="Frozen Yogurt, Joghurt, Eis, Toppings, Mixen" />
+        <meta name="description" content="Eine Website um sich seinen eigenen Frozen Yogurt zu mixen" />
 
         <title>Yummy Yogurt</title>
 
         <!-- Bootstrap core CSS -->
-        <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
         <!-- Custom styles for this template -->
-        <link href="../css/modern-business.css" rel="stylesheet">
-        <link href="../css/icon.css" rel="stylesheet">
+        <link href="../css/modern-business.css" rel="stylesheet" />
+        <link href="../css/icon.css" rel="stylesheet" />
     </head>
 
     <body>
@@ -28,32 +28,32 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item"><a class="nav-link" href="about.html">Über uns</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Kontakt</a></li>
-                        <li class="nav-item"><a class="nav-link" href="services.html">Mixer</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Kontakt  <span class="fa fa-address-book"></span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="service.html">Mixer</a></li>
                         <li class="nav-item"><a class="nav-link" href="discover.html">Entdecken  <span class="fa fa-search"></span></a></li>
                         <li class="nav-item"><a class="nav-link" href="shopping-cart.html">Warenkorb  <span class="fa fa-shopping-cart"></span></a></li>
 
                         <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Anmelden  <span class="fa fa-user"></span>
-                          </a>
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownLogIn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Anmelden  <span class="fa fa-user"></span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right p-2" aria-labelledby="navbarDropdownLogIn">
+                                <form action="log-in.html" method="post">
+                                    <label>Benutzername</label>
+                                    <input type="text" name="hallo" value="" />
 
-                          <div class="dropdown-menu dropdown-menu-right p-2" aria-labelledby="navbarDropdownPortfolio">
-                            <form action="index.html" method="post">
-                                <label>Benutzername</label>
-                                <input type="text" name="hallo" value="">
+                                    <label>Passwort</label>
+                                    <input type="text" name="hallo" value="" />
 
-                                <label>Passwort</label>
-                                <input type="text" name="hallo" value="">
-
-                                <button type="submit" class="button">Anmelden</button>
-                            </form>
-                            <a class="" href="#"><small>Ich habe noch keinen Account</small></a>
-                          </div>
+                                    <button type="submit" class="button">Anmelden</button>
+                                </form>
+                                <a href="sign-up.html"><small>Ich habe noch keinen Account</small></a>
+                            </div>
                         </li>
 
                     </ul>
                 </div>
+
             </div>
         </nav>
 
@@ -66,24 +66,24 @@
                 </ol>
                 <div class="carousel-inner" role="listbox">
                     <!-- Slide One - Set the background image for this slide in the line below -->
-                    <div class="carousel-item active" style="background-image: url('http://placehold.it/1900x1080')">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h3>First Slide</h3>
-                            <p>This is a description for the first slide.</p>
+                    <div class="carousel-item active" style="background-image: url('../images/Banner3.jpg')">
+                        <div class="carousel-caption d-none d-md-block bg-white-tp text-dark">
+                            <h3>Eröffnungsangebot</h3>
+                            <p>20% auf jeden Frozen Yogurt, den ihr bestellt, nur noch diese Woche</p>
                         </div>
                     </div>
                     <!-- Slide Two - Set the background image for this slide in the line below -->
-                    <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h3>Second Slide</h3>
-                            <p>This is a description for the second slide.</p>
+                    <div class="carousel-item" style="background-image: url('../images/Banner1.jpg')">
+                        <div class="carousel-caption d-none d-md-block bg-white-tp text-dark">
+                            <h3>Spezialangebot zum Freitag den 13.</h3>
+                            <p>Kauf drei zum Preis von zwei. Jetzt zuschlagen.</p>
                         </div>
                     </div>
                     <!-- Slide Three - Set the background image for this slide in the line below -->
-                    <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h3>Third Slide</h3>
-                            <p>This is a description for the third slide.</p>
+                    <div class="carousel-item" style="background-image: url('../images/Banner2.jpg')">
+                        <div class="carousel-caption d-none d-md-block bg-white-tp text-dark">
+                            <h3>Catering-Service bald verfügbar!</h3>
+                            <p>Demnächst wird es auch möglich sein, die Frozen Yogurt Experience zu euch nach Hause zu holen</p>
                         </div>
                     </div>
                 </div>
@@ -98,6 +98,7 @@
             </div>
         </header>
 
+
         <!-- Page Content -->
         <div class="container">
             <!-- Page Heading -->
@@ -106,134 +107,256 @@
             <div class="row">
                 <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
                     <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                        <a href="#"><img class="card-img-top" src="../images/Yogurt1.jpg" height="200px" alt=""></a>
                         <div class="card-body">
                             <h4 class="card-title">
-                                <a href="#">Project One</a>
+                                <a href="product-info.html">Super Yogurt X</a>
                             </h4>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!</p>
+                            <p class="card-text">Erdbeer-Joghurt, Haselnuss, Schokostreusel, Schokosoße</p>
+                            <p><strong>Preis: 3,99€</strong></p>
+                            <span class="badge badge-fruits">Früchte</span>
+                            <span class="badge badge-nuts">Nüsse & Kerne</span>
+                            <span class="badge badge-chocolate">Schokolade</span>
+                        </div>
+                        <div class="card-footer text-center">
+                            <div class="star-rating">
+                                <span class="fa fa-star" data-rating="1"></span>
+                                <span class="fa fa-star" data-rating="2"></span>
+                                <span class="fa fa-star" data-rating="3"></span>
+                                <span class="fa fa-star" data-rating="4"></span>
+                                <span class="fa fa-star" data-rating="5"></span>
+                                <input type="hidden" name="whatever1" class="rating-value" value="4.99">
+                                <p class="card-text"><small>4,99 (150)</small></p>
+                            </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
                     <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                        <a href="#"><img class="card-img-top" src="../images/Yogurt2.jpg" height="200px" alt=""></a>
                         <div class="card-body">
                             <h4 class="card-title">
-                                <a href="#">Project Two</a>
+                                <a href="product-info.html">Banana Awesome</a>
                             </h4>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+                            <p class="card-text">Bananen-Joghurt, Banane, Schokostreusel</p>
+                            <p><strong>Preis: 3,99€</strong></p>
+                            <span class="badge badge-fruits">Früchte</span>
+                            <span class="badge badge-chocolate">Schokolade</span>
+                        </div>
+                        <div class="card-footer text-center">
+                            <div class="star-rating">
+                                <span class="fa fa-star" data-rating="1"></span>
+                                <span class="fa fa-star" data-rating="2"></span>
+                                <span class="fa fa-star" data-rating="3"></span>
+                                <span class="fa fa-star" data-rating="4"></span>
+                                <span class="fa fa-star" data-rating="5"></span>
+                                <input type="hidden" name="whatever1" class="rating-value" value="4.84">
+                                <p class="card-text"><small>4,84 (121)</small></p>
+                            </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
                     <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                        <a href="#"><img class="card-img-top" src="../images/Yogurt3.jpg" height="200px" alt=""></a>
                         <div class="card-body">
                             <h4 class="card-title">
-                                <a href="#">Project Three</a>
+                                <a href="product-info.html">Blutbad Becher</a>
                             </h4>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere atque iure perspiciatis mollitia recusandae vero vel quam!</p>
+                            <p class="card-text">Erdbeer-Joghurt, Kirschen, Cocosflocken, Schokosoße</p>
+                            <p><strong>Preis: 3,99€</strong></p>
+                            <span class="badge badge-fruits">Früchte</span>
+                            <span class="badge badge-chocolate">Schokolade</span>
+                        </div>
+                        <div class="card-footer text-center">
+                            <div class="star-rating">
+                                <span class="fa fa-star" data-rating="1"></span>
+                                <span class="fa fa-star" data-rating="2"></span>
+                                <span class="fa fa-star" data-rating="3"></span>
+                                <span class="fa fa-star" data-rating="4"></span>
+                                <span class="fa fa-star" data-rating="5"></span>
+                                <input type="hidden" name="whatever1" class="rating-value" value="4.71">
+                                <p class="card-text"><small>4,71 (142)</small></p>
+                            </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
                     <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                        <a href="#"><img class="card-img-top" src="../images/Yogurt4.jpg" height="200px" alt=""></a>
                         <div class="card-body">
                             <h4 class="card-title">
-                                <a href="#">Project Four</a>
+                                <a href="product-info.html">Nuts Royal</a>
                             </h4>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+                            <p class="card-text">Nuccio-Joghurt, Haselnuss, Walnuss, Nougatsoße</p>
+                            <p><strong>Preis: 3,99€</strong></p>
+                            <span class="badge badge-nuts">Nüsse & Kerne</span>
+                            <span class="badge badge-chocolate">Schokolade</span>
+                        </div>
+                        <div class="card-footer text-center">
+                            <div class="star-rating">
+                                <span class="fa fa-star" data-rating="1"></span>
+                                <span class="fa fa-star" data-rating="2"></span>
+                                <span class="fa fa-star" data-rating="3"></span>
+                                <span class="fa fa-star" data-rating="4"></span>
+                                <span class="fa fa-star-o" data-rating="5"></span>
+                                <input type="hidden" name="whatever1" class="rating-value" value="4.32">
+                                <p class="card-text"><small>4,32 (95)</small></p>
+                            </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
                     <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                        <a href="#"><img class="card-img-top" src="../images/Yogurt5.jpg" height="200px" alt=""></a>
                         <div class="card-body">
                             <h4 class="card-title">
-                                <a href="#">Project Five</a>
+                                <a href="product-info.html">Fruity Loop</a>
                             </h4>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+                            <p class="card-text">Apfel-Joghurt, Banane, Erdbeer, Birne, Ananas</p>
+                            <p><strong>Preis: 3,99€</strong></p>
+                            <span class="badge badge-fruits">Früchte</span>
+                        </div>
+                        <div class="card-footer text-center">
+                            <div class="star-rating">
+                                <span class="fa fa-star" data-rating="1"></span>
+                                <span class="fa fa-star" data-rating="2"></span>
+                                <span class="fa fa-star" data-rating="3"></span>
+                                <span class="fa fa-star" data-rating="4"></span>
+                                <span class="fa fa-star-o" data-rating="5"></span>
+                                <input type="hidden" name="whatever1" class="rating-value" value="4.28">
+                                <p class="card-text"><small>4,28 (136)</small></p>
+                            </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
                     <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                        <a href="#"><img class="card-img-top" src="../images/Yogurt6.jpg" height="200px" alt=""></a>
                         <div class="card-body">
                             <h4 class="card-title">
-                                <a href="#">Project Six</a>
+                                <a href="product-info.html">Sugar Bombs</a>
                             </h4>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque earum nostrum suscipit ducimus nihil provident, perferendis rem illo, voluptate atque, sit eius in voluptates, nemo repellat fugiat excepturi! Nemo, esse.</p>
+                            <p class="card-text">Schoko-Joghurt, Karamell, Schokostreusel, Nougatsoße</p>
+                            <p><strong>Preis: 3,99€</strong></p>
+                            <span class="badge badge-chocolate">Schokolade</span>
+                        </div>
+                        <div class="card-footer text-center">
+                            <div class="star-rating">
+                                <span class="fa fa-star" data-rating="1"></span>
+                                <span class="fa fa-star" data-rating="2"></span>
+                                <span class="fa fa-star" data-rating="3"></span>
+                                <span class="fa fa-star" data-rating="4"></span>
+                                <span class="fa fa-star-o" data-rating="5"></span>
+                                <input type="hidden" name="whatever1" class="rating-value" value="4.19">
+                                <p class="card-text"><small>4,19 (119)</small></p>
+                            </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
                     <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                        <a href="#"><img class="card-img-top" src="../images/Yogurt7.jpg" height="200px" alt=""></a>
                         <div class="card-body">
                             <h4 class="card-title">
-                                <a href="#">Project Seven</a>
+                                <a href="product-info.html">MC Fitty</a>
                             </h4>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+                            <p class="card-text">Light-Joghurt, Apfel, Erdbeeren, Bananen</p>
+                            <p><strong>Preis: 3,99€</strong></p>
+                            <span class="badge badge-fruits">Früchte</span>
+                            <span class="badge badge-vegan">Vegan</span>
+                        </div>
+                        <div class="card-footer text-center">
+                            <div class="star-rating">
+                                <span class="fa fa-star" data-rating="1"></span>
+                                <span class="fa fa-star" data-rating="2"></span>
+                                <span class="fa fa-star" data-rating="3"></span>
+                                <span class="fa fa-star" data-rating="4"></span>
+                                <span class="fa fa-star-o" data-rating="5"></span>
+                                <input type="hidden" name="whatever1" class="rating-value" value="3.97">
+                                <p class="card-text"><small>3,97 (101)</small></p>
+                            </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
                     <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                        <a href="#"><img class="card-img-top" src="../images/Yogurt8.jpg" height="200px" alt=""></a>
                         <div class="card-body">
                             <h4 class="card-title">
-                                <a href="#">Project Eight</a>
+                                <a href="product-info.html">Gold Becher</a>
                             </h4>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius adipisci dicta dignissimos neque animi ea, veritatis, provident hic consequatur ut esse! Commodi ea consequatur accusantium, beatae qui deserunt tenetur ipsa.</p>
+                            <p class="card-text">Vanille-Joghurt, Apfel, Pistazien, Karamell, Au</p>
+                            <p><strong>Preis: 3,99€</strong></p>
+                            <span class="badge badge-fruits">Früchte</span>
+                            <span class="badge badge-nuts">Nüsse & Kerne</span>
+                            <span class="badge badge-chocolate">Schokolade</span>
+                        </div>
+                        <div class="card-footer text-center">
+                            <div class="star-rating">
+                                <span class="fa fa-star" data-rating="1"></span>
+                                <span class="fa fa-star" data-rating="2"></span>
+                                <span class="fa fa-star" data-rating="3"></span>
+                                <span class="fa fa-star" data-rating="4"></span>
+                                <span class="fa fa-star-o" data-rating="5"></span>
+                                <input type="hidden" name="whatever1" class="rating-value" value="3.89">
+                                <p class="card-text"><small>3,89 (122)</small></p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Pagination -->
-            <ul class="pagination justify-content-center">
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                </li>
-                <li class="page-item">
-                    <a class="page-link" href="#">1</a>
-                </li>
-                <li class="page-item">
-                    <a class="page-link" href="#">2</a>
-                </li>
-                <li class="page-item">
-                    <a class="page-link" href="#">3</a>
-                </li>
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </li>
-            </ul>
-
+            <div class="row">
+                <div class="col-md-12 mb-4">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                        </li>
+                        <li class="page-item active">
+                            <a class="page-link" href="#">1</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">2</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">3</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
         <!-- /.container -->
 
         <!-- Footer -->
-        <footer class="pt-2 pb-5 bg-secondary text-light">
+        <footer class="nice-fix pt-2 pb-5 bg-secondary text-center">
             <div class="container">
-                <div class="mt-2 text-center">
+                <div class="mt-2">
                     <a class="social-media-icon fa fa-linkedin" href="#" target="_blank"></a>
                     <a class="social-media-icon fa fa-twitter-square" href="#" target="_blank"></a>
                     <a class="social-media-icon fa fa-facebook-square" href="https://www.facebook.com/dardan.rrafshi.31" target="_blank"></a>
                     <a class="social-media-icon fa fa-instagram" href="https://www.instagram.com/dr.kolumbus/" target="_blank"></a>
                     <a class="social-media-icon fa fa-youtube" href="https://www.youtube.com/channel/UCoOaD0du25LCn8NOBgV7rCw" target="_blank"></a>
                 </div>
-                <p class="mt-2 text-center"><small>Copyright &copy; Your Website 2018</small></p>
-                <div class="mt-2 text-center">
+                <p class="mt-2 text-white"><small>Copyright &copy; DaHaMaRi 2018</small></p>
+                <div class="mt-2">
                     <a class="mr-2 text-white" href="contact.html">Kontakt</a>
                     <a class="mr-2 text-white" href="impressum.html">Impressum</a>
                     <a class="mr-2 text-white" href="about.html">Über uns</a>
@@ -244,6 +367,7 @@
         <!-- Bootstrap core JavaScript -->
         <script src="../vendor/jquery/jquery.min.js"></script>
         <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+        <!-- Own JavaScript -->
+        <script type="../scripts/ratingsystem.js"></script>
     </body>
 </html>

@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="de">
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="author" content="Dardan Rrafshi">
-        <meta name="keywords" content="Frozen Yogurt, Joghurt, Eis, Toppings, Mixen">
-        <meta name="description" content="Eine Website um sich seinen eigenen Frozen Yogurt zu mixen">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="author" content="Dardan Rrafshi" />
+        <meta name="keywords" content="Frozen Yogurt, Joghurt, Eis, Toppings, Mixen" />
+        <meta name="description" content="Eine Website um sich seinen eigenen Frozen Yogurt zu mixen" />
 
         <title>Yummy Yogurt - Profil-Einstellung</title>
 
         <!-- Bootstrap core CSS -->
-        <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
         <!-- Custom styles for this template -->
-        <link href="../css/modern-business.css" rel="stylesheet">
-        <link href="../css/icon.css" rel="stylesheet">
+        <link href="../css/modern-business.css" rel="stylesheet" />
+        <link href="../css/icon.css" rel="stylesheet" />
     </head>
 
     <body>
@@ -28,32 +28,25 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item"><a class="nav-link" href="about.html">Über uns</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Kontakt</a></li>
-                        <li class="nav-item"><a class="nav-link" href="services.html">Mixer</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Kontakt  <span class="fa fa-address-book"></span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="service.html">Mixer</a></li>
                         <li class="nav-item"><a class="nav-link" href="discover.html">Entdecken  <span class="fa fa-search"></span></a></li>
                         <li class="nav-item"><a class="nav-link" href="shopping-cart.html">Warenkorb  <span class="fa fa-shopping-cart"></span></a></li>
 
                         <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Anmelden  <span class="fa fa-user"></span>
-                          </a>
-
-                          <div class="dropdown-menu dropdown-menu-right p-2" aria-labelledby="navbarDropdownPortfolio">
-                            <form action="index.html" method="post">
-                                <label>Benutzername</label>
-                                <input type="text" name="hallo" value="">
-
-                                <label>Passwort</label>
-                                <input type="text" name="hallo" value="">
-
-                                <button type="submit" class="button">Anmelden</button>
-                            </form>
-                            <a class="" href="#"><small>Ich habe noch keinen Account</small></a>
-                          </div>
+                            <a class="nav-link dropdown-toggle text-ice-blue" href="#" id="navbarDropdownLogIn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Dardan Rrafshi  <span class="fa fa-user-circle"></span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right p-2" aria-labelledby="navbarDropdownLogIn">
+                                <a class="dropdown-item" href="profile.html">Profil</a>
+                                <a class="dropdown-item" href="profile-setting.html">Einstellungen</a>
+                                <a class="dropdown-item" href="index.html">Abmelden</a>
+                            </div>
                         </li>
 
                     </ul>
                 </div>
+
             </div>
         </nav>
 
@@ -67,22 +60,83 @@
             </ol>
 
             <div class="row">
+                <div class="col-md-6">
+                    <div class="control-group form-group">
+                        <strong>Vorname:</strong>
+                        <span class="fa fa-lock float-right"></span>
+                        <input type="text" class="form-control" id="Vorname" value="Dardan" disabled>
+                    </div>
 
+                    <div class="control-group form-group">
+                        <strong>Nachname:</strong>
+                        <span class="fa fa-unlock float-right"></span>
+                        <input type="text" class="form-control" id="Nachname" value="Rrafshi">
+                    </div>
+
+                    <div class="control-group form-group">
+                        <strong>Username:</strong>
+                        <span class="fa fa-lock float-right"></span>
+                        <input type="text" class="form-control" id="Username" value="Don Colon" disabled>
+                    </div>
+
+                    <div class="control-group form-group">
+                        <strong>E-Mail:</strong>
+                        <span class="fa fa-unlock float-right"></span>
+                        <input type="text" class="form-control" id="E-Mail" value="drrafshi@hotmail.de">
+                    </div>
+
+                    <hr />
+                    <div class="control-group form-group">
+                        <div class="">
+                            <strong>Adresse: </strong>
+                            <span class="fa fa-lock float-right"></span>
+                        </div>
+
+                        <div class="">
+                            <input type="text" class="form-control" id="strasse" value="Bei der Schule" placeholder="Straße" disabled>
+                            <input type="text" class="form-control my-2" id="hausnummer" value="12" placeholder="Hausnummer" disabled>
+                            <input type="text" class="form-control my-2" id="zusatz" value="" placeholder="Zusatz" disabled>
+                        </div>
+
+                        <div class="">
+                            <input type="text" class="form-control my-2" id="plz" value="88515" placeholder="PLZ" disabled>
+                            <input type="text" class="form-control my-2" id="ort" value="Langenenslingen" placeholder="Ort" disabled>
+                        </div>
+                    </div>
+
+                    <hr />
+                    <div class="control-group form-group">
+                        <strong>Passwort ändern:</strong>
+                        <input type="text" class="form-control" id="altes-passwort" value="" placeholder="Altes Passwort">
+                        <input type="text" class="form-control my-2" id="neues-passwort" value="" placeholder="Neues Passwort">
+                        <input type="text" class="form-control my-2" id="neues-passwort-bestaetigen" value="" placeholder="Neues Paswort bestätigen">
+                        <input type="submit" class="button" id="submit-new-password" value="Passwort ändern">
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                        <img class="center-img img-fluid mb-4" src="../images/Profil.jpeg" alt="Profilbild">
+                        <form>
+                            <div class="form-group w-50 center">
+                                <input type="file" class="form-control-file" id="picture" value="Bild hochladen">
+                            </div>
+                        </form>
+                </div>
             </div>
         </div>
 
         <!-- Footer -->
-        <footer class="pt-2 pb-5 bg-secondary text-light">
+        <footer class="nice-fix pt-2 pb-5 bg-secondary text-center">
             <div class="container">
-                <div class="mt-2 text-center">
+                <div class="mt-2">
                     <a class="social-media-icon fa fa-linkedin" href="#" target="_blank"></a>
                     <a class="social-media-icon fa fa-twitter-square" href="#" target="_blank"></a>
                     <a class="social-media-icon fa fa-facebook-square" href="https://www.facebook.com/dardan.rrafshi.31" target="_blank"></a>
                     <a class="social-media-icon fa fa-instagram" href="https://www.instagram.com/dr.kolumbus/" target="_blank"></a>
                     <a class="social-media-icon fa fa-youtube" href="https://www.youtube.com/channel/UCoOaD0du25LCn8NOBgV7rCw" target="_blank"></a>
                 </div>
-                <p class="mt-2 text-center"><small>Copyright &copy; Your Website 2018</small></p>
-                <div class="mt-2 text-center">
+                <p class="mt-2 text-white"><small>Copyright &copy; DaHaMaRi 2018</small></p>
+                <div class="mt-2">
                     <a class="mr-2 text-white" href="contact.html">Kontakt</a>
                     <a class="mr-2 text-white" href="impressum.html">Impressum</a>
                     <a class="mr-2 text-white" href="about.html">Über uns</a>

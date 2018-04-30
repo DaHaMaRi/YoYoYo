@@ -1,5 +1,5 @@
-# YoYoYo
-Website mit Datenbank Anbindung zu Lernzwecken 
+# Yummy Yogurt
+Website mit Datenbank Anbindung zu Lernzwecken
 
 ### Aktuell:
 - Stylevorlagen sind erlaubt
@@ -9,6 +9,10 @@ Website mit Datenbank Anbindung zu Lernzwecken
 
  -  https://blackrockdigital.github.io/startbootstrap-modern-business/
  -  https://www.tessemaes.com/
+
+### Software:
+ - Atom v1.25.0
+ - Eclipse Oxygen v4.7.3
 
 ### Liste aller Seiten
  1. Startseite
@@ -24,4 +28,6 @@ Website mit Datenbank Anbindung zu Lernzwecken
  11. Impressum
  12. Kontakt
  13. Über uns
- 
+
+### News
+Macht mal was ihr netten Menschen

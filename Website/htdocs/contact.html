@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="de">
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="author" content="Dardan Rrafshi">
-        <meta name="keywords" content="Frozen Yogurt, Joghurt, Eis, Toppings, Mixen">
-        <meta name="description" content="Eine Website um sich seinen eigenen Frozen Yogurt zu mixen">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="author" content="Dardan Rrafshi" />
+        <meta name="keywords" content="Frozen Yogurt, Joghurt, Eis, Toppings, Mixen" />
+        <meta name="description" content="Eine Website um sich seinen eigenen Frozen Yogurt zu mixen" />
 
         <title>Yummy Yogurt - Kontakt</title>
 
         <!-- Bootstrap core CSS -->
-        <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
         <!-- Custom styles for this template -->
-        <link href="../css/modern-business.css" rel="stylesheet">
-        <link href="../css/icon.css" rel="stylesheet">
+        <link href="../css/modern-business.css" rel="stylesheet" />
+        <link href="../css/icon.css" rel="stylesheet" />
     </head>
 
     <body>
@@ -28,37 +28,37 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item"><a class="nav-link" href="about.html">Über uns</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="contact.html">Kontakt</a></li>
-                        <li class="nav-item"><a class="nav-link" href="services.html">Mixer</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="contact.html">Kontakt  <span class="fa fa-address-book"></span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="service.html">Mixer</a></li>
                         <li class="nav-item"><a class="nav-link" href="discover.html">Entdecken  <span class="fa fa-search"></span></a></li>
                         <li class="nav-item"><a class="nav-link" href="shopping-cart.html">Warenkorb  <span class="fa fa-shopping-cart"></span></a></li>
 
                         <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Anmelden  <span class="fa fa-user"></span>
-                          </a>
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownLogIn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Anmelden  <span class="fa fa-user"></span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right p-2" aria-labelledby="navbarDropdownLogIn">
+                                <form action="log-in.html" method="post">
+                                    <label>Benutzername</label>
+                                    <input type="text" name="hallo" value="" />
 
-                          <div class="dropdown-menu dropdown-menu-right p-2" aria-labelledby="navbarDropdownPortfolio">
-                            <form action="index.html" method="post">
-                                <label>Benutzername</label>
-                                <input type="text" name="hallo" value="">
+                                    <label>Passwort</label>
+                                    <input type="text" name="hallo" value="" />
 
-                                <label>Passwort</label>
-                                <input type="text" name="hallo" value="">
-
-                                <button type="submit" class="button">Anmelden</button>
-                            </form>
-                            <a class="" href="#"><small>Ich habe noch keinen Account</small></a>
-                          </div>
+                                    <button type="submit" class="button">Anmelden</button>
+                                </form>
+                                <a href="sign-up.html"><small>Ich habe noch keinen Account</small></a>
+                            </div>
                         </li>
 
                     </ul>
                 </div>
+
             </div>
         </nav>
 
         <!-- Page Content -->
-        <div class="container">
+        <main class="container">
             <!-- Page Heading/Breadcrumbs -->
             <h1 class="mt-4 mb-3">Kontakt</h1>
             <ol class="breadcrumb">
@@ -80,26 +80,26 @@
                     <form name="sentMessage" id="contactForm" novalidate>
                         <div class="control-group form-group">
                             <div class="controls">
-                                <label>Name:</label>
+                                <label><strong>Name:</strong></label>
                                 <input type="text" class="form-control" id="name" required data-validation-required-message="Bitte tragen Sie Ihren Namen ein.">
                                 <p class="help-block"></p>
                             </div>
                         </div>
                         <div class="control-group form-group">
                             <div class="controls">
-                                <label>Telefonnummer:</label>
+                                <label><strong>Telefonnummer:</strong></label>
                                 <input type="tel" class="form-control" id="phone">
                             </div>
                         </div>
                         <div class="control-group form-group">
                             <div class="controls">
-                                <label>E-Mail:</label>
+                                <label><strong>E-Mail:</strong></label>
                                 <input type="email" class="form-control" id="email" required data-validation-required-message="Bitte tragen Sie Ihre E-Mail Adresse ein.">
                             </div>
                         </div>
                         <div class="control-group form-group">
                             <div class="controls">
-                                <label>Nachricht:</label>
+                                <label><strong>Nachricht:</strong></label>
                                 <textarea rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Bitte geben Sie eine Nachricht ein" maxlength="999" style="resize:none"></textarea>
                             </div>
                         </div>
@@ -110,23 +110,26 @@
                 </div>
 
                 <!-- Contact Details Column -->
-                <div class="col-md-4 mb-4">
-                    <h4>E-Mail</h4>
-                    <p><a href="mailto:yummy-yogurt@info.com">yummy-yogurt@info.com</a></p>
-
-                    <h4>Telefon</h4>
-                    <p>+49 (0) 123 44 55 66</p>
-
-                    <h4>Adresse</h4>
+                <aside class="col-md-4 mb-4">
                     <address>
-                        Yummy Yogurt<br />
-                        An der Technologiewerkstatt 1<br />
-                        Postfach 1337<br />
-                        72461 Albstadt
+                        <h4>E-Mail</h4>
+                        <p><a href="mailto:yummy-yogurt@info.com">yummy-yogurt@info.com</a></p>
+
+                        <h4>Telefon</h4>
+                        <p>+49 (0) 123 44 55 66</p>
+
+                        <h4>Adresse</h4>
+                        <p>
+                            Yummy Yogurt KG<br/>
+                            An der Technologiewerkstatt 1<br/>
+                            Postfach 1337<br/>
+                            72461 Albstadt
+                        </p>
                     </address>
-                </div>
+                </aside>
+
             </div>
-        </div>
+        </main>
 
         <!-- Embedded Google Map -->
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1579.5815751870557!2d9.012715154559006!3d48.25419415034408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479a04d29145bcaf%3A0x368c9c4648e68732!2sTechnologiewerkstatt+Albstadt!5e0!3m2!1sde!2sde!4v1523118370749"
@@ -134,17 +137,17 @@
         </iframe>
 
         <!-- Footer -->
-        <footer class="pt-2 pb-5 bg-secondary text-light">
+        <footer class="pt-2 pb-5 bg-secondary text-center nice-fix">
             <div class="container">
-                <div class="mt-2 text-center">
+                <div class="mt-2">
                     <a class="social-media-icon fa fa-linkedin" href="#" target="_blank"></a>
                     <a class="social-media-icon fa fa-twitter-square" href="#" target="_blank"></a>
                     <a class="social-media-icon fa fa-facebook-square" href="https://www.facebook.com/dardan.rrafshi.31" target="_blank"></a>
                     <a class="social-media-icon fa fa-instagram" href="https://www.instagram.com/dr.kolumbus/" target="_blank"></a>
                     <a class="social-media-icon fa fa-youtube" href="https://www.youtube.com/channel/UCoOaD0du25LCn8NOBgV7rCw" target="_blank"></a>
                 </div>
-                <p class="mt-2 text-center"><small>Copyright &copy; Your Website 2018</small></p>
-                <div class="mt-2 text-center">
+                <p class="mt-2 text-white"><small>Copyright &copy; DaHaMaRi 2018</small></p>
+                <div class="mt-2">
                     <a class="mr-2 text-white" href="contact.html">Kontakt</a>
                     <a class="mr-2 text-white" href="impressum.html">Impressum</a>
                     <a class="mr-2 text-white" href="about.html">Über uns</a>
@@ -160,6 +163,6 @@
         <!-- Do not edit these files! In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
         <script src="../scripts/jqBootstrapValidation.js"></script>
         <script src="../scripts/contact_me.js"></script>
-        
+
     </body>
 </html>

@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="de">
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="author" content="Dardan Rrafshi">
-        <meta name="keywords" content="Frozen Yogurt, Joghurt, Eis, Toppings, Mixen">
-        <meta name="description" content="Eine Website um sich seinen eigenen Frozen Yogurt zu mixen">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="author" content="Dardan Rrafshi" />
+        <meta name="keywords" content="Frozen Yogurt, Joghurt, Eis, Toppings, Mixen" />
+        <meta name="description" content="Eine Website um sich seinen eigenen Frozen Yogurt zu mixen" />
 
         <title>Yummy Yogurt - Impressum</title>
 
         <!-- Bootstrap core CSS -->
-        <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
         <!-- Custom styles for this template -->
-        <link href="../css/modern-business.css" rel="stylesheet">
-        <link href="../css/icon.css" rel="stylesheet">
+        <link href="../css/modern-business.css" rel="stylesheet" />
+        <link href="../css/icon.css" rel="stylesheet" />
     </head>
 
     <body>
@@ -28,52 +28,135 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item"><a class="nav-link" href="about.html">Über uns</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Kontakt</a></li>
-                        <li class="nav-item"><a class="nav-link" href="services.html">Mixer</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Kontakt  <span class="fa fa-address-book"></span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="service.html">Mixer</a></li>
                         <li class="nav-item"><a class="nav-link" href="discover.html">Entdecken  <span class="fa fa-search"></span></a></li>
                         <li class="nav-item"><a class="nav-link" href="shopping-cart.html">Warenkorb  <span class="fa fa-shopping-cart"></span></a></li>
 
                         <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Anmelden  <span class="fa fa-user"></span>
-                          </a>
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownLogIn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Anmelden  <span class="fa fa-user"></span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right p-2" aria-labelledby="navbarDropdownLogIn">
+                                <form action="log-in.html" method="post">
+                                    <label>Benutzername</label>
+                                    <input type="text" name="hallo" value="" />
 
-                          <div class="dropdown-menu dropdown-menu-right p-2" aria-labelledby="navbarDropdownPortfolio">
-                            <form action="index.html" method="post">
-                                <label>Benutzername</label>
-                                <input type="text" name="hallo" value="">
+                                    <label>Passwort</label>
+                                    <input type="text" name="hallo" value="" />
 
-                                <label>Passwort</label>
-                                <input type="text" name="hallo" value="">
-
-                                <button type="submit" class="button">Anmelden</button>
-                            </form>
-                            <a class="" href="#"><small>Ich habe noch keinen Account</small></a>
-                          </div>
+                                    <button type="submit" class="button">Anmelden</button>
+                                </form>
+                                <a href="sign-up.html"><small>Ich habe noch keinen Account</small></a>
+                            </div>
                         </li>
 
                     </ul>
                 </div>
+
             </div>
         </nav>
 
         <!-- Page Content -->
-        <div class="container">
+        <main class="container">
+            <!-- Pageheading/Breadcrumbs -->
+            <h1 class="mt-4 mb-3">Impressum</h1>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active">Impressum</li>
+            </ol>
 
-        </div>
+            <!-- Content Row -->
+            <div class="row">
+                <div class="col-md-8 mb-4">
+                    <h4 class="my-4">Angaben gemäß §5 TMG</h4>
+                    <address>
+                        Yummy Yogurt KG<br />
+                        An der Technologiewerkstatt 1<br />
+                        Postfach 1337<br />
+                        72461 Albstadt<br />
+                    </address>
+
+                    <h4 class="my-4">Vertreten durch</h4>
+                    <p>
+                        Dardan Rrafshi<br />
+                        Hasan Karadeniz<br />
+                        Martin Hafner<br />
+                        Richard Ries
+                    </p>
+
+                    <h4 class="my-4">Kontakt</h4>
+                    <p>
+                        Telefon: +49 (0) 123 44 55 66<br />
+                        Telefax: +49 (0) 123 44 55 99<br />
+                        E-Mail: yummy-yogurt@info.de
+                    </p>
+
+                    <h4 class="my-4">Registergericht</h4>
+                    <p>
+                        Amtsgericht Albstadt-Ebingen<br />
+                        Registernummer: HRB 13371
+                    </p>
+                    <p></p>
+
+                    <h4 class="my-4">Umsatzsteuer</h4>
+                    <p>
+                        Umsatzsteuer-Identifikationsnummer gemäß §27 a Umsatzsteuergesetz:<br />
+                        DE 999 999 999
+                    </p>
+
+                    <h3 class="mt-5 mb-4">Haftung für Inhalte</h3>
+                    <p class="text-justify">
+                        Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den
+                        allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht
+                        verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen
+                        zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
+                        Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen
+                        Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der
+                        Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden
+                        Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.
+                    </p>
+
+                    <h3 class="mt-5 mb-4">Haftung für Links</h3>
+                    <p class="text-justify">
+                        Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben.
+                        Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der
+                        verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten
+                        Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige
+                        Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar.
+                        Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer
+                        Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links
+                        umgehend entfernen.
+                    </p>
+
+                    <h3 class="mt-5 mb-4">Urheberrecht</h3>
+                    <p class="text-justify">
+                        Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen
+                        Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der
+                        Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw.
+                        Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch
+                        gestattet.
+                        Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter
+                        beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine
+                        Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei
+                        Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
+                    </p>
+                </div>
+            </div>
+        </main>
 
         <!-- Footer -->
-        <footer class="pt-2 pb-5 bg-secondary text-light">
+        <footer class="nice-fix pt-2 pb-5 bg-secondary text-center">
             <div class="container">
-                <div class="mt-2 text-center">
+                <div class="mt-2">
                     <a class="social-media-icon fa fa-linkedin" href="#" target="_blank"></a>
                     <a class="social-media-icon fa fa-twitter-square" href="#" target="_blank"></a>
                     <a class="social-media-icon fa fa-facebook-square" href="https://www.facebook.com/dardan.rrafshi.31" target="_blank"></a>
                     <a class="social-media-icon fa fa-instagram" href="https://www.instagram.com/dr.kolumbus/" target="_blank"></a>
                     <a class="social-media-icon fa fa-youtube" href="https://www.youtube.com/channel/UCoOaD0du25LCn8NOBgV7rCw" target="_blank"></a>
                 </div>
-                <p class="mt-2 text-center"><small>Copyright &copy; Your Website 2018</small></p>
-                <div class="mt-2 text-center">
+                <p class="mt-2 text-white"><small>Copyright &copy; DaHaMaRi 2018</small></p>
+                <div class="mt-2">
                     <a class="mr-2 text-white" href="contact.html">Kontakt</a>
                     <a class="mr-2 text-white" href="impressum.html">Impressum</a>
                     <a class="mr-2 text-white" href="about.html">Über uns</a>
