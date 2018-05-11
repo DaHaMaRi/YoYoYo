@@ -1,0 +1,70 @@
+package entity;
+
+import java.io.Serializable;
+import java.time.LocalDate;
+
+import javax.persistence.*;
+
+/*create table Benutzer(
+	    ID              int           primary key,
+	    Vorname         varchar(64)   not null,
+	    Nachname        varchar(64)   not null,
+	    Benutzername    varchar(64)   not null unique,
+	    Email           varchar(64)   not null unique,
+	    Geburtsdatum    date          not null,
+	    AdressID        int           not null,
+	    Passwort        varchar(1024) not null,
+	    Beitrittsdatum  date          not null,
+	    constraint checkDatum check(Geburtsdatum < Beitrittsdatum)
+);*/
+
+@Entity
+@Table(name="Benutzer")
+@NamedQuery(name="User.listAll", query="select u from User u")
+public class User implements Serializable {
+	
+	private static final long serialVersionUID = 4102446862783691913L;
+
+	@Id
+	@Column(name="ID")
+	private int userID;
+	
+	@Column(name="Vorname", nullable=false)
+	private String firstname;
+	
+	@Column(name="Nachname", nullable=false)
+	private String familyname;
+	
+	@Column(name="Benutzername", unique=true, nullable=false)
+	private String username;
+
+	@Column(name="Email", unique=true, nullable=false)
+	private String email;
+	
+	@Column(name="Geburtsdatum", nullable=false)
+	private LocalDate birthday;
+	
+	@ManyToOne
+	@JoinColumn(name="AdressID", nullable=false)
+	private Address address;
+	
+	@Column(name="Beitrittsdatum", nullable=false)
+	private LocalDate accessiondate;
+	
+	public User() {}
+
+	public User(int userID, String firstname, String familyname, String username, 
+			String email, LocalDate birthday, Address address, LocalDate accessiondate) {
+		this.userID = userID;
+		this.firstname = firstname;
+		this.familyname = familyname;
+		this.username = username;
+		this.email = email;
+		this.birthday = birthday;
+		this.address = address;
+		this.accessiondate = accessiondate;
+	}
+
+	
+
+}

@@ -1,0 +1,364 @@
+/*!
+ * Start Bootstrap - Modern Business (https://startbootstrap.com/template-overviews/modern-business)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-logomodern-business-nav/blob/master/LICENSE)
+ */
+
+ :root {
+   --footer-height: 180px;
+ }
+
+body {
+    background-color: rgb(236, 236, 237);
+    padding-top: 54px;
+    margin-bottom: var(--footer-height);
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+.nice-fix {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: var(--footer-height);
+  background-color: #f5f5f5;
+}
+
+
+.carousel-item {
+  height: 65vh;
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.portfolio-item {
+  margin-bottom: 30px;
+}
+
+/* Own designs----------------------------------------------------------------*/
+.non-hover-button {
+    background: rgb(87, 127, 189);
+    color: white;
+    letter-spacing: 3px;
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+.button {
+    background: transparent;
+    border: 1px solid rgb(87, 127, 189);
+    color: rgb(87, 127, 189);
+    letter-spacing: 3px;
+    margin: 15px 0;
+    cursor: pointer;
+    transition: color 0.5s;
+    transition: background-color 0.5s;
+}
+
+.button:hover {
+    color: rgb(236, 236, 237);
+    background-color: rgb(87, 127, 189);
+}
+
+.rating_bar {
+    width: 55px;
+    background: url(/img/star.gif) 0 0 repeat-x;
+}
+
+.buttonbutton {
+    background: transparent;
+    border: 1px solid rgb(87, 127, 189);
+    color: rgb(87, 127, 189);
+    padding: 5px;
+    letter-spacing: 3px;
+    margin: 30px 0;
+    cursor: pointer;
+    transition: color 0.5s;
+    transition: background-color 0.5s;
+}
+/* Center */
+.center-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    height: 350px;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.span-center {
+    text-align: center;
+}
+.ul-center{
+    display: table;
+    margin-right: auto;
+    margin-left: auto;
+}
+/* Toggle-Button */
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.y-scroll {
+    height:600px;
+    overflow-y: scroll;
+}
+
+ul.no-bullets {
+  list-style-type: none;
+}
+
+/*background-colors-----------------------------------------------------------*/
+.bg-vanilla {
+    background-color: rgb(254, 242, 190);
+}
+
+.bg-cream {
+    background-color: rgb(255, 233, 192);
+}
+
+.bg-sunflower {
+    background-color: rgb(250, 254, 153);
+}
+
+.bg-salmon {
+    background-color: rgb(254, 205, 172);
+}
+
+.bg-flamingo {
+    background-color: rgb(253, 203, 230);
+}
+
+.bg-rose {
+    background-color: rgb(248, 180, 219);
+}
+
+.bg-pistachio {
+    background-color: rgb(210, 236, 189);
+}
+
+.bg-middle-green {
+    background-color: rgb(180, 222, 156);
+}
+
+.bg-ice-blue {
+    background-color: rgb(87, 127, 189);
+}
+
+.bg-sky {
+    background-color: rgb(167, 222, 219);
+}
+
+.bg-middle-blue {
+    background-color: rgb(93, 158, 190);
+}
+
+.bg-white-tp {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+
+/* Text-colors----------------------------------------------------------------*/
+.text-vanilla {
+    color: rgb(254, 242, 190);
+}
+
+.text-cream {
+    color: rgb(255, 233, 192);
+}
+
+.text-sunflower {
+    color: rgb(250, 254, 153);
+}
+
+.text-salmon {
+    color: rgb(254, 205, 172);
+}
+
+.text-flamingo {
+    color: rgb(253, 203, 230);
+}
+
+.text-rose {
+    color: rgb(248, 180, 219);
+}
+
+.text-pistachio {
+    color: rgb(210, 236, 189);
+}
+
+.text-middle-green {
+    color: rgb(180, 222, 156);
+}
+
+.text-ice-blue {
+    color: rgb(87, 127, 189);
+}
+
+.text-sky {
+    color: rgb(167, 222, 219);
+}
+
+.text-middle-blue {
+    color: rgb(93, 158, 190);
+}
+
+.text-black {
+    color: rgb(0,0,0);
+}
+
+/* costom-badges--------------------------------------------------------------*/
+.badge-nuts {
+  color: #fff;
+  background-color: #f99b2f;
+}
+
+.badge-nuts[href]:hover, .badge-nuts[href]:focus {
+  color: #fff;
+  text-decoration: none;
+  background-color: #bf6d0f;
+}
+
+.badge-chocolate {
+  color: #fff;
+  background-color: #442400;
+}
+
+.badge-chocolate[href]:hover, .badge-chocolate[href]:focus {
+  color: #fff;
+  text-decoration: none;
+  background-color: #231300;
+}
+
+.badge-fruits {
+  color: #fff;
+  background-color: #ff3838;
+}
+
+.badge-fruits[href]:hover, .badge-fruits[href]:focus {
+  color: #fff;
+  text-decoration: none;
+  background-color: #f71818;
+}
+
+.badge-vegan {
+  color: #fff;
+  background-color: #56ff49;
+}
+
+.badge-vegan[href]:hover, .badge-vegan[href]:focus {
+  color: #fff;
+  text-decoration: none;
+  background-color: #40bc36;
+}
+
+/* Toggle Button Design-------------------------------------------------------*/
+.btn-chocolate {
+  color: #fff;
+  background-color: #442400;
+  border-color: #442400;
+}
+
+.btn-chocolate:hover {
+  color: #fff;
+  background-color: #231300;
+  border-color: #231300;
+}
+
+.btn-chocolate:not(:disabled):not(.disabled):active, .btn-chocolate:not(:disabled):not(.disabled).active,
+.show > .btn-chocolate.dropdown-toggle {
+  color: #fff;
+  background-color: #231300;
+  border-color: #231300;
+}
+
+.btn-sweets {
+  color: #fff;
+  background-color: rgb(248, 180, 219);
+  border-color: rgb(248, 180, 219);
+}
+
+.btn-sweets:hover {
+  color: #fff;
+  background-color: rgb(252, 139, 199);
+  border-color: rgb(252, 139, 199);
+}
+
+.btn-sweets:not(:disabled):not(.disabled):active, .btn-sweets:not(:disabled):not(.disabled).active,
+.show > .btn-sweets.dropdown-toggle {
+  color: #fff;
+  background-color: rgb(252, 139, 199);
+  border-color: rgb(252, 139, 199);
+}

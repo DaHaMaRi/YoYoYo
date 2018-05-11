@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 10 elements from project &apos;YummyYogurt&apos;&#x0D;&#x0A;- Original project: &apos;YummyYogurt&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     css&#x0D;&#x0A;     htdocs&#x0D;&#x0A;     images&#x0D;&#x0A;     mail&#x0D;&#x0A;     scripts&#x0D;&#x0A;     vendor&#x0D;&#x0A;     LICENSE&#x0D;&#x0A;     package.json&#x0D;&#x0A;     package-lock.json&#x0D;&#x0A;     README.md" description="Delete elements" element1="WebContent/package-lock.json" element10="WebContent/package.json" element2="WebContent/htdocs" element3="WebContent/mail" element4="WebContent/LICENSE" element5="WebContent/scripts" element6="WebContent/README.md" element7="WebContent/css" element8="WebContent/images" element9="WebContent/vendor" elements="0" flags="589830" id="org.eclipse.jdt.ui.delete" resources="10" stamp="1526078306633" subPackages="false" version="1.0"/>
+</session>

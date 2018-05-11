@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="author" content="Dardan Rrafshi" />
+        <meta name="keywords" content="Frozen Yogurt, Joghurt, Eis, Toppings, Mixen" />
+        <meta name="description" content="Eine Website um sich seinen eigenen Frozen Yogurt zu mixen" />
+
+        <title>Yummy Yogurt - Kontakt</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+        <!-- Custom styles for this template -->
+        <link href="../css/modern-business.css" rel="stylesheet" />
+        <link href="../css/icon.css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <!-- Navigation -->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Yummy Yogurt</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="about.html">Über uns</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="contact.html">Kontakt  <span class="fa fa-address-book"></span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="service.html">Mixer</a></li>
+                        <li class="nav-item"><a class="nav-link" href="discover.html">Entdecken  <span class="fa fa-search"></span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="shopping-cart.html">Warenkorb  <span class="fa fa-shopping-cart"></span></a></li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownLogIn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Anmelden  <span class="fa fa-user"></span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right p-2" aria-labelledby="navbarDropdownLogIn">
+                                <form action="log-in.html" method="post">
+                                    <label>Benutzername</label>
+                                    <input type="text" name="hallo" value="" />
+
+                                    <label>Passwort</label>
+                                    <input type="text" name="hallo" value="" />
+
+                                    <button type="submit" class="button">Anmelden</button>
+                                </form>
+                                <a href="sign-up.html"><small>Ich habe noch keinen Account</small></a>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+
+        <!-- Page Content -->
+        <main class="container">
+            <!-- Page Heading/Breadcrumbs -->
+            <h1 class="mt-4 mb-3">Kontakt</h1>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active">Kontakt</li>
+            </ol>
+
+            <!-- Content Row -->
+            <div class="row">
+                <div class="col-md-8 mb-4">
+                    <p>
+                        Sie können uns sehr gerne kontaktieren, wenn sie Fragen zu unseren Produkten haben
+                        oder Probleme mit unserem Service haben. Einfach das Formular ausfüllen uns Sie
+                        können uns eine E-Mail schicken.
+                    </p>
+
+                    <!-- Contact Form -->
+                    <!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
+                    <form name="sentMessage" id="contactForm" novalidate>
+                        <div class="control-group form-group">
+                            <div class="controls">
+                                <label><strong>Name:</strong></label>
+                                <input type="text" class="form-control" id="name" required data-validation-required-message="Bitte tragen Sie Ihren Namen ein.">
+                                <p class="help-block"></p>
+                            </div>
+                        </div>
+                        <div class="control-group form-group">
+                            <div class="controls">
+                                <label><strong>Telefonnummer:</strong></label>
+                                <input type="tel" class="form-control" id="phone">
+                            </div>
+                        </div>
+                        <div class="control-group form-group">
+                            <div class="controls">
+                                <label><strong>E-Mail:</strong></label>
+                                <input type="email" class="form-control" id="email" required data-validation-required-message="Bitte tragen Sie Ihre E-Mail Adresse ein.">
+                            </div>
+                        </div>
+                        <div class="control-group form-group">
+                            <div class="controls">
+                                <label><strong>Nachricht:</strong></label>
+                                <textarea rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Bitte geben Sie eine Nachricht ein" maxlength="999" style="resize:none"></textarea>
+                            </div>
+                        </div>
+                        <div id="success"></div>
+                        <!-- For success/fail messages -->
+                        <button type="submit" class="button" id="sendMessageButton">Senden</button>
+                    </form>
+                </div>
+
+                <!-- Contact Details Column -->
+                <aside class="col-md-4 mb-4">
+                    <address>
+                        <h4>E-Mail</h4>
+                        <p><a href="mailto:yummy-yogurt@info.com">yummy-yogurt@info.com</a></p>
+
+                        <h4>Telefon</h4>
+                        <p>+49 (0) 123 44 55 66</p>
+
+                        <h4>Adresse</h4>
+                        <p>
+                            Yummy Yogurt KG<br/>
+                            An der Technologiewerkstatt 1<br/>
+                            Postfach 1337<br/>
+                            72461 Albstadt
+                        </p>
+                    </address>
+                </aside>
+
+            </div>
+        </main>
+
+        <!-- Embedded Google Map -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1579.5815751870557!2d9.012715154559006!3d48.25419415034408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479a04d29145bcaf%3A0x368c9c4648e68732!2sTechnologiewerkstatt+Albstadt!5e0!3m2!1sde!2sde!4v1523118370749"
+            width="100%" height="500" frameborder="0" style="border:0" allowfullscreen>
+        </iframe>
+
+        <!-- Footer -->
+        <footer class="pt-2 pb-5 bg-secondary text-center nice-fix">
+            <div class="container">
+                <div class="mt-2">
+                    <a class="social-media-icon fa fa-linkedin" href="#" target="_blank"></a>
+                    <a class="social-media-icon fa fa-twitter-square" href="#" target="_blank"></a>
+                    <a class="social-media-icon fa fa-facebook-square" href="https://www.facebook.com/dardan.rrafshi.31" target="_blank"></a>
+                    <a class="social-media-icon fa fa-instagram" href="https://www.instagram.com/dr.kolumbus/" target="_blank"></a>
+                    <a class="social-media-icon fa fa-youtube" href="https://www.youtube.com/channel/UCoOaD0du25LCn8NOBgV7rCw" target="_blank"></a>
+                </div>
+                <p class="mt-2 text-white"><small>Copyright &copy; DaHaMaRi 2018</small></p>
+                <div class="mt-2">
+                    <a class="mr-2 text-white" href="contact.html">Kontakt</a>
+                    <a class="mr-2 text-white" href="impressum.html">Impressum</a>
+                    <a class="mr-2 text-white" href="about.html">Über uns</a>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Bootstrap core JavaScript -->
+        <script src="../vendor/jquery/jquery.min.js"></script>
+        <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Contact form JavaScript -->
+        <!-- Do not edit these files! In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
+        <script src="../scripts/jqBootstrapValidation.js"></script>
+        <script src="../scripts/contact_me.js"></script>
+
+    </body>
+</html>
