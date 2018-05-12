@@ -1,0 +1,139 @@
+package entity;
+
+import java.io.Serializable;
+import java.time.LocalDate;
+
+import javax.persistence.*;
+
+/*create table Benutzer(
+	    ID              int           primary key,
+	    Vorname         varchar(64)   not null,
+	    Nachname        varchar(64)   not null,
+	    Benutzername    varchar(64)   not null unique,
+	    Email           varchar(64)   not null unique,
+	    Geburtsdatum    date          not null,
+	    AdressID        int           not null,
+	    Passwort        varchar(1024) not null,
+	    Beitrittsdatum  date          not null,
+	    constraint checkDatum check(Geburtsdatum < Beitrittsdatum)
+);*/
+
+@Entity
+@Table(name="Benutzer")
+@NamedQuery(name="User.listAll", query="select u from User u")
+public class User implements Serializable {
+	
+	private static final long serialVersionUID = 4102446862783691913L;
+
+	@Id
+	@Column(name="ID")
+	private int userID;
+	
+	@Column(name="Vorname", nullable=false)
+	private String firstname;
+	
+	@Column(name="Nachname", nullable=false)
+	private String familyname;
+	
+	@Column(name="Benutzername", unique=true, nullable=false)
+	private String username;
+
+	@Column(name="Email", unique=true, nullable=false)
+	private String email;
+	
+	@Column(name="Geburtsdatum", nullable=false)
+	private LocalDate birthday;
+	
+	@ManyToOne(cascade=CascadeType.ALL)
+	@JoinColumn(name="AdressID", nullable=false)
+	private Address address;
+	
+	@Column(name="Beitrittsdatum", nullable=false)
+	private LocalDate accessiondate;
+	
+	public User() {}
+
+	public User(int userID, String firstname, String familyname, String username, 
+			String email, LocalDate birthday, Address address, LocalDate accessiondate) {
+		this.userID = userID;
+		this.firstname = firstname;
+		this.familyname = familyname;
+		this.username = username;
+		this.email = email;
+		this.birthday = birthday;
+		this.address = address;
+		this.accessiondate = accessiondate;
+	}
+
+	@Override
+	public String toString() {
+		return "User [userID=" + userID + ", firstname=" + firstname + ", familyname=" + familyname + ", username="
+				+ username + ", email=" + email + ", birthday=" + birthday + "\n\taddress=" + address + ", accessiondate="
+				+ accessiondate + "]";
+	}
+
+	public int getUserID() {
+		return userID;
+	}
+
+	public void setUserID(int userID) {
+		this.userID = userID;
+	}
+
+	public String getFirstname() {
+		return firstname;
+	}
+
+	public void setFirstname(String firstname) {
+		this.firstname = firstname;
+	}
+
+	public String getFamilyname() {
+		return familyname;
+	}
+
+	public void setFamilyname(String familyname) {
+		this.familyname = familyname;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public LocalDate getBirthday() {
+		return birthday;
+	}
+
+	public void setBirthday(LocalDate birthday) {
+		this.birthday = birthday;
+	}
+
+	public Address getAddress() {
+		return address;
+	}
+
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+
+	public LocalDate getAccessiondate() {
+		return accessiondate;
+	}
+
+	public void setAccessiondate(LocalDate accessiondate) {
+		this.accessiondate = accessiondate;
+	}
+
+}

@@ -1,5 +1,7 @@
 package entity;
 
+import java.io.Serializable;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,6 +10,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
+
 
 /*create table Zutat(
 	    ID    int           primary key,
@@ -22,13 +25,15 @@ import javax.persistence.Table;
 @Entity
 @Table(name="Zutat")
 @NamedQuery(name="Ingredient.listAll", query="select i from Ingredient i")
-public class Ingredient {
+public class Ingredient implements Serializable {
 	
+	private static final long serialVersionUID = -4899690730111444088L;
+
 	@Id
 	@Column(name="ID")
 	private int ingredientID;
 	
-	@Column(unique=true, nullable=false)
+	@Column(name="Name", unique=true, nullable=false)
 	private String name;
 	
 	@Column(name="Vegan", nullable=false)

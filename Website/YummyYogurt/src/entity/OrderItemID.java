@@ -3,7 +3,9 @@ package entity;
 import java.io.Serializable;
 import java.util.Objects;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Embeddable;
+
 
 @Embeddable
 public class OrderItemID implements Serializable{

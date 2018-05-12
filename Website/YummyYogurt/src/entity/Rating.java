@@ -1,5 +1,7 @@
 package entity;
 
+import java.io.Serializable;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
@@ -8,6 +10,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
+
 
 /*create table Bewertung(
 	    BenutzerID   int,
@@ -21,8 +24,10 @@ import javax.persistence.Table;
 @Entity
 @Table(name="Bewertung")
 @NamedQuery(name="Rating.listAll", query="select r from Rating r")
-public class Rating {
+public class Rating implements Serializable {
 	
+	private static final long serialVersionUID = 5767727589601503395L;
+
 	@EmbeddedId
 	private RatingID ratingID;
 	

@@ -8,6 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
+
 /*create table Zutatenkategorie(
 	    ID    int         primary key,
 	    Name  varchar(64) unique not null,
@@ -26,7 +27,7 @@ public class Category implements Serializable {
 	@Column(name="ID")
 	private int categoryID;
 	
-	@Column(unique=true, nullable=false)
+	@Column(name="Name", unique=true, nullable=false)
 	private String name;
 	
 	@Column(name="preis", nullable=false)

@@ -1,6 +1,15 @@
 package entity;
 
-import javax.persistence.*;
+import java.io.Serializable;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.EmbeddedId;
+import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
 
 /*create table Bestellposition(
     BestellungID  int,
@@ -14,8 +23,10 @@ import javax.persistence.*;
 
 @Entity
 @Table(name="Bestellposition")
-public class OrderItem {
+public class OrderItem implements Serializable {
 	
+	private static final long serialVersionUID = -632106431641713377L;
+
 	@EmbeddedId
 	private OrderItemID orderItemID;
 	

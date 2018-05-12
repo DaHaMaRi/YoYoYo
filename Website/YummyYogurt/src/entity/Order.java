@@ -1,8 +1,15 @@
 package entity;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
 
 /*create table Bestellung(
 	    ID           int  primary key,
@@ -14,8 +21,10 @@ import javax.persistence.*;
 
 @Entity
 @Table(name="Bestellung")
-public class Order {
+public class Order implements Serializable {
 	
+	private static final long serialVersionUID = 1019596392287525485L;
+
 	@Id
 	@Column(name="ID")
 	private int orderID;
