@@ -18,14 +18,12 @@ public class OrderItemID implements Serializable{
 	@Column(name="YogurtID", nullable=false)
 	private int yogurtID;
 	
-	
 	public OrderItemID() {}
 
 	public OrderItemID(int orderID, int yogurtID) {
 		this.orderID = orderID;
 		this.yogurtID = yogurtID;
 	}
-	
 	
 	@Override
 	public String toString() {
@@ -50,13 +48,20 @@ public class OrderItemID implements Serializable{
 		return Objects.hash(this.orderID, this.yogurtID);
 	}
 	
-	
 	public int getOrderID() {
 		return orderID;
 	}
 
+	public void setOrderID(int orderID) {
+		this.orderID = orderID;
+	}
+
 	public int getYogurtID() {
 		return yogurtID;
+	}
+
+	public void setYogurtID(int yogurtID) {
+		this.yogurtID = yogurtID;
 	}
 	
 }

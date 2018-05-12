@@ -65,16 +65,17 @@ public class Order implements Serializable {
 		if(this.getClass() != object.getClass())
 			return false;
 		
-		Order other = (Order) object;
-		return Objects.equals(this.orderID, other.getOrderID())
-			&& Objects.equals(this.user, other.getUser())
-			&& Objects.equals(this.totalPrice, other.getTotalPrice())
-			&& Objects.equals(this.orderdate, other.getOrderdate());
+		Order order = (Order) object;
+		return Objects.equals(this.orderID, order.getOrderID())
+			&& Objects.equals(this.user, order.getUser())
+			&& Objects.equals(this.totalPrice, order.getTotalPrice())
+			&& Objects.equals(this.orderdate, order.getOrderdate());
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(this.orderID, this.user, this.totalPrice, this.orderdate);
+		// TODO Auto-generated method stub
+		return super.hashCode();
 	}
 	
 

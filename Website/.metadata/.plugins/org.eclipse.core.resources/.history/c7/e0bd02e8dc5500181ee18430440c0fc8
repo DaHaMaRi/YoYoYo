@@ -58,14 +58,16 @@ public class Category implements Serializable {
 		if(this.getClass() != object.getClass())
 			return false;
 		
-		Category other = (Category) object;
-		return Objects.equals(this.categoryID, other.getCategoryID())
-			&& Objects.equals(this.name, other.getName());
+		Category category = (Category) object;
+		return Objects.equals(this.categoryID, category.getCategoryID())
+			&& Objects.equals(this.name, category.getName())
+			&& Objects.equals(this.priceInCents, category.getPriceInCents());
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(this.categoryID, this.name);
+		// TODO Auto-generated method stub
+		return super.hashCode();
 	}
 
 	

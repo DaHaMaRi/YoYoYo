@@ -105,6 +105,7 @@ public class User implements Serializable {
 	public int hashCode() {
 		return Objects.hash(this.userID, this.firstname, this.familyname, this.username,
 					this.email, this.address, this.accessiondate);
+				
 	}
 	
 

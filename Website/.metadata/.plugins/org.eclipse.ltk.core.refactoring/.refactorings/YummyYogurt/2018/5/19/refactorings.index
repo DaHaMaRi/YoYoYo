@@ -1,1 +1,6 @@
 1526078306633	Delete elements
+1526128128131	Rename local variable 'address'
+1526128138594	Rename local variable 'category'
+1526128149618	Rename local variable 'ingredient'
+1526128279663	Rename local variable 'order'
+1526128290592	Rename local variable 'orderItem'

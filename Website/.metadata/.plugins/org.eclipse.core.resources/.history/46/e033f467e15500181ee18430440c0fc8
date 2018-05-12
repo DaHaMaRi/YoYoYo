@@ -2,7 +2,6 @@ package entity;
 
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.util.Objects;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -60,7 +59,6 @@ public class User implements Serializable {
 	@Column(name="Beitrittsdatum", nullable=false)
 	private LocalDate accessiondate;
 	
-	
 	public User() {}
 
 	public User(int userID, String firstname, String familyname, String username, 
@@ -74,7 +72,6 @@ public class User implements Serializable {
 		this.address = address;
 		this.accessiondate = accessiondate;
 	}
-	
 
 	@Override
 	public String toString() {
@@ -82,31 +79,6 @@ public class User implements Serializable {
 				+ username + ", email=" + email + ", birthday=" + birthday + "\n\taddress=" + address + ", accessiondate="
 				+ accessiondate + "]";
 	}
-
-	@Override
-	public boolean equals(Object object) {
-		if(object == null) return false;
-		if(this == object) return true;
-		
-		if(this.getClass() != object.getClass())
-			return false;
-		
-		User other = (User) object;
-		return Objects.equals(this.userID, other.getUserID())
-			&& Objects.equals(this.firstname, other.getFirstname())
-			&& Objects.equals(this.familyname, other.getFamilyname())
-			&& Objects.equals(this.username, other.getUsername())
-			&& Objects.equals(this.email, other.getEmail())
-			&& Objects.equals(this.address, other.getAddress())
-			&& Objects.equals(this.accessiondate, other.getAccessiondate());
-	}
-
-	@Override
-	public int hashCode() {
-		return Objects.hash(this.userID, this.firstname, this.familyname, this.username,
-					this.email, this.address, this.accessiondate);
-	}
-	
 
 	public int getUserID() {
 		return userID;

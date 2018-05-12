@@ -73,13 +73,13 @@ public class Address implements Serializable {
 		if(this.getClass() != object.getClass())
 			return false;
 		
-		Address other = (Address) object;
-		return Objects.equals(this.addressID, other.getAddressID())
-			&& Objects.equals(this.streetname, other.getStreetname())
-			&& Objects.equals(this.streetnumber, other.getStreetnumber())
-			&& Objects.equals(this.additional, other.getAdditional())
-			&& Objects.equals(this.postalCode, other.getPostalCode())
-			&& Objects.equals(this.city, other.getCity());
+		Address address = (Address) object;
+		return Objects.equals(this.addressID, address.getAddressID())
+			&& Objects.equals(this.streetname, address.getStreetname())
+			&& Objects.equals(this.streetnumber, address.getStreetnumber())
+			&& Objects.equals(this.additional, address.getAdditional())
+			&& Objects.equals(this.postalCode, address.getPostalCode())
+			&& Objects.equals(this.city, address.getCity());
 	}
 
 	@Override

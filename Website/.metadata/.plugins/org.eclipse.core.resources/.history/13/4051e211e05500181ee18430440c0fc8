@@ -74,10 +74,12 @@ public class Ingredient implements Serializable {
 		if(this.getClass() != object.getClass())
 			return false;
 		
-		Ingredient other = (Ingredient) object;
-		return Objects.equals(this.ingredientID, other.getIngredientID())
-			&& Objects.equals(this.name, other.getName())
-			&& Objects.equals(this.category, other.getCategory());
+		Ingredient ingredient = (Ingredient) object;
+		return Objects.equals(this.ingredientID, ingredient.getIngredientID())
+			&& Objects.equals(this.name, ingredient.getName())
+			&& Objects.equals(this.isVegan, ingredient.isVegan())
+			&& Objects.equals(this.isHaram, ingredient.isHaram())
+			&& Objects.equals(this.category, ingredient.getCategory());
 	}
 
 	@Override

@@ -77,6 +77,8 @@ public class Ingredient implements Serializable {
 		Ingredient other = (Ingredient) object;
 		return Objects.equals(this.ingredientID, other.getIngredientID())
 			&& Objects.equals(this.name, other.getName())
+			&& Objects.equals(this.isVegan, other.isVegan())
+			&& Objects.equals(this.isHaram, other.isHaram())
 			&& Objects.equals(this.category, other.getCategory());
 	}
 

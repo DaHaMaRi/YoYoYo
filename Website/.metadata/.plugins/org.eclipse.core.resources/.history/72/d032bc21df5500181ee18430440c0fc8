@@ -41,7 +41,7 @@ public class OrderItem implements Serializable {
 	
 	@Column(name="Menge", nullable=false)
 	private int amount;
-	
+
 	
 	public OrderItem() {}
 
@@ -67,11 +67,11 @@ public class OrderItem implements Serializable {
 		if(this.getClass() != object.getClass())
 			return false;
 		
-		OrderItem other = (OrderItem) object;
-		return Objects.equals(this.orderItemID, other.getOrderItemID())
-			&& Objects.equals(this.order, other.getOrder())
-			&& Objects.equals(this.yogurt, other.getYogurt())
-			&& Objects.equals(this.amount, other.getAmount());
+		OrderItem orderItem = (OrderItem) object;
+		return Objects.equals(this.orderItemID, orderItem.getOrderItemID())
+			&& Objects.equals(this.order, orderItem.getOrder())
+			&& Objects.equals(this.yogurt, orderItem.getYogurt())
+			&& Objects.equals(this.amount, orderItem.getAmount());
 	}
 
 	@Override

@@ -1,7 +1,6 @@
 package entity;
 
 import java.io.Serializable;
-import java.util.Objects;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -47,7 +46,6 @@ public class Ingredient implements Serializable {
 	@JoinColumn(name="ZutatenkategorieID", nullable=false)
 	private Category category;
 	
-	
 	public Ingredient() {}
 
 	public Ingredient(int ingredientID, String name, 
@@ -58,34 +56,12 @@ public class Ingredient implements Serializable {
 		this.isHaram = isHaram;
 		this.category = category;
 	}
-	
 
 	@Override
 	public String toString() {
 		return "Ingredient [ingredientID=" + ingredientID + ", name=" + name + ", isVegan=" + isVegan + ", isHaram="
 				+ isHaram + "\n\tcategory=" + category + "]";
 	}
-
-	@Override
-	public boolean equals(Object object) {
-		if(object == null) return false;
-		if(this == object) return true;
-		
-		if(this.getClass() != object.getClass())
-			return false;
-		
-		Ingredient other = (Ingredient) object;
-		return Objects.equals(this.ingredientID, other.getIngredientID())
-			&& Objects.equals(this.name, other.getName())
-			&& Objects.equals(this.category, other.getCategory());
-	}
-
-	@Override
-	public int hashCode() {
-		return Objects.hash(this.ingredientID, this.name,
-					this.isVegan, this.isHaram, this.category);
-	}
-	
 
 	public int getIngredientID() {
 		return ingredientID;

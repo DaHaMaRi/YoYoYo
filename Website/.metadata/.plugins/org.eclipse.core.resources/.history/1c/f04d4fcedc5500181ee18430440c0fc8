@@ -1,7 +1,6 @@
 package entity;
 
 import java.io.Serializable;
-import java.util.Objects;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -34,7 +33,6 @@ public class Category implements Serializable {
 	@Column(name="preis", nullable=false)
 	private int priceInCents;
 	
-	
 	public Category() {}
 
 	public Category(int categoryID, String name, int priceInCents) {
@@ -43,32 +41,12 @@ public class Category implements Serializable {
 		this.priceInCents = priceInCents;
 	}
 
-	
 	@Override
 	public String toString() {
 		return "IngredientCategory [categoryID=" + categoryID + ", name=" + name 
 					+ ", priceInCents=" + priceInCents + "]";
 	}
-	
-	@Override
-	public boolean equals(Object object) {
-		if(object == null) return false;
-		if(this == object) return true;
-		
-		if(this.getClass() != object.getClass())
-			return false;
-		
-		Category other = (Category) object;
-		return Objects.equals(this.categoryID, other.getCategoryID())
-			&& Objects.equals(this.name, other.getName());
-	}
 
-	@Override
-	public int hashCode() {
-		return Objects.hash(this.categoryID, this.name);
-	}
-
-	
 	public int getCategoryID() {
 		return categoryID;
 	}

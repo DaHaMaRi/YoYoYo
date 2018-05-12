@@ -55,8 +55,16 @@ public class OrderItemID implements Serializable{
 		return orderID;
 	}
 
+	public void setOrderID(int orderID) {
+		this.orderID = orderID;
+	}
+
 	public int getYogurtID() {
 		return yogurtID;
+	}
+
+	public void setYogurtID(int yogurtID) {
+		this.yogurtID = yogurtID;
 	}
 	
 }

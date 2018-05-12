@@ -18,7 +18,6 @@ public class RatingID implements Serializable {
 	@Column(name="YogurtID", nullable=false)
 	private int yogurtID;
 	
-	
 	public RatingID() {}
 
 	public RatingID(int userID, int yogurtID) {
@@ -26,7 +25,6 @@ public class RatingID implements Serializable {
 		this.yogurtID = yogurtID;
 	}
 
-	
 	@Override
 	public String toString() {
 		return "RatingPK [userID=" + userID + ", yogurtID=" + yogurtID + "]";
@@ -50,7 +48,6 @@ public class RatingID implements Serializable {
 		return Objects.hash(this.userID, this.yogurtID);
 	}
 
-	
 	public int getUserID() {
 		return userID;
 	}
