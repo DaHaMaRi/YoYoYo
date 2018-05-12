@@ -93,17 +93,27 @@ public class User implements Serializable {
 		
 		User other = (User) object;
 		return Objects.equals(this.userID, other.getUserID())
+			&& Objects.equals(this.firstname, other.getFirstname())
+			&& Objects.equals(this.familyname, other.getFamilyname())
+			&& Objects.equals(this.username, other.getUsername())
+			&& Objects.equals(this.email, other.getEmail())
+			&& Objects.equals(this.address, other.getAddress())
 			&& Objects.equals(this.accessiondate, other.getAccessiondate());
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(this.userID, this.accessiondate);
+		return Objects.hash(this.userID, this.firstname, this.familyname, this.username,
+					this.email, this.address, this.accessiondate);
 	}
 	
 
 	public int getUserID() {
 		return userID;
+	}
+
+	public void setUserID(int userID) {
+		this.userID = userID;
 	}
 
 	public String getFirstname() {
@@ -142,6 +152,10 @@ public class User implements Serializable {
 		return birthday;
 	}
 
+	public void setBirthday(LocalDate birthday) {
+		this.birthday = birthday;
+	}
+
 	public Address getAddress() {
 		return address;
 	}
@@ -152,6 +166,10 @@ public class User implements Serializable {
 
 	public LocalDate getAccessiondate() {
 		return accessiondate;
+	}
+
+	public void setAccessiondate(LocalDate accessiondate) {
+		this.accessiondate = accessiondate;
 	}
 
 }

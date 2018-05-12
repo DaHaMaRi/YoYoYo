@@ -87,8 +87,16 @@ public class Yogurt implements Serializable {
 		return yogurtID;
 	}
 
+	public void setYogurtID(int yogurtID) {
+		this.yogurtID = yogurtID;
+	}
+
 	public String getName() {
 		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public boolean isVisible() {
@@ -105,8 +113,16 @@ public class Yogurt implements Serializable {
 		return owner;
 	}
 
+	public void setOwner(User owner) {
+		this.owner = owner;
+	}
+
 	public List<Ingredient> getRecipe() {
 		return recipe;
+	}
+
+	public void setRecipe(List<Ingredient> recipe) {
+		this.recipe = recipe;
 	}
 
 }

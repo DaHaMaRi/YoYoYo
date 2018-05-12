@@ -90,8 +90,16 @@ public class Ingredient implements Serializable {
 		return ingredientID;
 	}
 
+	public void setIngredientID(int ingredientID) {
+		this.ingredientID = ingredientID;
+	}
+
 	public String getName() {
 		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public boolean isVegan() {
@@ -116,6 +124,10 @@ public class Ingredient implements Serializable {
 
 	public Category getCategory() {
 		return category;
+	}
+
+	public void setCategory(Category category) {
+		this.category = category;
 	}
 	
 }

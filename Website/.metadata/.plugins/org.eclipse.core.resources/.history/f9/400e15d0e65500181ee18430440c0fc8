@@ -82,16 +82,32 @@ public class Order implements Serializable {
 		return orderID;
 	}
 
+	public void setOrderID(int orderID) {
+		this.orderID = orderID;
+	}
+
 	public User getUser() {
 		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
 	}
 
 	public int getTotalPrice() {
 		return totalPrice;
 	}
-	
+
+	public void setTotalPrice(int totalPrice) {
+		this.totalPrice = totalPrice;
+	}
+
 	public LocalDateTime getOrderdate() {
 		return orderdate;
+	}
+
+	public void setOrderdate(LocalDateTime orderdate) {
+		this.orderdate = orderdate;
 	}
 
 }

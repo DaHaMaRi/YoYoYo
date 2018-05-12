@@ -84,12 +84,24 @@ public class Rating implements Serializable {
 		return ratingID;
 	}
 
+	public void setRatingID(RatingID ratingID) {
+		this.ratingID = ratingID;
+	}
+
 	public User getUser() {
 		return user;
 	}
 
+	public void setUser(User user) {
+		this.user = user;
+	}
+
 	public Yogurt getYogurt() {
 		return yogurt;
+	}
+
+	public void setYogurt(Yogurt yogurt) {
+		this.yogurt = yogurt;
 	}
 
 	public int getRating() {
