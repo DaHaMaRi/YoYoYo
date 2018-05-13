@@ -53,7 +53,7 @@ public final class User implements Serializable {
 	@Column(name="Geburtsdatum", nullable=false)
 	private LocalDate birthday;
 	
-	@ManyToOne(cascade=CascadeType.ALL)
+	@ManyToOne(cascade=CascadeType.PERSIST)
 	@JoinColumn(name="AdressID", nullable=false)
 	private Address address;
 	

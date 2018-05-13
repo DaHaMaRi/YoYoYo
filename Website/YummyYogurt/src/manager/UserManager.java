@@ -15,10 +15,12 @@ public class UserManager {
 	
 	private EntityManager manager;
 	
+	
 	public UserManager(String persistenceUnitName) {
 		EntityManagerFactory factory = Persistence.createEntityManagerFactory(persistenceUnitName);
 		this.manager = factory.createEntityManager();
 	}
+	
 	
 	public List<User> listAll() {
 		TypedQuery<User> query = manager.createNamedQuery("User.listAll", User.class);

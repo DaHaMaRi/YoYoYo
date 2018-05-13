@@ -3,7 +3,6 @@ package entity;
 import java.io.Serializable;
 import java.util.Objects;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
@@ -31,11 +30,11 @@ public final class OrderItem implements Serializable {
 	@EmbeddedId
 	private OrderItemID orderItemID;
 	
-	@ManyToOne(cascade=CascadeType.ALL)
+	@ManyToOne
 	@JoinColumn(name="BestellungID", insertable=false, updatable=false)
 	private Order order;
 	
-	@ManyToOne(cascade=CascadeType.ALL)
+	@ManyToOne
 	@JoinColumn(name="YogurtID", insertable=false, updatable=false)
 	private Yogurt yogurt;
 	

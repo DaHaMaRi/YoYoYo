@@ -3,7 +3,6 @@ package entity;
 import java.io.Serializable;
 import java.util.Objects;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
@@ -32,11 +31,11 @@ public final class Rating implements Serializable {
 	@EmbeddedId
 	private RatingID ratingID;
 	
-	@ManyToOne(cascade=CascadeType.ALL)
+	@ManyToOne
 	@JoinColumn(name="BenutzerID", insertable=false, updatable=false)
 	private User evaluator;
 	
-	@ManyToOne(cascade=CascadeType.ALL)
+	@ManyToOne
 	@JoinColumn(name="YogurtID", insertable=false, updatable=false)
 	private Yogurt yogurt;
 	

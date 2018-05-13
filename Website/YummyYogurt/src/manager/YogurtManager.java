@@ -15,10 +15,12 @@ public class YogurtManager {
 	
 	private EntityManager manager;
 	
+	
 	public YogurtManager(String persistenceUnitName) {
 		EntityManagerFactory factory = Persistence.createEntityManagerFactory(persistenceUnitName);
 		this.manager = factory.createEntityManager();
 	}
+	
 	
 	public List<Yogurt> listAll() {
 		TypedQuery<Yogurt> query = manager.createNamedQuery("Yogurt.listAll", Yogurt.class);

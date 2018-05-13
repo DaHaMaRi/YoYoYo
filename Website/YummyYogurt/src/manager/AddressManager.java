@@ -15,10 +15,12 @@ public class AddressManager {
 	
 	private EntityManager manager;
 	
+	
 	public AddressManager(String persistenceUnitName) {
 		EntityManagerFactory factory = Persistence.createEntityManagerFactory(persistenceUnitName);
 		this.manager = factory.createEntityManager();
 	}
+	
 	
 	public List<Address> listAll() {
 		TypedQuery<Address> query = manager.createNamedQuery("Address.listAll", Address.class);

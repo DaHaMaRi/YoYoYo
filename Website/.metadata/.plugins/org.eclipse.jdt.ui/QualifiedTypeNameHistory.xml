@@ -30,4 +30,5 @@
 <fullyQualifiedTypeName name="entity.Rating"/>
 <fullyQualifiedTypeName name="entity.Yogurt"/>
 <fullyQualifiedTypeName name="java.util.Objects"/>
+<fullyQualifiedTypeName name="java.lang.Boolean"/>
 </qualifiedTypeNameHistroy>
