@@ -8,7 +8,7 @@ import javax.persistence.Embeddable;
 
 
 @Embeddable
-public class RatingID implements Serializable {
+public final class RatingID implements Serializable {
 
 	private static final long serialVersionUID = -6468692932627379275L;
 
@@ -21,7 +21,7 @@ public class RatingID implements Serializable {
 	
 	public RatingID() {}
 
-	public RatingID(int userID, int yogurtID) {
+	public RatingID(final int userID, final int yogurtID) {
 		this.userID = userID;
 		this.yogurtID = yogurtID;
 	}

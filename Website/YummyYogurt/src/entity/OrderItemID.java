@@ -8,7 +8,7 @@ import javax.persistence.Embeddable;
 
 
 @Embeddable
-public class OrderItemID implements Serializable{
+public final class OrderItemID implements Serializable{
 
 	private static final long serialVersionUID = 6057115042508716061L;
 
@@ -21,7 +21,7 @@ public class OrderItemID implements Serializable{
 	
 	public OrderItemID() {}
 
-	public OrderItemID(int orderID, int yogurtID) {
+	public OrderItemID(final int orderID, final int yogurtID) {
 		this.orderID = orderID;
 		this.yogurtID = yogurtID;
 	}

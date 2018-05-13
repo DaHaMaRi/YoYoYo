@@ -30,7 +30,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name="Benutzer")
 @NamedQuery(name="User.listAll", query="select u from User u")
-public class User implements Serializable {
+public final class User implements Serializable {
 	
 	private static final long serialVersionUID = 4102446862783691913L;
 
@@ -63,8 +63,12 @@ public class User implements Serializable {
 	
 	public User() {}
 
-	public User(int userID, String firstname, String familyname, String username, 
-			String email, LocalDate birthday, Address address, LocalDate accessiondate) {
+	public User(final int userID, final String firstname, final String familyname, final String username, 
+				final String email, final LocalDate birthday, final Address address, final LocalDate accessiondate) {
+		Objects.requireNonNull(birthday, "birthday is null");
+		Objects.requireNonNull(address, "address is null");
+		Objects.requireNonNull(accessiondate, "accessiondate is null");
+		
 		this.userID = userID;
 		this.firstname = firstname;
 		this.familyname = familyname;
@@ -110,7 +114,7 @@ public class User implements Serializable {
 		return firstname;
 	}
 
-	public void setFirstname(String firstname) {
+	public void setFirstname(final String firstname) {
 		this.firstname = firstname;
 	}
 
@@ -118,7 +122,7 @@ public class User implements Serializable {
 		return familyname;
 	}
 
-	public void setFamilyname(String familyname) {
+	public void setFamilyname(final String familyname) {
 		this.familyname = familyname;
 	}
 
@@ -126,7 +130,7 @@ public class User implements Serializable {
 		return username;
 	}
 
-	public void setUsername(String username) {
+	public void setUsername(final String username) {
 		this.username = username;
 	}
 
@@ -134,7 +138,7 @@ public class User implements Serializable {
 		return email;
 	}
 
-	public void setEmail(String email) {
+	public void setEmail(final String email) {
 		this.email = email;
 	}
 
@@ -146,8 +150,8 @@ public class User implements Serializable {
 		return address;
 	}
 
-	public void setAddress(Address address) {
-		this.address = address;
+	public void setAddress(final Address address) {
+		this.address = Objects.requireNonNull(address, "address is null");
 	}
 
 	public LocalDate getAccessiondate() {

@@ -25,7 +25,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name="Bewertung")
 @NamedQuery(name="Rating.listAll", query="select r from Rating r")
-public class Rating implements Serializable {
+public final class Rating implements Serializable {
 	
 	private static final long serialVersionUID = 5767727589601503395L;
 
@@ -34,7 +34,7 @@ public class Rating implements Serializable {
 	
 	@ManyToOne(cascade=CascadeType.ALL)
 	@JoinColumn(name="BenutzerID", insertable=false, updatable=false)
-	private User user;
+	private User evaluator;
 	
 	@ManyToOne(cascade=CascadeType.ALL)
 	@JoinColumn(name="YogurtID", insertable=false, updatable=false)
@@ -46,9 +46,12 @@ public class Rating implements Serializable {
 	
 	public Rating() {}
 
-	public Rating(User user, Yogurt yogurt, int rating) {
-		this.ratingID = new RatingID(user.getUserID(), yogurt.getYogurtID());
-		this.user = user;
+	public Rating(final User evaluator, final Yogurt yogurt, final int rating) {
+		Objects.requireNonNull(evaluator, "evaluator is null");
+		Objects.requireNonNull(yogurt, "yogurt is null");
+		
+		this.ratingID = new RatingID(evaluator.getUserID(), yogurt.getYogurtID());
+		this.evaluator = evaluator;
 		this.yogurt = yogurt;
 		this.rating = rating;
 	}
@@ -56,7 +59,7 @@ public class Rating implements Serializable {
 	
 	@Override
 	public String toString() {
-		return "Rating [ratingID=" + ratingID + ", user=" + user + ", yogurt=" + yogurt + ", rating=" + rating + "]";
+		return "Rating [ratingID=" + ratingID + ", user=" + evaluator + ", yogurt=" + yogurt + ", rating=" + rating + "]";
 	}
 
 	@Override
@@ -69,14 +72,14 @@ public class Rating implements Serializable {
 		
 		Rating other = (Rating) object;
 		return Objects.equals(this.ratingID, other.getRatingID())
-			&& Objects.equals(this.user, other.getUser())
+			&& Objects.equals(this.evaluator, other.getEvaluator())
 			&& Objects.equals(this.yogurt, other.getYogurt())
 			&& Objects.equals(this.rating, other.getRating());
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(this.ratingID, this.user, this.yogurt, this.rating);
+		return Objects.hash(this.ratingID, this.evaluator, this.yogurt, this.rating);
 	}
 	
 
@@ -84,8 +87,8 @@ public class Rating implements Serializable {
 		return ratingID;
 	}
 
-	public User getUser() {
-		return user;
+	public User getEvaluator() {
+		return evaluator;
 	}
 
 	public Yogurt getYogurt() {
@@ -96,7 +99,7 @@ public class Rating implements Serializable {
 		return rating;
 	}
 
-	public void setRating(int rating) {
+	public void setRating(final int rating) {
 		this.rating = rating;
 	}
 	

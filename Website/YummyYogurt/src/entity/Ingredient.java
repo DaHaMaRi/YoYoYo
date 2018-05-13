@@ -26,7 +26,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name="Zutat")
 @NamedQuery(name="Ingredient.listAll", query="select i from Ingredient i")
-public class Ingredient implements Serializable {
+public final class Ingredient implements Serializable {
 	
 	private static final long serialVersionUID = -4899690730111444088L;
 
@@ -50,8 +50,10 @@ public class Ingredient implements Serializable {
 	
 	public Ingredient() {}
 
-	public Ingredient(int ingredientID, String name, 
-			String isVegan, String isHaram, Category category) {
+	public Ingredient(final int ingredientID, final String name, final String isVegan, 
+					  final String isHaram, final Category category) {
+		Objects.requireNonNull(category, "category is null");
+		
 		this.ingredientID = ingredientID;
 		this.name = name;
 		this.isVegan = isVegan;
@@ -99,9 +101,8 @@ public class Ingredient implements Serializable {
 		return isVegan.booleanValue();
 	}
 
-	public void setIsVegan(boolean isVegan) {
-		Boolean temp = new Boolean(isVegan);
-		this.isVegan = temp.toString();
+	public void setIsVegan(final boolean isVegan) {
+		this.isVegan = Boolean.toString(isVegan);
 	}
 
 	public boolean isHaram() {
@@ -109,9 +110,8 @@ public class Ingredient implements Serializable {
 		return isHaram.booleanValue();
 	}
 
-	public void setIsHaram(boolean isHaram) {
-		Boolean temp = new Boolean(isHaram);
-		this.isHaram = temp.toString();
+	public void setIsHaram(final boolean isHaram) {
+		this.isHaram = Boolean.toString(isHaram);
 	}
 
 	public Category getCategory() {

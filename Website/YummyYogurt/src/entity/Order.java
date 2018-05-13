@@ -22,7 +22,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="Bestellung")
-public class Order implements Serializable {
+public final class Order implements Serializable {
 	
 	private static final long serialVersionUID = 1019596392287525485L;
 
@@ -32,7 +32,7 @@ public class Order implements Serializable {
 	
 	@ManyToOne
 	@JoinColumn(name="BenutzerID", nullable=false)
-	private User user;
+	private User purchaser;
 	
 	@Column(name="Gesamtpreis", nullable=false)
 	private int totalPrice;
@@ -43,9 +43,13 @@ public class Order implements Serializable {
 	
 	public Order() {}
 
-	public Order(int orderID, User user, int totalPrice, LocalDateTime orderdate) {
+	public Order(final int orderID, final User purchaser, 
+				 final int totalPrice, final LocalDateTime orderdate) {
+		Objects.requireNonNull(purchaser, "purchaser is null");
+		Objects.requireNonNull(orderdate, "oderdate is null");
+		
 		this.orderID = orderID;
-		this.user = user;
+		this.purchaser = purchaser;
 		this.totalPrice = totalPrice;
 		this.orderdate = orderdate;
 	}
@@ -53,7 +57,7 @@ public class Order implements Serializable {
 	
 	@Override
 	public String toString() {
-		return "Order [orderID=" + orderID + ", user=" + user + ", totalPrice=" + totalPrice + ", orderdate="
+		return "Order [orderID=" + orderID + ", user=" + purchaser + ", totalPrice=" + totalPrice + ", orderdate="
 				+ orderdate + "]";
 	}
 	
@@ -67,14 +71,14 @@ public class Order implements Serializable {
 		
 		Order other = (Order) object;
 		return Objects.equals(this.orderID, other.getOrderID())
-			&& Objects.equals(this.user, other.getUser())
+			&& Objects.equals(this.purchaser, other.getPurchaser())
 			&& Objects.equals(this.totalPrice, other.getTotalPrice())
 			&& Objects.equals(this.orderdate, other.getOrderdate());
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(this.orderID, this.user, this.totalPrice, this.orderdate);
+		return Objects.hash(this.orderID, this.purchaser, this.totalPrice, this.orderdate);
 	}
 	
 
@@ -82,8 +86,8 @@ public class Order implements Serializable {
 		return orderID;
 	}
 
-	public User getUser() {
-		return user;
+	public User getPurchaser() {
+		return purchaser;
 	}
 
 	public int getTotalPrice() {

@@ -20,7 +20,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name="Zutatenkategorie")
 @NamedQuery(name="Category.listAll", query="select c from Category c")
-public class Category implements Serializable {
+public final class Category implements Serializable {
 	
 	private static final long serialVersionUID = 7610617292935816641L;
 
@@ -37,7 +37,7 @@ public class Category implements Serializable {
 	
 	public Category() {}
 
-	public Category(int categoryID, String name, int priceInCents) {
+	public Category(final int categoryID, final String name, final int priceInCents) {
 		this.categoryID = categoryID;
 		this.name = name;
 		this.priceInCents = priceInCents;
@@ -81,7 +81,7 @@ public class Category implements Serializable {
 		return priceInCents;
 	}
 
-	public void setPriceInCents(int priceInCents) {
+	public void setPriceInCents(final int priceInCents) {
 		this.priceInCents = priceInCents;
 	}
 	

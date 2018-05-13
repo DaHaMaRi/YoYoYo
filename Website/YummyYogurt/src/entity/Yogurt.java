@@ -23,7 +23,7 @@ import javax.persistence.NamedQuery;
 
 @Entity
 @NamedQuery(name="Yogurt.listAll", query="select y from Yogurt y")
-public class Yogurt implements Serializable {
+public final class Yogurt implements Serializable {
 	
 	private static final long serialVersionUID = -6134440095691454868L;
 
@@ -49,11 +49,13 @@ public class Yogurt implements Serializable {
 	
 	public Yogurt() {}
 
-	public Yogurt(int yogurtID, String name, User owner, String visibility) {
+	public Yogurt(final int yogurtID, final String name, final User owner, final boolean visibility) {
+		Objects.requireNonNull(owner, "owner is null");
+		
 		this.yogurtID = yogurtID;
 		this.name = name;
 		this.owner = owner;
-		this.visibility = visibility;
+		this.visibility = Boolean.toString(visibility);
 	}
 	
 	
@@ -96,9 +98,8 @@ public class Yogurt implements Serializable {
 		return visibility.booleanValue();
 	}
 
-	public void setVisibility(boolean visibility) {
-		Boolean temp = new Boolean(visibility);
-		this.visibility = temp.toString();
+	public void setVisibility(final boolean visibility) {
+		this.visibility = Boolean.toString(visibility);
 	}
 
 	public User getOwner() {

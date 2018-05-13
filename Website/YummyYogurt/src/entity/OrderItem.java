@@ -24,7 +24,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="Bestellposition")
-public class OrderItem implements Serializable {
+public final class OrderItem implements Serializable {
 	
 	private static final long serialVersionUID = -632106431641713377L;
 
@@ -45,7 +45,10 @@ public class OrderItem implements Serializable {
 	
 	public OrderItem() {}
 
-	public OrderItem(Order order, Yogurt yogurt, int amount) {
+	public OrderItem(final Order order, final Yogurt yogurt, final int amount) {
+		Objects.requireNonNull(order, "order is null");
+		Objects.requireNonNull(yogurt, "yogurt is null");
+		
 		this.orderItemID = new OrderItemID(order.getOrderID(), yogurt.getYogurtID());
 		this.order = order;
 		this.yogurt = yogurt;

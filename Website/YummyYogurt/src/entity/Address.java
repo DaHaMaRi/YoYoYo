@@ -22,7 +22,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name="Adresse")
 @NamedQuery(name="Address.listAll", query="select a from Address a")
-public class Address implements Serializable {
+public final class Address implements Serializable {
 
 	private static final long serialVersionUID = 1816467445814784831L;
 
@@ -48,8 +48,8 @@ public class Address implements Serializable {
 	
 	public Address() {}
 
-	public Address(int addressID, String streetname, String streetnumber, 
-			String additional, String postalCode, String city) {
+	public Address(final int addressID, final String streetname, final String streetnumber, 
+				   final String additional, final String postalCode, final String city) {
 		this.addressID = addressID;
 		this.streetname = streetname;
 		this.streetnumber = streetnumber;
