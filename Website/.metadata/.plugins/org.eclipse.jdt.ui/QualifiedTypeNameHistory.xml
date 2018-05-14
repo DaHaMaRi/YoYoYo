@@ -10,7 +10,6 @@
 <fullyQualifiedTypeName name="javax.persistence.TypedQuery"/>
 <fullyQualifiedTypeName name="javax.persistence.EmbeddedId"/>
 <fullyQualifiedTypeName name="javax.persistence.Embeddable"/>
-<fullyQualifiedTypeName name="javax.persistence.CascadeType"/>
 <fullyQualifiedTypeName name="javax.persistence.NamedQuery"/>
 <fullyQualifiedTypeName name="javax.persistence.ManyToMany"/>
 <fullyQualifiedTypeName name="javax.persistence.JoinTable"/>
@@ -31,4 +30,5 @@
 <fullyQualifiedTypeName name="entity.Yogurt"/>
 <fullyQualifiedTypeName name="java.util.Objects"/>
 <fullyQualifiedTypeName name="java.lang.Boolean"/>
+<fullyQualifiedTypeName name="javax.persistence.CascadeType"/>
 </qualifiedTypeNameHistroy>
