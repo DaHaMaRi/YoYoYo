@@ -20,7 +20,6 @@
 <fullyQualifiedTypeName name="javax.persistence.Column"/>
 <fullyQualifiedTypeName name="javax.persistence.ManyToOne"/>
 <fullyQualifiedTypeName name="javax.persistence.JoinColumn"/>
-<fullyQualifiedTypeName name="entity.Address"/>
 <fullyQualifiedTypeName name="entity.Category"/>
 <fullyQualifiedTypeName name="entity.Ingredient"/>
 <fullyQualifiedTypeName name="java.lang.Object"/>
@@ -31,4 +30,9 @@
 <fullyQualifiedTypeName name="java.util.Objects"/>
 <fullyQualifiedTypeName name="java.lang.Boolean"/>
 <fullyQualifiedTypeName name="javax.persistence.CascadeType"/>
+<fullyQualifiedTypeName name="com.fasterxml.jackson.databind.ObjectMapper"/>
+<fullyQualifiedTypeName name="com.fasterxml.jackson.core.JsonParseException"/>
+<fullyQualifiedTypeName name="com.fasterxml.jackson.databind.JsonMappingException"/>
+<fullyQualifiedTypeName name="entity.Address"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
 </qualifiedTypeNameHistroy>
