@@ -18,7 +18,7 @@ import javax.persistence.NamedQuery;
 	    ID              int          primary key,
 	    Name            varchar(64)  unique not null,
 	    BenutzerID      int          not null,
-	    Veröffentlicht  varchar(8)   not null,
+	    Verï¿½ffentlicht  varchar(8)   not null,
 );*/
 
 @Entity
@@ -38,7 +38,7 @@ public final class Yogurt implements Serializable {
 	@JoinColumn(name="BenutzerID", nullable=false)
 	private User owner;
 	
-	@Column(name="Veröffentlicht", nullable=false)
+	@Column(name="VerÃ¶ffentlicht", nullable=false)
 	private String visibility;
 	
 	@ManyToMany

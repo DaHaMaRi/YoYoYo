@@ -26,13 +26,14 @@
 <fullyQualifiedTypeName name="entity.OrderItemID"/>
 <fullyQualifiedTypeName name="entity.OrderItem"/>
 <fullyQualifiedTypeName name="entity.Rating"/>
-<fullyQualifiedTypeName name="entity.Yogurt"/>
 <fullyQualifiedTypeName name="java.util.Objects"/>
 <fullyQualifiedTypeName name="java.lang.Boolean"/>
 <fullyQualifiedTypeName name="javax.persistence.CascadeType"/>
-<fullyQualifiedTypeName name="com.fasterxml.jackson.databind.ObjectMapper"/>
 <fullyQualifiedTypeName name="com.fasterxml.jackson.core.JsonParseException"/>
 <fullyQualifiedTypeName name="com.fasterxml.jackson.databind.JsonMappingException"/>
 <fullyQualifiedTypeName name="entity.Address"/>
 <fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="manager.YogurtManager"/>
+<fullyQualifiedTypeName name="com.fasterxml.jackson.databind.ObjectMapper"/>
+<fullyQualifiedTypeName name="entity.Yogurt"/>
 </qualifiedTypeNameHistroy>
