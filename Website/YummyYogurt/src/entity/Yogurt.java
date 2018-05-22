@@ -38,8 +38,8 @@ public final class Yogurt implements Serializable {
 	@JoinColumn(name="BenutzerID", nullable=false)
 	private User owner;
 	
-	@Column(name="VerÃ¶ffentlicht", nullable=false)
-	private String visibility;
+	@Column(name="Veröffentlicht", nullable=false)
+	private String visible;
 	
 	@ManyToMany
 	@JoinTable(name="Zutatenliste", joinColumns={@JoinColumn(name="YogurtID")}, 
@@ -55,13 +55,13 @@ public final class Yogurt implements Serializable {
 		this.yogurtID = yogurtID;
 		this.name = name;
 		this.owner = owner;
-		this.visibility = Boolean.toString(visibility);
+		this.visible = Boolean.toString(visibility);
 	}
 	
 	
 	@Override
 	public String toString() {
-		return "Yogurt [yogurtID=" + yogurtID + ", name=" + name + ", visibility=" + visibility + "\n\towner=" + owner
+		return "Yogurt [yogurtID=" + yogurtID + ", name=" + name + ", visibility=" + visible + "\n\towner=" + owner
 				+ "\n\trecipe=" + recipe + "]";
 	}
 
@@ -94,12 +94,12 @@ public final class Yogurt implements Serializable {
 	}
 
 	public boolean isVisible() {
-		Boolean visibility = new Boolean(this.visibility);
-		return visibility.booleanValue();
+		Boolean visible = new Boolean(this.visible);
+		return visible.booleanValue();
 	}
 
-	public void setVisibility(final boolean visibility) {
-		this.visibility = Boolean.toString(visibility);
+	public void setVisibility(final boolean visible) {
+		this.visible = Boolean.toString(visible);
 	}
 
 	public User getOwner() {

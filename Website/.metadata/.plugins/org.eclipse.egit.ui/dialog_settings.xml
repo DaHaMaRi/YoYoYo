@@ -4,4 +4,9 @@
 	<item value="C:\Users\drraf\Documents\Studium\Semester 4\Webbasierte Anwendung\Yummy-Yogurt\.git" key="GitSelectRepositoryPage.lastRepository"/>
 	<section name="GitImportWizard">
 	</section>
+	<section name="org.eclipse.egit.ui.internal.staging.StagingView">
+		<item value="200,200" key="STAGING_SASH_FORM_WEIGHT"/>
+		<item value="false" key="sortItemState"/>
+		<item value="200,200" key="HORIZONTAL_SASH_FORM_WEIGHT"/>
+	</section>
 </section>

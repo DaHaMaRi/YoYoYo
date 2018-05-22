@@ -38,10 +38,10 @@ public final class Ingredient implements Serializable {
 	private String name;
 	
 	@Column(name="Vegan", nullable=false)
-	private String isVegan;
+	private String vegan;
 	
 	@Column(name="Haram", nullable=false)
-	private String isHaram;
+	private String haram;
 	
 	@ManyToOne(cascade=CascadeType.PERSIST)
 	@JoinColumn(name="ZutatenkategorieID", nullable=false)
@@ -56,16 +56,16 @@ public final class Ingredient implements Serializable {
 		
 		this.ingredientID = ingredientID;
 		this.name = name;
-		this.isVegan = isVegan;
-		this.isHaram = isHaram;
+		this.vegan = isVegan;
+		this.haram = isHaram;
 		this.category = category;
 	}
 	
 
 	@Override
 	public String toString() {
-		return "Ingredient [ingredientID=" + ingredientID + ", name=" + name + ", isVegan=" + isVegan + ", isHaram="
-				+ isHaram + "\n\tcategory=" + category + "]";
+		return "Ingredient [ingredientID=" + ingredientID + ", name=" + name + ", vegan=" + vegan + ", haram="
+				+ haram + "\n\tcategory=" + category + "]";
 	}
 
 	@Override
@@ -97,21 +97,21 @@ public final class Ingredient implements Serializable {
 	}
 
 	public boolean isVegan() {
-		Boolean isVegan = new Boolean(this.isVegan);
-		return isVegan.booleanValue();
+		Boolean vegan = new Boolean(this.vegan);
+		return vegan.booleanValue();
 	}
 
-	public void setIsVegan(final boolean isVegan) {
-		this.isVegan = Boolean.toString(isVegan);
+	public void setVegan(final boolean vegan) {
+		this.vegan = Boolean.toString(vegan);
 	}
 
 	public boolean isHaram() {
-		Boolean isHaram = new Boolean(this.isHaram);
-		return isHaram.booleanValue();
+		Boolean haram = new Boolean(this.haram);
+		return haram.booleanValue();
 	}
 
-	public void setIsHaram(final boolean isHaram) {
-		this.isHaram = Boolean.toString(isHaram);
+	public void setHaram(final boolean haram) {
+		this.haram = Boolean.toString(haram);
 	}
 
 	public Category getCategory() {
