@@ -1,5 +1,6 @@
 INDEX VERSION 1.130+C:\Users\drraf\Documents\Studium\Semester 4\Webbasierte Anwendung\Yummy-Yogurt\Website\.metadata\.plugins\org.eclipse.jdt.core
 190252676.index
+3051988103.index
 3776659492.index
 3813910286.index
 762882469.index
@@ -25,7 +26,6 @@ INDEX VERSION 1.130+C:\Users\drraf\Documents\Studium\Semester 4\Webbasierte Anwe
 873936841.index
 3466088704.index
 3878457715.index
-2969824713.index
 3214923292.index
 1328531131.index
 1541840881.index

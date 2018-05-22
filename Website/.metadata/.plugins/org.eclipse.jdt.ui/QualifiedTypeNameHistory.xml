@@ -29,7 +29,6 @@
 <fullyQualifiedTypeName name="com.fasterxml.jackson.databind.JsonMappingException"/>
 <fullyQualifiedTypeName name="entity.Address"/>
 <fullyQualifiedTypeName name="java.io.IOException"/>
-<fullyQualifiedTypeName name="com.fasterxml.jackson.databind.ObjectMapper"/>
 <fullyQualifiedTypeName name="javax.persistence.Entity"/>
 <fullyQualifiedTypeName name="javax.persistence.EntityManager"/>
 <fullyQualifiedTypeName name="javax.persistence.EntityManagerFactory"/>
@@ -39,5 +38,8 @@
 <fullyQualifiedTypeName name="manager.IngredientManager"/>
 <fullyQualifiedTypeName name="entity.Ingredient"/>
 <fullyQualifiedTypeName name="manager.YogurtManager"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="java.lang.NumberFormatException"/>
 <fullyQualifiedTypeName name="entity.Yogurt"/>
+<fullyQualifiedTypeName name="com.fasterxml.jackson.databind.ObjectMapper"/>
 </qualifiedTypeNameHistroy>
