@@ -60,10 +60,10 @@
         <!-- Page Content -->
         <div class="container">
             <!-- Page Heading/Breadcrumbs -->
-            <h1 class="mt-4 mb-3 text-center" id=#title>Gold Becher</h1>
+            <h1 class="mt-4 mb-3 text-center" id="title">Gold Becher</h1>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                <li class="breadcrumb-item active">Gold Becher</li>
+                <li class="breadcrumb-item active" id="breadcrumb">Gold Becher</li>
             </ol>
 
             <div class="row bg-light">
@@ -137,7 +137,12 @@
         <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
         
         <script>
-        
+        	$(document).ready(function() {
+        		$.get("http://localhost:8080/YummyYogurt/product-info.html?id=1", function(data) {
+        			$("#title").html(data.name);
+        			$("#breadcrumb").html(data.name);
+        		});	
+        	});
 		</script>
 
     </body>

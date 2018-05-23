@@ -12,9 +12,11 @@
 		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\drraf\Documents\Studium\Semester 4\Webbasierte Anwendung\Yummy-Yogurt\Website\Servers"/>
 			<item value="C:\Users\drraf\Documents\Studium\Semester 4\Webbasierte Anwendung\Yummy-Yogurt\Website\YummyYogurt"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value="C:\Users\drraf\Documents\Studium\Semester 4\Webbasierte Anwendung\Yummy-Yogurt\Website\YummyYogurt\WebContent\Content\htdocs\product-info.html"/>
 			<item value=""/>
 		</list>
 	</section>
