@@ -9,6 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 
@@ -22,6 +23,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="Bestellung")
+@NamedQuery(name="Order.listAll", query="select o from Order o")
 public final class Order implements Serializable {
 	
 	private static final long serialVersionUID = 1019596392287525485L;
@@ -70,7 +72,7 @@ public final class Order implements Serializable {
 			return false;
 		
 		Order other = (Order) object;
-		return Objects.equals(this.orderID, other.getOrderID())
+		return Objects.equals(this.orderID, other.getID())
 			&& Objects.equals(this.purchaser, other.getPurchaser())
 			&& Objects.equals(this.totalPrice, other.getTotalPrice())
 			&& Objects.equals(this.orderdate, other.getOrderdate());
@@ -82,7 +84,7 @@ public final class Order implements Serializable {
 	}
 	
 
-	public int getOrderID() {
+	public int getID() {
 		return orderID;
 	}
 

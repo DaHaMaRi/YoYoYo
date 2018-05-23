@@ -74,7 +74,7 @@ public final class Yogurt implements Serializable {
 			return false;
 		
 		Yogurt other = (Yogurt) object;
-		return Objects.equals(this.yogurtID, other.getYogurtID())
+		return Objects.equals(this.yogurtID, other.getID())
 			&& Objects.equals(this.name, other.getName())
 			&& Objects.equals(this.owner, other.getOwner());
 	}
@@ -85,7 +85,7 @@ public final class Yogurt implements Serializable {
 	}
 	
 
-	public int getYogurtID() {
+	public int getID() {
 		return yogurtID;
 	}
 

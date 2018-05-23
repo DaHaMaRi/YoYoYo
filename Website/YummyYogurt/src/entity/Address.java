@@ -74,7 +74,7 @@ public final class Address implements Serializable {
 			return false;
 		
 		Address other = (Address) object;
-		return Objects.equals(this.addressID, other.getAddressID())
+		return Objects.equals(this.addressID, other.getID())
 			&& Objects.equals(this.streetname, other.getStreetname())
 			&& Objects.equals(this.streetnumber, other.getStreetnumber())
 			&& Objects.equals(this.additional, other.getAdditional())
@@ -89,7 +89,7 @@ public final class Address implements Serializable {
 	}
 	
 
-	public int getAddressID() {
+	public int getID() {
 		return addressID;
 	}
 

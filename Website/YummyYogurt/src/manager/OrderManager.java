@@ -8,49 +8,49 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
 
-import entity.User;
+import entity.Order;
 import exception.NoSuchRowException;
 
-public final class UserManager {
+public final class OrderManager {
 	
 	private final EntityManager manager;
 	
 	
-	public UserManager(final String persistenceUnitName) {
+	public OrderManager(final String persistenceUnitName) {
 		final EntityManagerFactory factory = Persistence.createEntityManagerFactory(persistenceUnitName);
 		this.manager = factory.createEntityManager();
 	}
 	
 	
-	public List<User> listAll() {
-		final TypedQuery<User> query = manager.createNamedQuery("User.listAll", User.class);
+	public List<Order> listAll() {
+		final TypedQuery<Order> query = manager.createNamedQuery("Order.listAll", Order.class);
 		return query.getResultList();
 	}
 	
-	public User findByID(final int userID) throws NoSuchRowException {
-		final User user = manager.find(User.class, userID);
-		if(user == null)
+	public Order findByID(final int orderID) throws NoSuchRowException {
+		final Order order = manager.find(Order.class, orderID);
+		if(order == null)
 			throw new NoSuchRowException();
-		return user;
+		return order;
 	}
 	
-	public void save(final User user) {
+	public void save(final Order order) {
 		final EntityTransaction transaction = manager.getTransaction();
 		transaction.begin();
-			final User temp = manager.find(User.class, user.getID());
+			final Order temp = manager.find(Order.class, order.getID());
 			if(temp == null)
-				manager.persist(user);
+				manager.persist(order);
 			else
-				manager.merge(user);
+				manager.merge(order);
 		transaction.commit();
 	}
 	
-	public void delete(final User user) throws NoSuchRowException {
+	public void delete(final Order order) throws NoSuchRowException {
 		final EntityTransaction transaction = manager.getTransaction();
 		transaction.begin();
-			final User temp = this.findByID(user.getID());
+			final Order temp = this.findByID(order.getID());
 			if(temp != null)
-				manager.remove(user);
+				manager.remove(order);
 		transaction.commit();
 	}
 	
@@ -58,6 +58,5 @@ public final class UserManager {
 		if(manager != null)
 			manager.close();
 	}
-
+	
 }
-

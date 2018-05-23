@@ -11,33 +11,33 @@ import javax.persistence.TypedQuery;
 import entity.Address;
 import exception.NoSuchRowException;
 
-public class AddressManager {
+public final class AddressManager {
 	
-	private EntityManager manager;
+	private final EntityManager manager;
 	
 	
-	public AddressManager(String persistenceUnitName) {
-		EntityManagerFactory factory = Persistence.createEntityManagerFactory(persistenceUnitName);
+	public AddressManager(final String persistenceUnitName) {
+		final EntityManagerFactory factory = Persistence.createEntityManagerFactory(persistenceUnitName);
 		this.manager = factory.createEntityManager();
 	}
 	
 	
 	public List<Address> listAll() {
-		TypedQuery<Address> query = manager.createNamedQuery("Address.listAll", Address.class);
+		final TypedQuery<Address> query = manager.createNamedQuery("Address.listAll", Address.class);
 		return query.getResultList();
 	}
 	
-	public Address findByID(int addressID) throws NoSuchRowException {
-		Address address = manager.find(Address.class, addressID);
+	public Address findByID(final int addressID) throws NoSuchRowException {
+		final Address address = manager.find(Address.class, addressID);
 		if(address == null)
 			throw new NoSuchRowException();
 		return address;
 	}
 	
-	public void save(Address address) {
-		EntityTransaction transaction = manager.getTransaction();
+	public void save(final Address address) {
+		final EntityTransaction transaction = manager.getTransaction();
 		transaction.begin();
-			Address temp = manager.find(Address.class, address.getAddressID());
+			final Address temp = manager.find(Address.class, address.getID());
 			if(temp == null)
 				manager.persist(address);
 			else
@@ -45,10 +45,10 @@ public class AddressManager {
 		transaction.commit();
 	}
 	
-	public void delete(Address address) throws NoSuchRowException {
-		EntityTransaction transaction = manager.getTransaction();
+	public void delete(final Address address) throws NoSuchRowException {
+		final EntityTransaction transaction = manager.getTransaction();
 		transaction.begin();
-			Address temp = this.findByID(address.getAddressID());
+			final Address temp = this.findByID(address.getID());
 			if(temp != null)
 				manager.remove(address);
 		transaction.commit();

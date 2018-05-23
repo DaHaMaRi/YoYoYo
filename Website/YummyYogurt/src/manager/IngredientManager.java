@@ -11,33 +11,33 @@ import javax.persistence.TypedQuery;
 import entity.Ingredient;
 import exception.NoSuchRowException;
 
-public class IngredientManager {
+public final class IngredientManager {
 	
-	private EntityManager manager;
+	private final EntityManager manager;
 	
 	
-	public IngredientManager(String persistenceUnitName) {
-		EntityManagerFactory factory = Persistence.createEntityManagerFactory(persistenceUnitName);
+	public IngredientManager(final String persistenceUnitName) {
+		final EntityManagerFactory factory = Persistence.createEntityManagerFactory(persistenceUnitName);
 		this.manager = factory.createEntityManager();
 	}
 	
 	
 	public List<Ingredient> listAll() {
-		TypedQuery<Ingredient> query = manager.createNamedQuery("Ingredient.listAll", Ingredient.class);
+		final TypedQuery<Ingredient> query = manager.createNamedQuery("Ingredient.listAll", Ingredient.class);
 		return query.getResultList();
 	}
 	
-	public Ingredient findByID(int ingredientID) throws NoSuchRowException {
-		Ingredient ingredient = manager.find(Ingredient.class, ingredientID);
+	public Ingredient findByID(final int ingredientID) throws NoSuchRowException {
+		final Ingredient ingredient = manager.find(Ingredient.class, ingredientID);
 		if(ingredient == null)
 			throw new NoSuchRowException();
 		return ingredient;
 	}
 	
-	public void save(Ingredient ingredient) {
-		EntityTransaction transaction = manager.getTransaction();
+	public void save(final Ingredient ingredient) {
+		final EntityTransaction transaction = manager.getTransaction();
 		transaction.begin();
-			Ingredient temp = manager.find(Ingredient.class, ingredient.getIngredientID());
+			final Ingredient temp = manager.find(Ingredient.class, ingredient.getID());
 			if(temp == null)
 				manager.persist(ingredient);
 			else
@@ -45,10 +45,10 @@ public class IngredientManager {
 		transaction.commit();
 	}
 	
-	public void delete(Ingredient ingredient) throws NoSuchRowException {
-		EntityTransaction transaction = manager.getTransaction();
+	public void delete(final Ingredient ingredient) throws NoSuchRowException {
+		final EntityTransaction transaction = manager.getTransaction();
 		transaction.begin();
-			Ingredient temp = this.findByID(ingredient.getIngredientID());
+			final Ingredient temp = this.findByID(ingredient.getID());
 			if(temp != null)
 				manager.remove(ingredient);
 		transaction.commit();

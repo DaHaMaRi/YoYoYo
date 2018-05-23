@@ -8,49 +8,50 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
 
-import entity.User;
+import entity.OrderItem;
+import entity.OrderItemID;
 import exception.NoSuchRowException;
 
-public final class UserManager {
-	
+public final class OrderItemManager {
+
 	private final EntityManager manager;
 	
 	
-	public UserManager(final String persistenceUnitName) {
+	public OrderItemManager(final String persistenceUnitName) {
 		final EntityManagerFactory factory = Persistence.createEntityManagerFactory(persistenceUnitName);
 		this.manager = factory.createEntityManager();
 	}
 	
 	
-	public List<User> listAll() {
-		final TypedQuery<User> query = manager.createNamedQuery("User.listAll", User.class);
+	public List<OrderItem> listAll() {
+		final TypedQuery<OrderItem> query = manager.createNamedQuery("OrderItem.listAll", OrderItem.class);
 		return query.getResultList();
 	}
 	
-	public User findByID(final int userID) throws NoSuchRowException {
-		final User user = manager.find(User.class, userID);
-		if(user == null)
+	public OrderItem findByID(final OrderItemID orderItemID) throws NoSuchRowException {
+		final OrderItem orderItem = manager.find(OrderItem.class, orderItemID);
+		if(orderItem == null)
 			throw new NoSuchRowException();
-		return user;
+		return orderItem;
 	}
 	
-	public void save(final User user) {
+	public void save(final OrderItem orderItem) {
 		final EntityTransaction transaction = manager.getTransaction();
 		transaction.begin();
-			final User temp = manager.find(User.class, user.getID());
+			final OrderItem temp = manager.find(OrderItem.class, orderItem.getID());
 			if(temp == null)
-				manager.persist(user);
+				manager.persist(orderItem);
 			else
-				manager.merge(user);
+				manager.merge(orderItem);
 		transaction.commit();
 	}
 	
-	public void delete(final User user) throws NoSuchRowException {
+	public void delete(final OrderItem orderItem) throws NoSuchRowException {
 		final EntityTransaction transaction = manager.getTransaction();
 		transaction.begin();
-			final User temp = this.findByID(user.getID());
+			final OrderItem temp = this.findByID(orderItem.getID());
 			if(temp != null)
-				manager.remove(user);
+				manager.remove(orderItem);
 		transaction.commit();
 	}
 	
@@ -58,6 +59,5 @@ public final class UserManager {
 		if(manager != null)
 			manager.close();
 	}
-
+	
 }
-

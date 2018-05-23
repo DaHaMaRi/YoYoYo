@@ -49,7 +49,7 @@ public final class Rating implements Serializable {
 		Objects.requireNonNull(evaluator, "evaluator is null");
 		Objects.requireNonNull(yogurt, "yogurt is null");
 		
-		this.ratingID = new RatingID(evaluator.getUserID(), yogurt.getYogurtID());
+		this.ratingID = new RatingID(evaluator.getID(), yogurt.getID());
 		this.evaluator = evaluator;
 		this.yogurt = yogurt;
 		this.rating = rating;
@@ -70,7 +70,7 @@ public final class Rating implements Serializable {
 			return false;
 		
 		Rating other = (Rating) object;
-		return Objects.equals(this.ratingID, other.getRatingID())
+		return Objects.equals(this.ratingID, other.getID())
 			&& Objects.equals(this.evaluator, other.getEvaluator())
 			&& Objects.equals(this.yogurt, other.getYogurt())
 			&& Objects.equals(this.rating, other.getRating());
@@ -82,7 +82,7 @@ public final class Rating implements Serializable {
 	}
 	
 
-	public RatingID getRatingID() {
+	public RatingID getID() {
 		return ratingID;
 	}
 

@@ -96,7 +96,7 @@ public final class User implements Serializable {
 			return false;
 		
 		User other = (User) object;
-		return Objects.equals(this.userID, other.getUserID())
+		return Objects.equals(this.userID, other.getID())
 			&& Objects.equals(this.accessiondate, other.getAccessiondate());
 	}
 
@@ -106,7 +106,7 @@ public final class User implements Serializable {
 	}
 	
 
-	public int getUserID() {
+	public int getID() {
 		return userID;
 	}
 

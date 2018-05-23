@@ -59,7 +59,7 @@ public final class Category implements Serializable {
 			return false;
 		
 		Category other = (Category) object;
-		return Objects.equals(this.categoryID, other.getCategoryID())
+		return Objects.equals(this.categoryID, other.getID())
 			&& Objects.equals(this.name, other.getName());
 	}
 
@@ -69,7 +69,7 @@ public final class Category implements Serializable {
 	}
 
 	
-	public int getCategoryID() {
+	public int getID() {
 		return categoryID;
 	}
 

@@ -8,7 +8,7 @@ public class NoSuchRowException extends Exception {
 		super("Element existiert nicht.");
 	}
 	
-	public NoSuchRowException(String message) {
+	public NoSuchRowException(final String message) {
 		super(message);
 	}
 

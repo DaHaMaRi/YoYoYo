@@ -14,24 +14,26 @@ import exception.NoSuchRowException;
 import manager.YogurtManager;
 
 @WebServlet("/product-info.html")
-public class ProductInfo extends HttpServlet {
+public final class ProductInfo extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 
+	
 	public ProductInfo() {
 		super();
 	}
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		int index = Integer.parseInt(request.getParameter("id"));
+	
+	protected void doGet(final HttpServletRequest request, final HttpServletResponse response) throws ServletException, IOException {
+		final int index = Integer.parseInt(request.getParameter("id"));
 		
-		YogurtManager manager = new YogurtManager("YummyYogurt");
-		ObjectMapper mapper = new ObjectMapper();
+		final YogurtManager manager = new YogurtManager("YummyYogurt");
+		final ObjectMapper mapper = new ObjectMapper();
 		mapper.findAndRegisterModules();
 
 		try {
-			Yogurt yogurt = manager.findByID(index);
-			String json = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(yogurt);
+			final Yogurt yogurt = manager.findByID(index);
+			final String json = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(yogurt);
 			System.out.println(json);
 			
 			
@@ -42,9 +44,7 @@ public class ProductInfo extends HttpServlet {
 		}
 	}
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		// TODO Auto-generated method stub
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doGet(request, response);
 	}
 

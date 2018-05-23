@@ -11,33 +11,33 @@ import javax.persistence.TypedQuery;
 import entity.Yogurt;
 import exception.NoSuchRowException;
 
-public class YogurtManager {
+public final class YogurtManager {
 	
-	private EntityManager manager;
+	private final EntityManager manager;
 	
 	
-	public YogurtManager(String persistenceUnitName) {
-		EntityManagerFactory factory = Persistence.createEntityManagerFactory(persistenceUnitName);
+	public YogurtManager(final String persistenceUnitName) {
+		final EntityManagerFactory factory = Persistence.createEntityManagerFactory(persistenceUnitName);
 		this.manager = factory.createEntityManager();
 	}
 	
 	
 	public List<Yogurt> listAll() {
-		TypedQuery<Yogurt> query = manager.createNamedQuery("Yogurt.listAll", Yogurt.class);
+		final TypedQuery<Yogurt> query = manager.createNamedQuery("Yogurt.listAll", Yogurt.class);
 		return query.getResultList();
 	}
 	
-	public Yogurt findByID(int yogurtID) throws NoSuchRowException {
-		Yogurt yogurt = manager.find(Yogurt.class, yogurtID);
+	public Yogurt findByID(final int yogurtID) throws NoSuchRowException {
+		final Yogurt yogurt = manager.find(Yogurt.class, yogurtID);
 		if(yogurt == null)
 			throw new NoSuchRowException();
 		return yogurt;
 	}
 	
-	public void save(Yogurt yogurt) {
-		EntityTransaction transaction = manager.getTransaction();
+	public void save(final Yogurt yogurt) {
+		final EntityTransaction transaction = manager.getTransaction();
 		transaction.begin();
-			Yogurt temp = manager.find(Yogurt.class, yogurt.getYogurtID());
+			final Yogurt temp = manager.find(Yogurt.class, yogurt.getID());
 			if(temp == null)
 				manager.persist(yogurt);
 			else
@@ -45,10 +45,10 @@ public class YogurtManager {
 		transaction.commit();
 	}
 	
-	public void delete(Yogurt yogurt) throws NoSuchRowException {
-		EntityTransaction transaction = manager.getTransaction();
+	public void delete(final Yogurt yogurt) throws NoSuchRowException {
+		final EntityTransaction transaction = manager.getTransaction();
 		transaction.begin();
-			Yogurt temp = this.findByID(yogurt.getYogurtID());
+			final Yogurt temp = this.findByID(yogurt.getID());
 			if(temp != null)
 				manager.remove(yogurt);
 		transaction.commit();

@@ -8,6 +8,7 @@ import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 
@@ -23,6 +24,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="Bestellposition")
+@NamedQuery(name="OrderItem.listAll", query="select i from OrderItem i")
 public final class OrderItem implements Serializable {
 	
 	private static final long serialVersionUID = -632106431641713377L;
@@ -48,7 +50,7 @@ public final class OrderItem implements Serializable {
 		Objects.requireNonNull(order, "order is null");
 		Objects.requireNonNull(yogurt, "yogurt is null");
 		
-		this.orderItemID = new OrderItemID(order.getOrderID(), yogurt.getYogurtID());
+		this.orderItemID = new OrderItemID(order.getID(), yogurt.getID());
 		this.order = order;
 		this.yogurt = yogurt;
 		this.amount = amount;
@@ -70,7 +72,7 @@ public final class OrderItem implements Serializable {
 			return false;
 		
 		OrderItem other = (OrderItem) object;
-		return Objects.equals(this.orderItemID, other.getOrderItemID())
+		return Objects.equals(this.orderItemID, other.getID())
 			&& Objects.equals(this.order, other.getOrder())
 			&& Objects.equals(this.yogurt, other.getYogurt())
 			&& Objects.equals(this.amount, other.getAmount());
@@ -82,7 +84,7 @@ public final class OrderItem implements Serializable {
 	}
 
 	
-	public OrderItemID getOrderItemID() {
+	public OrderItemID getID() {
 		return orderItemID;
 	}
 

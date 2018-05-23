@@ -77,7 +77,7 @@ public final class Ingredient implements Serializable {
 			return false;
 		
 		Ingredient other = (Ingredient) object;
-		return Objects.equals(this.ingredientID, other.getIngredientID())
+		return Objects.equals(this.ingredientID, other.getID())
 			&& Objects.equals(this.name, other.getName())
 			&& Objects.equals(this.category, other.getCategory());
 	}
@@ -88,7 +88,7 @@ public final class Ingredient implements Serializable {
 	}
 	
 
-	public int getIngredientID() {
+	public int getID() {
 		return ingredientID;
 	}
 
