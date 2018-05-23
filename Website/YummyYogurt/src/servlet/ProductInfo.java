@@ -13,28 +13,27 @@ import entity.Yogurt;
 import exception.NoSuchRowException;
 import manager.YogurtManager;
 
-
-@WebServlet("/ProductInfo")
+@WebServlet("/product-info.html")
 public class ProductInfo extends HttpServlet {
-	
+
 	private static final long serialVersionUID = 1L;
-    
 
-    public ProductInfo() {
-        super();
-    }
+	public ProductInfo() {
+		super();
+	}
 
-    
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		int index = Integer.parseInt(request.getParameter("id"));
 		
 		YogurtManager manager = new YogurtManager("YummyYogurt");
 		ObjectMapper mapper = new ObjectMapper();
 		mapper.findAndRegisterModules();
-		
+
 		try {
 			Yogurt yogurt = manager.findByID(index);
 			String json = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(yogurt);
+			System.out.println(json);
+			
 			
 			response.setContentType("application/json");
 			response.getWriter().append(json);
@@ -43,7 +42,8 @@ public class ProductInfo extends HttpServlet {
 		}
 	}
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
