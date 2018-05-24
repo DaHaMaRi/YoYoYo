@@ -12,6 +12,7 @@
         <!-- Bootstrap core CSS -->
         <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+        
         <!-- Custom styles for this template -->
         <link href="../css/modern-business.css" rel="stylesheet" />
         <link href="../css/icon.css" rel="stylesheet" />
@@ -60,10 +61,10 @@
         <!-- Page Content -->
         <div class="container">
             <!-- Page Heading/Breadcrumbs -->
-            <h1 class="mt-4 mb-3 text-center" id="title">Gold Becher</h1>
+            <h1 class="mt-4 mb-3 text-center" id="title"></h1>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                <li class="breadcrumb-item active" id="breadcrumb">Gold Becher</li>
+                <li class="breadcrumb-item active" id="breadcrumb"></li>
             </ol>
 
             <div class="row bg-light">
@@ -135,15 +136,23 @@
         <!-- Bootstrap core JavaScript -->
         <script src="../vendor/jquery/jquery.min.js"></script>
         <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-        
-        <script>
-        	$(document).ready(function() {
-        		$.get("http://localhost:8080/YummyYogurt/product-info.html?id=1", function(data) {
-        			$("#title").html(data.name);
-        			$("#breadcrumb").html(data.name);
-        		});	
+
+		<script>
+        	$.ajax({
+        		url: "http://localhost:8080/YummyYogurt/product-info.html",
+        		data: {id: 1},
+        		type: "GET",
+        		dataType: "json"
+        	})
+        	
+        	.done(function(json) {
+        		$("#title").html(json.name);
+        		$("#breadcrumb").html(json.name);
+        	})
+        	
+        	.fail(function(xhr, status, errorThrown) {
+        		alert("Ein Fehler ist aufgetreten");
         	});
 		</script>
-
     </body>
 </html>
