@@ -29,7 +29,7 @@ public final class RatingID implements Serializable {
 	
 	@Override
 	public String toString() {
-		return "RatingPK [userID=" + userID + ", yogurtID=" + yogurtID + "]";
+		return "RatingID [userID=" + userID + ", yogurtID=" + yogurtID + "]";
 	}
 	
 	@Override

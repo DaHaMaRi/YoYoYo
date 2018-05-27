@@ -87,14 +87,10 @@
                     
                     <ul class="ul-center" id="recipe"></ul>
                     
-                    <div class="span-center" id="categories">
-                        <span class="badge badge-nuts">Nüsse & Samen</span>
-                        <span class="badge badge-fruits">Früchte</span>
-                    </div>
+                    <div class="span-center" id="categories"></div>
 
                     <p class="text-center">
-                        <strong class="my-4" style="font-size:160%;">Preis pro Becher: </strong>
-                        <strong style="font-size:160%;">3,99€</strong>
+                        <strong class="my-4" style="font-size:160%;" id="price"></strong>
                     </p>
 
                     <p class="text-center">
@@ -131,32 +127,7 @@
         <script src="../vendor/jquery/jquery.min.js"></script>
         <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-		<script>
-        	$.ajax({
-        		url: "http://localhost:8080/YummyYogurt/product-info.html",
-        		data: {id: 1},
-        		type: "GET",
-        		dataType: "json"
-        	})
-        	
-        	.done(function(json) {
-        		$("h1").html(json.name);
-        		$("li.breadcrumb-item.active").html(json.name);
-        		
-        		$.each(json.recipe, function(index, ingredient) {
-        			$("#recipe").append("<li>"+ingredient.name+"</li>");
-        		});	
-        		
-        		
-        		
-        		//if($("h1").length) {
-        			//alert($("h1").length);
-        		//}
-        	})
-        	
-        	.fail(function(xhr, status, errorThrown) {
-        		alert("Ein Fehler ist aufgetreten");
-        	});
-		</script>
+		<!-- Own Scripts -->
+		<script src="../scripts/product-info.js"></script>
     </body>
 </html>

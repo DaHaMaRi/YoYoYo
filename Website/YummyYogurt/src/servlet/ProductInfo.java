@@ -25,13 +25,14 @@ public final class ProductInfo extends HttpServlet {
 
 	
 	protected void doGet(final HttpServletRequest request, final HttpServletResponse response) throws ServletException, IOException {
-		final int index = Integer.parseInt(request.getParameter("id"));
+		
 		
 		final YogurtManager manager = new YogurtManager("YummyYogurt");
 		final ObjectMapper mapper = new ObjectMapper();
 		mapper.findAndRegisterModules();
 
 		try {
+			final int index = Integer.parseInt(request.getParameter("id"));
 			final Yogurt yogurt = manager.findByID(index);
 			final String json = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(yogurt);
 			System.out.println(json);
@@ -41,7 +42,11 @@ public final class ProductInfo extends HttpServlet {
 			response.getWriter().append(json);
 		} catch (NoSuchRowException e) {
 			System.out.println(e.getMessage());
+		} catch(NumberFormatException e) {
+			System.out.println(e.getMessage());
 		}
+		
+		manager.close();
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
