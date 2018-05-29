@@ -45,4 +45,6 @@
 <fullyQualifiedTypeName name="entity.OrderItem"/>
 <fullyQualifiedTypeName name="exception.NoSuchRowException"/>
 <fullyQualifiedTypeName name="entity.OrderItemID"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
 </qualifiedTypeNameHistroy>

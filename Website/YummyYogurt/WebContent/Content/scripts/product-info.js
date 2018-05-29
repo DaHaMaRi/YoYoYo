@@ -15,6 +15,7 @@ $.ajax({
 
 
 function editPage(productInfo) {
+	$("title").html(productInfo.name);
     $("h1").html(productInfo.name);
     $("li.breadcrumb-item.active").html(productInfo.name);
     

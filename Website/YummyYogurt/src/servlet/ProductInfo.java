@@ -25,8 +25,6 @@ public final class ProductInfo extends HttpServlet {
 
 	
 	protected void doGet(final HttpServletRequest request, final HttpServletResponse response) throws ServletException, IOException {
-		
-		
 		final YogurtManager manager = new YogurtManager("YummyYogurt");
 		final ObjectMapper mapper = new ObjectMapper();
 		mapper.findAndRegisterModules();
@@ -40,10 +38,9 @@ public final class ProductInfo extends HttpServlet {
 			
 			response.setContentType("application/json");
 			response.getWriter().append(json);
-		} catch (NoSuchRowException e) {
+		} catch (NumberFormatException | NoSuchRowException e) {
 			System.out.println(e.getMessage());
-		} catch(NumberFormatException e) {
-			System.out.println(e.getMessage());
+			response.setStatus(HttpServletResponse.SC_NOT_FOUND);
 		}
 		
 		manager.close();
