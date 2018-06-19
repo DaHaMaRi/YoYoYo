@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="manager.AddressManager"/>
-<fullyQualifiedTypeName name="manager.UserManager"/>
 <fullyQualifiedTypeName name="java.time.LocalDate"/>
 <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
 <fullyQualifiedTypeName name="javax.persistence.Query"/>
-<fullyQualifiedTypeName name="entity.User"/>
 <fullyQualifiedTypeName name="javax.persistence.EmbeddedId"/>
 <fullyQualifiedTypeName name="javax.persistence.Embeddable"/>
 <fullyQualifiedTypeName name="javax.persistence.ManyToMany"/>
@@ -47,4 +45,6 @@
 <fullyQualifiedTypeName name="entity.OrderItemID"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
+<fullyQualifiedTypeName name="manager.UserManager"/>
+<fullyQualifiedTypeName name="entity.User"/>
 </qualifiedTypeNameHistroy>
