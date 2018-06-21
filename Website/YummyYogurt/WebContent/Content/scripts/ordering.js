@@ -1,6 +1,10 @@
+/**
+ * 
+ */
+
 $.ajax({
-	url: "http://localhost:8080/YummyYogurt/profil.html",
-    data: {id: 2},
+	url: "http://localhost:8080/YummyYogurt/ordering.html",
+    data: {id: 1},
     method: "GET",
     dataType: "json",
     
@@ -15,11 +19,18 @@ $.ajax({
 
 
 
-function editPage(profil) {
-	$("title").html(profil.username);
-    $("#username").html(profil.username);
-    $("#namevorname").html(profil.firstname +" "+ profil.familyname);
-    $("#email").html(profil.email);
+function editPage(ordering) {
+    $("#firstname").html(ordering.firstname);
+    $("#name").html(" "+ ordering.familyname);
+    $("#street").html(ordering.address.streetname);
+    $("#housenumber").html(" "+ ordering.address.streetnumber);
+    $("#postalcode").html(ordering.address.postalCode);
+    $("#city").html(" "+ordering.address.city);
+    
+    $("#streetnameM").val(ordering.address.streetname);
+    $("#housenumberM").val(ordering.address.streetnumber);
+    $("#postalcodeM").val(ordering.address.postalCode);
+    $("#cityM").val(ordering.address.city);
     
 }
 

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="manager.AddressManager"/>
 <fullyQualifiedTypeName name="java.time.LocalDate"/>
 <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
 <fullyQualifiedTypeName name="javax.persistence.Query"/>
@@ -30,7 +29,6 @@
 <fullyQualifiedTypeName name="java.lang.NumberFormatException"/>
 <fullyQualifiedTypeName name="entity.Yogurt"/>
 <fullyQualifiedTypeName name="com.fasterxml.jackson.databind.ObjectMapper"/>
-<fullyQualifiedTypeName name="entity.Address"/>
 <fullyQualifiedTypeName name="javax.persistence.EntityTransaction"/>
 <fullyQualifiedTypeName name="entity.Category"/>
 <fullyQualifiedTypeName name="javax.persistence.EntityManager"/>
@@ -45,6 +43,8 @@
 <fullyQualifiedTypeName name="entity.OrderItemID"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
+<fullyQualifiedTypeName name="manager.AddressManager"/>
 <fullyQualifiedTypeName name="manager.UserManager"/>
 <fullyQualifiedTypeName name="entity.User"/>
+<fullyQualifiedTypeName name="entity.Address"/>
 </qualifiedTypeNameHistroy>
