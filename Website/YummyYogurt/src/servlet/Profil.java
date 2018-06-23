@@ -9,30 +9,26 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import entity.Yogurt;
+import entity.User;
 import exception.NoSuchRowException;
-import manager.YogurtManager;
+import manager.UserManager;
 
-@WebServlet("/product-info.html")
-public final class ProductInfo extends HttpServlet {
-
-	private static final long serialVersionUID = 1L;
-
-	
-	public ProductInfo() {
+@WebServlet("/profil.html")
+public class Profil extends HttpServlet{
+	private static final long serialVersionUID = 2L;
+	public Profil() {
 		super();
 	}
-
 	
 	protected void doGet(final HttpServletRequest request, final HttpServletResponse response) throws ServletException, IOException {
-		final YogurtManager manager = new YogurtManager("YummyYogurt");
+		final UserManager manager = new UserManager("YummyYogurt");
 		final ObjectMapper mapper = new ObjectMapper();
 		mapper.findAndRegisterModules();
 
 		try {
 			final int index = Integer.parseInt(request.getParameter("id"));
-			final Yogurt yogurt = manager.findByID(index);
-			final String json = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(yogurt);
+			final User user = manager.findByID(index);
+			final String json = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(user);
 			System.out.println(json);
 			
 			
@@ -45,9 +41,8 @@ public final class ProductInfo extends HttpServlet {
 		
 		manager.close();
 	}
-
+	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doGet(request, response);
 	}
-
 }

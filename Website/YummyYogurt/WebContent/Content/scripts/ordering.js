@@ -1,5 +1,9 @@
+/**
+ * 
+ */
+
 $.ajax({
-	url: "http://localhost:8080/YummyYogurt/product-info.html",
+	url: "http://localhost:8080/YummyYogurt/ordering.html",
     data: {id: 1},
     method: "GET",
     dataType: "json",
@@ -14,20 +18,35 @@ $.ajax({
 });
 
 
-function editPage(productInfo) {
-	$("title").html(productInfo.name);
-    $("h1").html(productInfo.name);
-    $("li.breadcrumb-item.active").html(productInfo.name);
+
+function editPage(ordering) {
+    $("#firstname").html(ordering.firstname);
+    $("#name").html(" "+ ordering.familyname);
+    $("#street").html(ordering.address.streetname);
+    $("#housenumber").html(" "+ ordering.address.streetnumber);
+    $("#postalcode").html(ordering.address.postalCode);
+    $("#city").html(" "+ordering.address.city);
     
-    createIngredientList(productInfo.recipe);
-    createCategorySection(productInfo.recipe);
-    calculatePrice(productInfo.recipe);
+    $("#streetnameM").val(ordering.address.streetname);
+    $("#housenumberM").val(ordering.address.streetnumber);
+    $("#postalcodeM").val(ordering.address.postalCode);
+    $("#cityM").val(ordering.address.city);
+    
 }
 
 function createIngredientList(recipe) {
 	$.each(recipe, function(index, ingredient) {
 		$("#recipe").append("<li>" + ingredient.name + "</li>");
 	});
+}
+
+function calculatePrice(recipe) {
+	var price = 0;
+	$.each(recipe, function(index, ingredient) {
+		price += ingredient.category.priceInCents;
+	});
+	price /= 100;
+	$("#price").html("Preis pro Becher: " + price.toFixed(2) + "€");
 }
 
 function createCategorySection(recipe) {
@@ -71,19 +90,11 @@ function unique(array) {
     return resultSet;
 }
 
-function calculatePrice(recipe) {
-	var price = 0;
-	$.each(recipe, function(index, ingredient) {
-		price += ingredient.category.priceInCents;
-	});
-	price /= 100;
-	$("#price").html("Preis pro Becher: " + price.toFixed(2) + "€");
-}
-
-
 function handleError(xhr, status, errorThrown) {
 	alert("Sorry, there was a problem!");
     console.log("Error: " + errorThrown);
     console.log("Status: " + status );
     console.log(xhr);
 }
+
+
