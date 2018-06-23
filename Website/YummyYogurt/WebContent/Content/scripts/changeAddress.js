@@ -1,9 +1,9 @@
 /**
  * 
  */
-$(function() {
+$(function change() {
 
-  $("#contactForm input").jqBootstrapValidation({
+  $("#changeAddress input").jqBootstrapValidation({
     preventSubmit: true,
     submitError: function($form, event, errors) {
     	alert(error);
@@ -17,7 +17,7 @@ $(function() {
       var city = $("input#cityM").val();
       var postalcode = $("input#postalcodeM").val();
       alert(city);
-      $this = $("#changeAdressButton");
+      $this = $("#changeAddressButton");
       $this.prop("disabled", true);
       
       $.ajax({

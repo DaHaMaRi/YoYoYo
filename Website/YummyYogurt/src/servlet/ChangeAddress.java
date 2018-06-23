@@ -36,7 +36,7 @@ public class ChangeAddress extends HttpServlet{
 			User user = userManager.findByID(UID);
 			int AID = user.getAddress().getID();
 			Address address = new Address(AID,street_name,housenumber," ",postalcode,city);
-			System.out.println("test: "+address.toString());
+			System.out.println("test2: "+address.toString());
 			addressManager.save(address);
 			
 			
@@ -49,6 +49,7 @@ public class ChangeAddress extends HttpServlet{
 		}
 		
 		addressManager.close();
+		userManager.close();
 	}
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
