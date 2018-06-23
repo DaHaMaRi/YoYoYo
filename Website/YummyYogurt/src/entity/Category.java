@@ -1,13 +1,18 @@
 package entity;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 
 /*create table Zutatenkategorie(
@@ -34,6 +39,9 @@ public final class Category implements Serializable {
 	@Column(name="preis", nullable=false)
 	private int priceInCents;
 	
+	@JsonBackReference
+	@OneToMany(mappedBy="category")
+	private List<Ingredient> ingredients;
 	
 	public Category() {}
 
@@ -41,15 +49,18 @@ public final class Category implements Serializable {
 		this.categoryID = categoryID;
 		this.name = name;
 		this.priceInCents = priceInCents;
+		this.ingredients = new ArrayList<>();
 	}
+
+	
 
 	
 	@Override
 	public String toString() {
-		return "IngredientCategory [categoryID=" + categoryID + ", name=" + name 
-					+ ", priceInCents=" + priceInCents + "]";
+		return "Category [categoryID=" + categoryID + ", name=" + name + ", priceInCents=" + priceInCents
+				+ ", ingredients=" + ingredients + "]";
 	}
-	
+
 	@Override
 	public boolean equals(Object object) {
 		if(object == null) return false;
@@ -83,6 +94,14 @@ public final class Category implements Serializable {
 
 	public void setPriceInCents(final int priceInCents) {
 		this.priceInCents = priceInCents;
+	}
+
+	public List<Ingredient> getIngredients() {
+		return ingredients;
+	}
+
+	public void setIngredients(List<Ingredient> ingredients) {
+		this.ingredients = ingredients;
 	}
 	
 }
