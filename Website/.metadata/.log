@@ -12539,3 +12539,9 @@ Caused by: com.google.gson.stream.MalformedJsonException: Expected ':' at line 4
 =======
 >>>>>>> e894532dfdb396e1549f68f4c403a43fe717cc01
 >>>>>>> d04d5c46c80f961847764bcb5c570ce7ab45d2ea
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-06-24 22:18:32.132
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-06-24 22:18:32.135
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
