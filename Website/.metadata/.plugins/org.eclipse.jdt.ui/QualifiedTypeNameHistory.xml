@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.time.LocalDate"/>
 <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
 <fullyQualifiedTypeName name="javax.persistence.Query"/>
 <fullyQualifiedTypeName name="javax.persistence.EmbeddedId"/>
@@ -29,22 +30,29 @@
 <fullyQualifiedTypeName name="entity.Yogurt"/>
 <fullyQualifiedTypeName name="com.fasterxml.jackson.databind.ObjectMapper"/>
 <fullyQualifiedTypeName name="javax.persistence.EntityTransaction"/>
-<fullyQualifiedTypeName name="entity.Category"/>
 <fullyQualifiedTypeName name="javax.persistence.EntityManager"/>
 <fullyQualifiedTypeName name="javax.persistence.EntityManagerFactory"/>
 <fullyQualifiedTypeName name="javax.persistence.Persistence"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="javax.persistence.TypedQuery"/>
 <fullyQualifiedTypeName name="entity.Order"/>
 <fullyQualifiedTypeName name="javax.persistence.NamedQuery"/>
 <fullyQualifiedTypeName name="entity.OrderItem"/>
 <fullyQualifiedTypeName name="exception.NoSuchRowException"/>
 <fullyQualifiedTypeName name="entity.OrderItemID"/>
+<<<<<<< HEAD
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="javax.persistence.OneToMany"/>
+<fullyQualifiedTypeName name="com.fasterxml.jackson.annotation.JsonBackReference"/>
+<fullyQualifiedTypeName name="com.fasterxml.jackson.annotation.JsonManagedReference"/>
+<fullyQualifiedTypeName name="manager.CategoryManager"/>
+<fullyQualifiedTypeName name="entity.Category"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+=======
 <fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
 <fullyQualifiedTypeName name="manager.AddressManager"/>
 <fullyQualifiedTypeName name="manager.UserManager"/>
 <fullyQualifiedTypeName name="entity.User"/>
 <fullyQualifiedTypeName name="entity.Address"/>
-<fullyQualifiedTypeName name="java.time.LocalDate"/>
+>>>>>>> 0e0f2a61aff36bcb5319f2d84ff13f515e70631a
 </qualifiedTypeNameHistroy>

@@ -12,6 +12,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 
 /*create table Zutat(
 	    ID    int           primary key,
@@ -43,6 +45,7 @@ public final class Ingredient implements Serializable {
 	@Column(name="Haram", nullable=false)
 	private String haram;
 	
+	@JsonManagedReference
 	@ManyToOne(cascade=CascadeType.PERSIST)
 	@JoinColumn(name="ZutatenkategorieID", nullable=false)
 	private Category category;

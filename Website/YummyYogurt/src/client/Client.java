@@ -5,25 +5,25 @@ import java.io.IOException;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import entity.Category;
 import entity.Yogurt;
 import exception.NoSuchRowException;
+import manager.CategoryManager;
 import manager.YogurtManager;
 
 public class Client {
 
 	public static void main(String args[]) {
-		YogurtManager yogurtManager = new YogurtManager("YummyYogurt");
+		CategoryManager categoryManager = new CategoryManager("YummyYogurt");
 		ObjectMapper mapper = new ObjectMapper();
 		mapper.findAndRegisterModules();
 		
 		try {
-			Yogurt yogurt = yogurtManager.findByID(1);
-			String json = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(yogurt);
+			Category category = categoryManager.findByID(1);
+			System.out.println(category);
+			
+			String json = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(category);
 			System.out.println(json);
-			
-			yogurt = mapper.readValue(json, Yogurt.class);
-			System.out.println(yogurt);
-			
 		} catch (NoSuchRowException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -35,7 +35,7 @@ public class Client {
 			e.printStackTrace();
 		}
 		
-		yogurtManager.close();
+		categoryManager.close();
 	}
 
 }
