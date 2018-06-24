@@ -121,7 +121,7 @@ html {
 }
 
 /* Hide default HTML checkbox */
-.switch input {display:none;}
+/*.switch input {display:none;}
 
 /* The slider */
 .slider {

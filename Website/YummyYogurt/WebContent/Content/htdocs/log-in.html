@@ -45,7 +45,7 @@
                                     <label>Passwort</label>
                                     <input type="text" name="hallo" value="" />
 
-                                    <button type="submit" class="button">Anmelden</button>
+                                    <a type="submit" class="button">Anmelden</a>
                                 </form>
                                 <a href="sign-up.html"><small>Ich habe noch keinen Account</small></a>
                             </div>
@@ -69,21 +69,21 @@
             <div class="row">
                 <div class="col-sm-6">
                     <h5 class="my-4">Ich besitze bereits ein Yummy-Joghurt Konto</h5>
-                    <form name="logIn" id="logInForm">
+                    <form name="logIn" id="logIn">
                         <div class="control-group form-group">
                             <div class="controls">
                                 <label> Benutzername: </label>
-                                <input type="text" class="form-control" id="Benutzername" placeholder="Benutzername eingeben" >
+                                <input type="text" class="form-control" name="Benutzername" id="Benutzername" placeholder="Benutzername eingeben" >
                             </div>
                         </div>
 
                         <div class="control-group form-group">
                             <div class="controls">
                                 <label> Passwort: </label>
-                                <input type="password" class="form-control" id="Passwort" placeholder="Passwort eingeben">
+                                <input type="password" class="form-control" name="Passwort" id="Passwort" placeholder="Passwort eingeben">
                             </div>
                         </div>
-                        <a class="buttonbutton" href="profile.html">Anmelden</a>
+                        <button type="submit" class="buttonbutton" name="LogInButton" id= "LogInButton" >Anmelden</button>
                     </form>
 
                     <hr>
@@ -117,6 +117,10 @@
         <!-- Bootstrap core JavaScript -->
         <script src="../vendor/jquery/jquery.min.js"></script>
         <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        
+        <!-- Own Scripts -->
+        <script src="../scripts/jqBootstrapValidation.js"></script>
+		<script src="../scripts/log-in.js"></script>
 
     </body>
 </html>

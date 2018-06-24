@@ -5,8 +5,11 @@ import java.util.Objects;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQuery;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 
@@ -25,6 +28,7 @@ import javax.persistence.Table;
 public final class Address implements Serializable {
 
 	private static final long serialVersionUID = 1816467445814784831L;
+	private static int generator = 20;
 
 	@Id
 	@Column(name="ID")
@@ -48,15 +52,29 @@ public final class Address implements Serializable {
 	
 	public Address() {}
 
-	public Address(final int addressID, final String streetname, final String streetnumber, 
+	public Address(final String streetname, final String streetnumber, 
 				   final String additional, final String postalCode, final String city) {
-		this.addressID = addressID;
+		
+		this.addressID = this.generator;
+		this.generator++;
 		this.streetname = streetname;
 		this.streetnumber = streetnumber;
 		this.additional = additional;
 		this.postalCode = postalCode;
 		this.city = city;
 	}
+	
+	public Address(int id, final String streetname, final String streetnumber, 
+			   final String additional, final String postalCode, final String city) {
+	
+	this.addressID = id;
+	this.streetname = streetname;
+	this.streetnumber = streetnumber;
+	this.additional = additional;
+	this.postalCode = postalCode;
+	this.city = city;
+}
+	
 	
 	
 	@Override

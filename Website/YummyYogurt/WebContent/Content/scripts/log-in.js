@@ -1,8 +1,8 @@
 /**
  * 
  */
-$(function register() {
-  $("#register input").jqBootstrapValidation({
+$(function logIn() {
+  $("#logIn input").jqBootstrapValidation({
     preventSubmit: true,
     submitError: function($form, event, errors) {
     	alert(error);
@@ -10,39 +10,22 @@ $(function register() {
     submitSuccess: function($form, event) {
       event.preventDefault(); // prevent default submit behaviour
       // get values from FORM
-	  var Vorname = $("input#Vorname").val();
-      var Nachname = $("input#Nachname").val();
-      var Username = $("input#Username").val();
-      var EMail = $("input#EMail").val();
-      var birthday = $("input#birthday").val();
-      var strasse = $("input#strasse").val();
-      var hausnummer = $("input#hausnummer").val();
-      var plz = $("input#plz").val();
-      var ort = $("input#ort").val();
-      var passwort = $("input#passwort").val();
-      var passwortBestaetigen = $("input#passwortBestaetigen").val();
-      $this = $("#registerButton");
+	  
+      var Username = $("input#Benutzername").val();
+      var passwort = $("input#Passwort").val();
+      $this = $("#LogInButton");
       $this.prop("disabled", true);
       
       $.ajax({
-        url: "http://localhost:8080/YummyYogurt/sign-up.html",
+        url: "http://localhost:8080/YummyYogurt/log-in.html",
         type: "POST",
         data: {
-        	 Vorname : Vorname,
-             Nachname : Nachname,
              Username : Username,
-             EMail  : EMail,
-             birthday : birthday,
-             strasse : strasse,
-             hausnummer : hausnummer,
-             plz : plz,
-             ort : ort,
              passwort : passwort
         },
-        cache: false,
         success: function() {
           // Success message
-        	window.location.href = "http://localhost:8080/YummyYogurt/Content/htdocs/log-in.html";
+        	window.location.href = "http://localhost:8080/YummyYogurt/Content/htdocs/profile.html";
         },
         error: function() {
           // Fail message
@@ -77,4 +60,3 @@ $(function register() {
     $('#name').focus(function() {
       $('#success').html('');
     });
-

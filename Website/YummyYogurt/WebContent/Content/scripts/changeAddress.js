@@ -29,9 +29,9 @@ $(function change() {
           city: city,
           postalcode: postalcode
         },
-        cache: false,
+        cache: true,
         success: function() {
-          // Success message
+          location.reload(true)
           $('#success').html("<div class='alert alert-success'>");
           $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
             .append("</button>");
@@ -43,7 +43,7 @@ $(function change() {
           $('#contactForm').trigger("reset");
         },
         error: function() {
-          // Fail message
+        	alert("Addresse konnte nicht geaendert werden");
           $('#success').html("<div class='alert alert-danger'>");
           $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
             .append("</button>");

@@ -6,9 +6,11 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
+import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 
 import entity.User;
+import entity.Yogurt;
 import exception.NoSuchRowException;
 
 public final class UserManager {
@@ -32,6 +34,25 @@ public final class UserManager {
 		if(user == null)
 			throw new NoSuchRowException();
 		return user;
+	}
+	
+	public User findByUsername(final String username) throws NoSuchRowException {
+		TypedQuery<User> query = manager.createQuery("select user from User user where user.username = :username", User.class);
+		query.setParameter("username", username);
+		User user = query.getResultList().get(0);
+		
+		if(user == null)
+			throw new NoSuchRowException();
+		return user;
+	}
+	
+	public List<Yogurt> getAllYogurts(final int user) throws NoSuchRowException{
+		TypedQuery<Yogurt> query = manager.createQuery("select yogurt from Yogurt yogurt where yogurt.owner = :ID", Yogurt.class);
+		System.out.println("Test22");
+		query.setParameter("ID", findByID(user));
+		System.out.println("Test23");
+		List<Yogurt> yogurts = query.getResultList();
+		return yogurts;
 	}
 	
 	public void save(final User user) {

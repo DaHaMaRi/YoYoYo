@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-[[{"location":"C:\\Program Files\\Java\\jre1.8.0_111","type":"JRE","hints":{"EXECUTION_ENVIRONMENT":"JavaSE-1.8"}},"jre:jre:1.8.0"],[{"location":"C:\\Users\\drraf\\Documents\\Studium\\Semester 4\\Webbasierte Anwendung\\Yummy-Yogurt\\Website\\YummyYogurt","type":"PROJECT","hints":{"PROJECT_NAME":"YummyYogurt"}},"YummyYogurt:YummyYogurt:0.0.1"]]
-=======
-[[{"location":"C:\\apache-tomcat-9.0.7\\lib\\servlet-api.jar","type":"JAR","hints":{}},"ABSENT"]]
->>>>>>> 0e0f2a61aff36bcb5319f2d84ff13f515e70631a
+{}

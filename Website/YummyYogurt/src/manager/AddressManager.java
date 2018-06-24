@@ -45,6 +45,18 @@ public final class AddressManager {
 		transaction.commit();
 	}
 	
+	public void add(final Address address) {
+		final EntityTransaction transaction = manager.getTransaction();
+		transaction.begin();
+			final Address temp = manager.find(Address.class, address.getID());
+			if(temp == null)
+				manager.persist(address);
+			else
+				//manager.merge(address);
+				System.out.println("Addresse existiert schon");
+		transaction.commit();
+	}
+	
 	public void delete(final Address address) throws NoSuchRowException {
 		final EntityTransaction transaction = manager.getTransaction();
 		transaction.begin();

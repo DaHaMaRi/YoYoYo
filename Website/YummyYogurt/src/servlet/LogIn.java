@@ -1,11 +1,16 @@
 package servlet;
 
 import java.io.IOException;
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.HashMap;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import entity.Address;
 import entity.User;
@@ -13,44 +18,44 @@ import exception.NoSuchRowException;
 import manager.AddressManager;
 import manager.UserManager;
 
-@WebServlet("/changeAddress.html")
-public class ChangeAddress extends HttpServlet{
+@WebServlet("/log-in.html")
+public class LogIn  extends HttpServlet{
 
-	private static final long serialVersionUID = 3L;
+private static final long serialVersionUID = 5L;
 	
-	public ChangeAddress(){
+	public LogIn() {
 		super();
 	}
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		AddressManager addressManager = new AddressManager("YummyYogurt");
 		UserManager userManager = new UserManager("YummyYogurt");
-		System.out.println("doGet test");
+		//System.out.println("doGet test");
 
 		try {
-			int UID = Integer.parseInt(request.getParameter("id"));
-			String street_name = request.getParameter("street_name");
-			String housenumber = request.getParameter("housenumber");
-			String city = request.getParameter("city");
-			String postalcode = request.getParameter("postalcode");
-			User user = userManager.findByID(UID);
-			int AID = user.getAddress().getID();
-			Address address = new Address(AID,street_name,housenumber," ",postalcode,city);
-			System.out.println("test2: "+address.toString());
-			addressManager.save(address);
 			
+			String username = request.getParameter("Username");
+			String passwort = request.getParameter("passwort");
 			
+			User user = userManager.findByUsername(username);
+			System.out.println("user id: "+user.getID());
+			
+			if (passwort.equals(user.getPassword())) {
+				HttpSession session = request.getSession();
+				session.setAttribute("UID", user.getID());
+				session.setAttribute("Einkaufswagen", new HashMap<Integer,Integer>());
+			}else{
+				response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+			}
 			
 			response.setContentType("text/html");
 			response.getWriter().append("");
-		} catch (NumberFormatException | NoSuchRowException e) {
+		} catch (NumberFormatException | NoSuchRowException  e) {
 			System.out.println(e.getMessage());
 			response.setStatus(HttpServletResponse.SC_NOT_FOUND);
-			addressManager.close();
+			//response.setStatus(HttpServletResponse.SC_OK);
 			userManager.close();
 		}
 		
-		addressManager.close();
 		userManager.close();
 	}
 	

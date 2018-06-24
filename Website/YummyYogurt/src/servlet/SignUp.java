@@ -25,12 +25,10 @@ public class SignUp extends HttpServlet{
 	}
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		AddressManager addressManager = new AddressManager("YummyYogurt");
 		UserManager userManager = new UserManager("YummyYogurt");
 		System.out.println("doGet test");
 
-		//try {
-			//int UID = Integer.parseInt(request.getParameter("id"));
+		try {
 			String vorname = request.getParameter("Vorname");
 			String nachname = request.getParameter("Nachname");
 			String username = request.getParameter("Username");
@@ -42,24 +40,26 @@ public class SignUp extends HttpServlet{
 			String ort = request.getParameter("ort");
 			String passwort = request.getParameter("passwort");
 			System.out.println("Test3: "+ birthday.toString());
-			//Address address = new Address(AID,strasse,hausnummer," ",plz,ort);
+			
 			LocalDate accessiondate = LocalDate.now();
-			//User user = new User(UID,vorname,nachname,username,eMail,birthday,address,accessiondate);
-			
-			
-			
-			
-			response.setContentType("application/json");
-			response.getWriter().append(" ");
-		//} catch (NumberFormatException | NoSuchRowException e) {
-			//System.out.println(e.getMessage());
-			//response.setStatus(HttpServletResponse.SC_NOT_FOUND);
-			//response.setStatus(HttpServletResponse.SC_OK);
-			//addressManager.close();
-			//userManager.close();
-		//}
 		
-		addressManager.close();
+			Address address = new Address(strasse,hausnummer," ",plz,ort);
+			System.out.println("address id: "+address.getID());
+			
+			User user = new User(vorname,nachname,username,eMail,birthday,address,accessiondate,passwort);
+			System.out.println("user id: "+user.getID());
+			userManager.save(user);
+			
+			
+			response.setContentType("text/html");
+			response.getWriter().append("");
+		} catch (NumberFormatException  e) {
+			System.out.println(e.getMessage());
+			response.setStatus(HttpServletResponse.SC_NOT_FOUND);
+			//response.setStatus(HttpServletResponse.SC_OK);
+			userManager.close();
+		}
+		
 		userManager.close();
 	}
 	
