@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 INDEX VERSION 1.4+C:\Users\drraf\Documents\Studium\Semester 4\Webbasierte Anwendung\Yummy-Yogurt\Website\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
 252108786.index
 930462473.index
@@ -5,3 +6,12 @@ INDEX VERSION 1.4+C:\Users\drraf\Documents\Studium\Semester 4\Webbasierte Anwend
 1453693151.index
 1078741005.index
 2733739286.index
+=======
+INDEX VERSION 1.4+/home/martin/Schreibtisch/Yummy-Yogurt/Website/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+3246809615.index
+3327582978.index
+1692641573.index
+3117120259.index
+328735497.index
+2342294451.index
+>>>>>>> e894532dfdb396e1549f68f4c403a43fe717cc01
