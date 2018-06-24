@@ -46,6 +46,8 @@ public class ChangeAddress extends HttpServlet{
 		} catch (NumberFormatException | NoSuchRowException e) {
 			System.out.println(e.getMessage());
 			response.setStatus(HttpServletResponse.SC_NOT_FOUND);
+			addressManager.close();
+			userManager.close();
 		}
 		
 		addressManager.close();

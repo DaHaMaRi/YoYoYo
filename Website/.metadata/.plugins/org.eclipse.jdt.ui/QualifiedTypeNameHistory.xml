@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.time.LocalDate"/>
 <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
 <fullyQualifiedTypeName name="javax.persistence.Query"/>
 <fullyQualifiedTypeName name="javax.persistence.EmbeddedId"/>
@@ -47,4 +46,5 @@
 <fullyQualifiedTypeName name="manager.UserManager"/>
 <fullyQualifiedTypeName name="entity.User"/>
 <fullyQualifiedTypeName name="entity.Address"/>
+<fullyQualifiedTypeName name="java.time.LocalDate"/>
 </qualifiedTypeNameHistroy>

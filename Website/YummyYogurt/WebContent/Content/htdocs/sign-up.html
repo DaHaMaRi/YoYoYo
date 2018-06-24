@@ -65,29 +65,36 @@
                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                 <li class="breadcrumb-item active">Registrierung</li>
             </ol>
-
+			
             <div class="row">
+            
                 <div class="col-md-6 mb-4">
+                <form name="register" id="register" novalidate>
                     <div class="control-group form-group">
                         <strong>Vorname:</strong>
-                        <input type="text" class="form-control" id="Vorname" value="Dardan">
+                        <input type="text" class="form-control" id="Vorname" value="">
                     </div>
 
                     <div class="control-group form-group">
                         <strong>Nachname:</strong>
-                        <input type="text" class="form-control" id="Nachname" value="Rrafshi">
+                        <input type="text" class="form-control" id="Nachname" value="">
                     </div>
 
                     <div class="control-group form-group">
                         <strong>Username:</strong>
-                        <input type="text" class="form-control" id="Username" value="Don Colon">
+                        <input type="text" class="form-control" id="Username" value="">
                     </div>
-
+					
                     <div class="control-group form-group">
                         <strong>E-Mail:</strong>
-                        <input type="text" class="form-control" id="E-Mail" value="drrafshi@hotmail.de">
+                        <input type="text" class="form-control" id="EMail" value="">
                     </div>
-
+                    
+                    <div class="control-group form-group">
+                        <strong>Geburtsdatum:</strong>
+                        <input type="date" class="form-control" id="birthday" value="">
+                    </div>
+                    
                     <hr />
                     <div class="control-group form-group">
                         <div class="">
@@ -95,26 +102,27 @@
                         </div>
 
                         <div class="">
-                            <input type="text" class="form-control" id="strasse" value="Bei der Schule" placeholder="Straße">
-                            <input type="text" class="form-control my-2" id="hausnummer" value="12" placeholder="Hausnummer">
-                            <input type="text" class="form-control my-2" id="zusatz" value="" placeholder="Zusatz">
+                            <input type="text" class="form-control" id="strasse" value="" placeholder="Straße">
+                            <input type="text" class="form-control my-2" id="hausnummer" value="" placeholder="Hausnummer">
                         </div>
 
                         <div class="">
-                            <input type="text" class="form-control my-2" id="plz" value="88515" placeholder="PLZ">
-                            <input type="text" class="form-control my-2" id="ort" value="Langenenslingen" placeholder="Ort">
+                            <input type="text" class="form-control my-2" id="plz" value="" placeholder="PLZ">
+                            <input type="text" class="form-control my-2" id="ort" value="" placeholder="Ort">
                         </div>
                     </div>
 
                     <hr />
                     <div class="control-group form-group">
                         <strong>Passwort:</strong>
-                        <input type="text" class="form-control my-2" id="passwort" value="" placeholder="Passwort">
-                        <input type="text" class="form-control my-2" id="passwort-bestaetigen" value="" placeholder="Paswort bestätigen">
+                        <input type="password" class="form-control my-2" id="passwort" value="" placeholder="Passwort">
+                        <input type="password" class="form-control my-2" id="passwortBestaetigen" value="" placeholder="Paswort bestätigen">
                     </div>
-                    <a class="buttonbutton" href="profile.html">Registrieren</a>
+                    <button class="button" type="submit" id = "registerButton" name = "registerButton">Registrieren</button>
+                    </form>
                 </div>
-
+                
+				
                 <div class="col-md-6">
                         <img class="center-img img-fluid mb-4" src="http://placehold.it/300x200" alt="Profilbild">
                         <form>
@@ -149,5 +157,10 @@
         <script src="../vendor/jquery/jquery.min.js"></script>
         <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
+		<!-- Own Scripts -->
+        <script src="../scripts/jqBootstrapValidation.js"></script>
+		<script src="../scripts/sign-up.js"></script>
+		
+		
     </body>
 </html>

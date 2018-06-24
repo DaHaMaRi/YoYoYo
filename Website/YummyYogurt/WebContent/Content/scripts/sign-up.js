@@ -1,9 +1,8 @@
 /**
  * 
  */
-$(function change() {
-
-  $("#changeAddress input").jqBootstrapValidation({
+$(function register() {
+  $("#register input").jqBootstrapValidation({
     preventSubmit: true,
     submitError: function($form, event, errors) {
     	alert(error);
@@ -11,39 +10,43 @@ $(function change() {
     submitSuccess: function($form, event) {
       event.preventDefault(); // prevent default submit behaviour
       // get values from FORM
-	var id = 1;
-      var street_name = $("input#streetnameM").val();
-      var housenumber = $("input#housenumberM").val();
-      var city = $("input#cityM").val();
-      var postalcode = $("input#postalcodeM").val();
-      $this = $("#changeAddressButton");
+	  var Vorname = $("input#Vorname").val();
+      var Nachname = $("input#Nachname").val();
+      var Username = $("input#Username").val();
+      var EMail = $("input#EMail").val();
+      var birthday = $("input#birthday").val();
+      var strasse = $("input#strasse").val();
+      var hausnummer = $("input#hausnummer").val();
+      var plz = $("input#plz").val();
+      var ort = $("input#ort").val();
+      var passwort = $("input#passwort").val();
+      var passwortBestaetigen = $("input#passwortBestaetigen").val();
+      $this = $("#registerButton");
       $this.prop("disabled", true);
       
       $.ajax({
-        url: "http://localhost:8080/YummyYogurt/changeAddress.html",
+        url: "http://localhost:8080/YummyYogurt/sign-up.html",
         type: "POST",
         data: {
-          id: id,
-          street_name: street_name,
-          housenumber: housenumber,
-          city: city,
-          postalcode: postalcode
+        	 Vorname : Vorname,
+             Nachname : Nachname,
+             Username : Username,
+             EMail  : EMail,
+             birthday : birthday,
+             strasse : strasse,
+             hausnummer : hausnummer,
+             plz : plz,
+             ort : ort,
+             passwort : passwort
         },
         cache: false,
         success: function() {
           // Success message
-          $('#success').html("<div class='alert alert-success'>");
-          $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
-            .append("</button>");
-          $('#success > .alert-success')
-            .append("<strong>Your message has been sent. </strong>");
-          $('#success > .alert-success')
-            .append('</div>');
-          //clear all fields
-          $('#contactForm').trigger("reset");
+        	window.location.href = "http://localhost:8080/YummyYogurt/log-in.html";
         },
         error: function() {
           // Fail message
+        	alert("fehlgeschagen");
           $('#success').html("<div class='alert alert-danger'>");
           $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
             .append("</button>");
