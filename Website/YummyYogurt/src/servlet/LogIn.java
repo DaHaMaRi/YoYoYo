@@ -43,6 +43,12 @@ private static final long serialVersionUID = 5L;
 				HttpSession session = request.getSession();
 				session.setAttribute("UID", user.getID());
 				session.setAttribute("Einkaufswagen", new HashMap<Integer,Integer>());
+				@SuppressWarnings("unchecked")
+				HashMap<Integer,Integer> einkauf = (HashMap<Integer, Integer>) session.getAttribute("Einkaufswagen");
+				einkauf.put(1,1);
+				einkauf.put(2,2);
+				einkauf.put(3,1);
+				session.setAttribute("Einkaufswagen", einkauf);
 			}else{
 				response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
 			}

@@ -1,42 +1,30 @@
 /**
  * 
  */
-
 $.ajax({
-	url: "http://localhost:8080/YummyYogurt/ordering.html",
-    data: {id: 1},
+	url: "http://localhost:8080/YummyYogurt/shopping-cart.html",
     method: "GET",
     dataType: "json",
+    data: {
+    	yid : "-999",
+    	m :  "-999"
+    },
     
     success: function(result) {
-    	editAddress(result[0]);
-    	editCart(result[1]);
+    	editPage(result);
+    	//check();
+    	//alert(JSON.stringify(result));
     },
     
     error: function(xhr, status, errorThrown) {
+    	//alert(JSON.stringify(result));
 		handleError(xhr, status, errorThrown);
 	}
 });
 
 
 
-function editAddress(ordering) {
-    $("#firstname").html(ordering.firstname);
-    $("#name").html(" "+ ordering.familyname);
-    $("#street").html(ordering.address.streetname);
-    $("#housenumber").html(" "+ ordering.address.streetnumber);
-    $("#postalcode").html(ordering.address.postalCode);
-    $("#city").html(" "+ordering.address.city);
-    
-    $("#streetnameM").val(ordering.address.streetname);
-    $("#housenumberM").val(ordering.address.streetnumber);
-    $("#postalcodeM").val(ordering.address.postalCode);
-    $("#cityM").val(ordering.address.city);
-    
-}
-
-
-function editCart(profil) {
+function editPage(profil) {
 	
     $.each(profil[0], function(index, Yogurt) {
     	//alert(JSON.stringify(yogurt));
@@ -66,7 +54,7 @@ function calculateFinal(profil){
 
 function loadYogurt(Yogurt, menge) {
 	
-	$("#warenkorb").append('<table class="border rounded bg-light mb-3"><tbody><tr><td class="col-2 w-25 px-0 align-top"><a href="product-info.html"><img class="img-fluid" src="../images/Yogurt1.jpg" height="200px" alt=""></a></td><td class="col-6 align-text-top"><h3><a href="product-info.html">'+Yogurt.name+'</a></h3><p id="Zutaten'+Yogurt.id+'"></p><div id="Categorien'+Yogurt.id+'"></div></td><td class="col-3"><ul style="list-style-type: none"><li><strong class="mr-5" >Einzelpreis:</strong></li><li><strong class="mr-5" >Menge: </strong></li><li><strong class="mr-5">Summe: </strong></li><li><strong class="mr-5">inkl. 19% MwSt:</strong></li></ul></td><td class="col-1"><ul style="list-style-type: none"><li><strong class="mr-5" id="Einzelpreis'+Yogurt.id+'"></strong></li><li><strong class="mr-5" id="Menge'+Yogurt.id+'">'+menge+'</strong></li><li><strong id="Summe'+Yogurt.id+'" class="mr-5"></strong></li><li><strong id="Mwst'+Yogurt.id+'" class="mr-5"></strong></li></ul></td></tr></tbody></table>');
+	$("#warenkorb").append('<table class="border rounded bg-light mb-3"><tbody><tr><td class="col-2 w-25 px-0 align-top"><a href="product-info.html"><img class="img-fluid" src="../images/Yogurt1.jpg" height="200px" alt=""></a></td><td class="col-6 align-text-top"><h3><a href="product-info.html">'+Yogurt.name+'</a></h3><p id="Zutaten'+Yogurt.id+'"></p><div id="Categorien'+Yogurt.id+'"></div></td><td class="col-3"><ul style="list-style-type: none"><li><strong class="mr-5" >Einzelpreis:</strong></li><li><strong class="mr-5" >Menge: </strong></li><li><strong class="mr-5">Summe: </strong></li><li><strong class="mr-5">inkl. 19% MwSt:</strong></li></ul></td><td class="col-1"><ul style="list-style-type: none"><li><strong class="mr-5" id="Einzelpreis'+Yogurt.id+'"></strong></li><li><input id="'+Yogurt.id+'" class="w-50 menge" onchange="changeAmount('+Yogurt.id+',this.value)" type="number" value="'+menge+'" min="1" max="2000" step="1" /></li><li><strong id="Summe'+Yogurt.id+'" class="mr-5"></strong></li><li><strong id="Mwst'+Yogurt.id+'" class="mr-5"></strong></li></ul></td></tr></tbody></table>');
 	//alert("vor insert");
 	createIngredientList(Yogurt);
 	createCategorySection(Yogurt);
@@ -139,5 +127,3 @@ function handleError(xhr, status, errorThrown) {
     console.log("Status: " + status );
     console.log(xhr);
 }
-
-

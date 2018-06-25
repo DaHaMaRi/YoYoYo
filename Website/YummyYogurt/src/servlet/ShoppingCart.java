@@ -1,7 +1,7 @@
 package servlet;
 
-
 import java.io.IOException;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -15,37 +15,43 @@ import javax.servlet.http.HttpSession;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import entity.Address;
 import entity.User;
 import entity.Yogurt;
 import exception.NoSuchRowException;
+import manager.AddressManager;
 import manager.UserManager;
 import manager.YogurtManager;
 
-@WebServlet("/ordering.html")
-public class Ordering extends HttpServlet{
+@WebServlet("/shopping-cart.html")
+public class ShoppingCart extends HttpServlet{
 
-
-	private static final long serialVersionUID = 4L;
-	
-	public Ordering(){
+	public ShoppingCart() {
 		super();
 	}
 	
+
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		final UserManager manager = new UserManager("YummyYogurt");
 		YogurtManager yogurtManager = new YogurtManager("YummyYogurt");
 		final ObjectMapper mapper = new ObjectMapper();
 		mapper.findAndRegisterModules();
 
 		try {
-			final int index = Integer.parseInt(request.getParameter("id"));
-			final User user = manager.findByID(index);
-			final String jsonA = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(user);
+			System.out.println("Test1");
 			HttpSession session = request.getSession();
 			if (!session.isNew()) {
+				System.out.println("Test2");
+				Integer yid =  Integer.parseInt(request.getParameter("yid"));
+				Integer m = Integer.parseInt(request.getParameter("m"));
+				System.out.println("yid "+yid);
+				System.out.println("m "+m);
 				
 				@SuppressWarnings("unchecked")
 				HashMap<Integer,Integer> einkaufSession = (HashMap<Integer, Integer>) session.getAttribute("Einkaufswagen");
+				if(yid!=-999 && m != -999) {
+					einkaufSession.put(yid, m);
+				}
+				session.setAttribute("Einkaufswagen", einkaufSession);
 				final List<Yogurt>  yogurts = new ArrayList<Yogurt>();
 				final List<Integer> mengen = new ArrayList<Integer>();
 				
@@ -56,18 +62,19 @@ public class Ordering extends HttpServlet{
 				final String json = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(yogurts);
 				final String json2 = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(mengen);
 				String message = "[ " +json+ " , "+json2 +"]";
-				message = "[ " +jsonA+ " , "+message+"]";
+				
 				response.setContentType("application/json");
 				response.getWriter().append(message);
+			}else{
+				response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
 			}
-		} catch (NumberFormatException | NoSuchRowException e) {
+		} catch (NumberFormatException | NoSuchRowException  e) {
 			System.out.println(e.getMessage());
 			response.setStatus(HttpServletResponse.SC_NOT_FOUND);
-			manager.close();
+			//response.setStatus(HttpServletResponse.SC_OK);
 			yogurtManager.close();
 		}
 		
-		manager.close();
 		yogurtManager.close();
 	}
 	

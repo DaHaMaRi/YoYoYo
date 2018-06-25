@@ -38,14 +38,14 @@
                                 Anmelden  <span class="fa fa-user"></span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right p-2" aria-labelledby="navbarDropdownLogIn">
-                                <form action="log-in.html" method="post">
+                                <form name="logInTop" id="logInTop">
                                     <label>Benutzername</label>
-                                    <input type="text" name="hallo" value="" />
+                                    <input type="text" class="form-control"name="username" id="username" value="" />
 
                                     <label>Passwort</label>
-                                    <input type="text" name="hallo" value="" />
+                                    <input type="password" class="form-control" name="password" id="password" value="" />
 
-                                    <a type="submit" class="button">Anmelden</a>
+                                    <button name="logInTopButton" id="logInTopButton"  type="submit" class="button">Anmelden</button>
                                 </form>
                                 <a href="sign-up.html"><small>Ich habe noch keinen Account</small></a>
                             </div>
@@ -121,6 +121,8 @@
         <!-- Own Scripts -->
         <script src="../scripts/jqBootstrapValidation.js"></script>
 		<script src="../scripts/log-in.js"></script>
+		<script src="../scripts/logInTop.js"></script>
+		<script src="../scripts/logOut.js"></script>
 
     </body>
 </html>

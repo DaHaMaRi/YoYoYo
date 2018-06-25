@@ -40,7 +40,9 @@
                             <div class="dropdown-menu dropdown-menu-right p-2" aria-labelledby="navbarDropdownLogIn">
                                 <a class="dropdown-item" href="profile.html">Profil</a>
                                 <a class="dropdown-item" href="profile-setting.html">Einstellungen</a>
-                                <a class="dropdown-item" href="index.html">Abmelden</a>
+                                <button  type="button" id="logOutButton" name="logOutButton" class="dropdown-item logOut">Abmelden</button>
+                
+                                
                             </div>
                         </li>
 
@@ -71,275 +73,12 @@
                 </div>
             </div>
 
-            <h4 class="my-4 text-center">Zuletzt Bestellt:</h4>
-
-            <div class="row">
-                <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
-                    <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="../images/Yogurt1.jpg" height="200px" alt=""></a>
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                <a href="product-info.html">Super Yogurt X</a>
-                            </h4>
-                            <p class="card-text">Erdbeer-Joghurt, Haselnuss, Schokostreusel, Schokosoße</p>
-                            <p><strong>Preis: 3,99€</strong></p>
-                            <span class="badge badge-fruits">Früchte</span>
-                            <span class="badge badge-nuts">Nüsse & Kerne</span>
-                            <span class="badge badge-chocolate">Schokolade</span>
-                        </div>
-                        <div class="card-footer text-center">
-                            <div class="star-rating">
-                                <span class="fa fa-star" data-rating="1"></span>
-                                <span class="fa fa-star" data-rating="2"></span>
-                                <span class="fa fa-star" data-rating="3"></span>
-                                <span class="fa fa-star" data-rating="4"></span>
-                                <span class="fa fa-star" data-rating="5"></span>
-                                <input type="hidden" name="whatever1" class="rating-value" value="4.99">
-                                <p class="card-text"><small>4,99 (150)</small></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
-                    <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="../images/Yogurt2.jpg" height="200px" alt=""></a>
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                <a href="product-info.html">Banana Awesome</a>
-                            </h4>
-                            <p class="card-text">Bananen-Joghurt, Banane, Schokostreusel</p>
-                            <p><strong>Preis: 3,99€</strong></p>
-                            <span class="badge badge-fruits">Früchte</span>
-                            <span class="badge badge-chocolate">Schokolade</span>
-                        </div>
-                        <div class="card-footer text-center">
-                            <div class="star-rating">
-                                <span class="fa fa-star" data-rating="1"></span>
-                                <span class="fa fa-star" data-rating="2"></span>
-                                <span class="fa fa-star" data-rating="3"></span>
-                                <span class="fa fa-star" data-rating="4"></span>
-                                <span class="fa fa-star" data-rating="5"></span>
-                                <input type="hidden" name="whatever1" class="rating-value" value="4.84">
-                                <p class="card-text"><small>4,84 (121)</small></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
-                    <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="../images/Yogurt3.jpg" height="200px" alt=""></a>
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                <a href="product-info.html">Blutbad Becher</a>
-                            </h4>
-                            <p class="card-text">Erdbeer-Joghurt, Kirschen, Cocosflocken, Schokosoße</p>
-                            <p><strong>Preis: 3,99€</strong></p>
-                            <span class="badge badge-fruits">Früchte</span>
-                            <span class="badge badge-chocolate">Schokolade</span>
-                        </div>
-                        <div class="card-footer text-center">
-                            <div class="star-rating">
-                                <span class="fa fa-star" data-rating="1"></span>
-                                <span class="fa fa-star" data-rating="2"></span>
-                                <span class="fa fa-star" data-rating="3"></span>
-                                <span class="fa fa-star" data-rating="4"></span>
-                                <span class="fa fa-star" data-rating="5"></span>
-                                <input type="hidden" name="whatever1" class="rating-value" value="4.71">
-                                <p class="card-text"><small>4,71 (142)</small></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
-                    <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="../images/Yogurt4.jpg" height="200px" alt=""></a>
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                <a href="product-info.html">Nuts Royal</a>
-                            </h4>
-                            <p class="card-text">Nuccio-Joghurt, Haselnuss, Walnuss, Nougatsoße</p>
-                            <p><strong>Preis: 3,99€</strong></p>
-                            <span class="badge badge-nuts">Nüsse & Kerne</span>
-                            <span class="badge badge-chocolate">Schokolade</span>
-                        </div>
-                        <div class="card-footer text-center">
-                            <div class="star-rating">
-                                <span class="fa fa-star" data-rating="1"></span>
-                                <span class="fa fa-star" data-rating="2"></span>
-                                <span class="fa fa-star" data-rating="3"></span>
-                                <span class="fa fa-star" data-rating="4"></span>
-                                <span class="fa fa-star-o" data-rating="5"></span>
-                                <input type="hidden" name="whatever1" class="rating-value" value="4.32">
-                                <p class="card-text"><small>4,32 (95)</small></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+            
             <h4 class="my-4 text-center">Meine Kreationen:</h4>
 
-            <div class="row">
-                <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
-                    <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="../images/Yogurt5.jpg" height="200px" alt=""></a>
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                <a href="product-info.html">Fruity Loop</a>
-                            </h4>
-                            <p class="card-text">Apfel-Joghurt, Banane, Erdbeer, Birne, Ananas</p>
-                            <p><strong>Preis: 3,99€</strong></p>
-                            <span class="badge badge-fruits">Früchte</span>
-                        </div>
-                        <div class="card-footer text-center">
-                            <div class="star-rating">
-                                <span class="fa fa-star" data-rating="1"></span>
-                                <span class="fa fa-star" data-rating="2"></span>
-                                <span class="fa fa-star" data-rating="3"></span>
-                                <span class="fa fa-star" data-rating="4"></span>
-                                <span class="fa fa-star-o" data-rating="5"></span>
-                                <input type="hidden" name="whatever1" class="rating-value" value="4.28">
-                                <p class="card-text"><small>4,28 (136)</small></p>
-                            </div>
-                            <label class="switch">
-                                <input type="checkbox" class="visebel" id="1">
-                                <span class="slider round"></span>
-                            </label>
-                            <i class="fa fa-lock"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
-                    <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="../images/Yogurt6.jpg" height="200px" alt=""></a>
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                <a href="product-info.html">Sugar Bombs</a>
-                            </h4>
-                            <p class="card-text">Schoko-Joghurt, Karamel, Schokostreusel, Nougatsoße</p>
-                            <p><strong>Preis: 3,99€</strong></p>
-                            <span class="badge badge-chocolate">Schokolade</span>
-                        </div>
-                        <div class="card-footer text-center">
-                            <div class="star-rating">
-                                <span class="fa fa-star" data-rating="1"></span>
-                                <span class="fa fa-star" data-rating="2"></span>
-                                <span class="fa fa-star" data-rating="3"></span>
-                                <span class="fa fa-star" data-rating="4"></span>
-                                <span class="fa fa-star-o" data-rating="5"></span>
-                                <input type="hidden" name="whatever1" class="rating-value" value="4.19">
-                                <p class="card-text"><small>4,19 (119)</small></p>
-                            </div>
-                            <label class="switch">
-                                <input type="checkbox" class="visebel" id="2">
-                                <span class="slider round"></span>
-                            </label>
-                            <i class="fa fa-unlock"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
-                    <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="../images/Yogurt7.jpg" height="200px" alt=""></a>
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                <a href="product-info.html">MC Fitty</a>
-                            </h4>
-                            <p class="card-text">Light-Joghurt, Apfel, Erdbeeren, Bananen</p>
-                            <p><strong>Preis: 3,99€</strong></p>
-                            <span class="badge badge-fruits">Früchte</span>
-                            <span class="badge badge-vegan">Vegan</span>
-                        </div>
-                        <div class="card-footer text-center">
-                            <div class="star-rating">
-                                <span class="fa fa-star" data-rating="1"></span>
-                                <span class="fa fa-star" data-rating="2"></span>
-                                <span class="fa fa-star" data-rating="3"></span>
-                                <span class="fa fa-star" data-rating="4"></span>
-                                <span class="fa fa-star-o" data-rating="5"></span>
-                                <input type="hidden" name="whatever1" class="rating-value" value="3.97">
-                                <p class="card-text"><small>3,97 (101)</small></p>
-                            </div>
-                            <label class="switch">
-                                <input type="checkbox" class="visebel" id="3" >
-                                <span class="slider round"></span>
-                            </label>
-                            <i class="fa fa-unlock"></i>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
-                    <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="../images/Yogurt7.jpg" height="200px" alt=""></a>
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                <a href="product-info.html">MC Fitty</a>
-                            </h4>
-                            <p class="card-text">Light-Joghurt, Apfel, Erdbeeren, Bananen</p>
-                            <p><strong>Preis: 3,99€</strong></p>
-                            <span class="badge badge-fruits">Früchte</span>
-                            <span class="badge badge-vegan">Vegan</span>
-                        </div>
-                        <div class="card-footer text-center">
-                            <div class="star-rating">
-                                <span class="fa fa-star" data-rating="1"></span>
-                                <span class="fa fa-star" data-rating="2"></span>
-                                <span class="fa fa-star" data-rating="3"></span>
-                                <span class="fa fa-star" data-rating="4"></span>
-                                <span class="fa fa-star-o" data-rating="5"></span>
-                                <input type="hidden" name="whatever1" class="rating-value" value="3.97">
-                                <p class="card-text"><small>3,97 (101)</small></p>
-                            </div>
-                            <label class="switch">
-                                <input type="checkbox" class="visebel" id="3" >
-                                <span class="slider round"></span>
-                            </label>
-                            <i class="fa fa-unlock"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
-                    <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="../images/Yogurt8.jpg" height="200px" alt=""></a>
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                <a href="product-info.html">Gold Becher</a>
-                            </h4>
-                            <p class="card-text">Vanille-Joghurt, Apfel, Pistazien, Karamell, Au</p>
-                            <p><strong>Preis: 3,99€</strong></p>
-                            <span class="badge badge-fruits">Früchte</span>
-                            <span class="badge badge-nuts">Nüsse & Kerne</span>
-                            <span class="badge badge-chocolate">Schokolade</span>
-                        </div>
-                        <div class="card-footer text-center">
-                            <div class="star-rating">
-                                <span class="fa fa-star" data-rating="1"></span>
-                                <span class="fa fa-star" data-rating="2"></span>
-                                <span class="fa fa-star" data-rating="3"></span>
-                                <span class="fa fa-star" data-rating="4"></span>
-                                <span class="fa fa-star-o" data-rating="5"></span>
-                                <input type="hidden" name="whatever1" class="rating-value" value="3.89">
-                                <p class="card-text"><small>3,89 (122)</small></p>
-                            </div>
-                            <label class="switch">
-                                <input type="checkbox" class="visebel" id="4">
-                                <span class="slider round"></span>
-                            </label>
-                            <i class="fa fa-lock"></i>
-                        </div>
-                    </div>
-                </div>
+            <div class="row" id="myYogurts">
             </div>
-
-        </div>
-
+		</div>
         <!-- Footer -->
         <footer class="nice-fix pt-2 pb-5 bg-secondary text-center">
             <div class="container">
@@ -365,10 +104,16 @@
         
         <!-- Own Scripts -->
 		<script src="../scripts/profil.js"></script>
+		<script src="../scripts/logOut.js"></script>
 		<script src="../scripts/setVisability.js"></script>
 		<script type="text/javascript">
+		function check(){
 			$('.visebel').click(function() {
     			setVis($(this).attr('id'));  //-->this will alert id of checked checkbox
+			});
+		}
+			$('.logOut').click(function() {
+    			logOut();  //-->this will alert id of checked checkbox
 			});
     	</script>
 

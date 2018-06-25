@@ -6,5 +6,7 @@
 <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
 <fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="servlet.ShoppingCart"/>
 <fullyQualifiedTypeName name="entity.Yogurt"/>
+<fullyQualifiedTypeName name="manager.YogurtManager"/>
 </qualifiedTypeNameHistroy>
