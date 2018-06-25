@@ -9,4 +9,9 @@
 <fullyQualifiedTypeName name="servlet.ShoppingCart"/>
 <fullyQualifiedTypeName name="entity.Yogurt"/>
 <fullyQualifiedTypeName name="manager.YogurtManager"/>
+<fullyQualifiedTypeName name="manager.OrderManager"/>
+<fullyQualifiedTypeName name="entity.Order"/>
+<fullyQualifiedTypeName name="java.time.LocalDateTime"/>
+<fullyQualifiedTypeName name="entity.OrderItem"/>
+<fullyQualifiedTypeName name="manager.OrderItemManager"/>
 </qualifiedTypeNameHistroy>
