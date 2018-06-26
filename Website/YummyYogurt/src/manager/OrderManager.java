@@ -16,8 +16,7 @@ public final class OrderManager {
 	private final EntityManager manager;
 	
 	
-	public OrderManager(final String persistenceUnitName) {
-		final EntityManagerFactory factory = Persistence.createEntityManagerFactory(persistenceUnitName);
+	public OrderManager(EntityManagerFactory factory) {
 		this.manager = factory.createEntityManager();
 	}
 	

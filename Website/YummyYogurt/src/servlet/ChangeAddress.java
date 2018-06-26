@@ -1,6 +1,8 @@
 package servlet;
 
 import java.io.IOException;
+
+import javax.persistence.EntityManagerFactory;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -23,13 +25,15 @@ public class ChangeAddress extends HttpServlet{
 	}
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		AddressManager addressManager = new AddressManager("YummyYogurt");
-		UserManager userManager = new UserManager("YummyYogurt");
+		EntityManagerFactory factory = (EntityManagerFactory)request.getServletContext().getAttribute("emf");
+		
+		AddressManager addressManager = new AddressManager(factory);
+		UserManager userManager = new UserManager(factory);
 		System.out.println("doGet test");
 
 		try {
 			int UID = Integer.parseInt(request.getParameter("id"));
-			String street_name = request.getParameter("street_name");
+		 	String street_name = request.getParameter("street_name");
 			String housenumber = request.getParameter("housenumber");
 			String city = request.getParameter("city");
 			String postalcode = request.getParameter("postalcode");

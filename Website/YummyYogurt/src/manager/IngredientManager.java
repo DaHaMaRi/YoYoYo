@@ -16,8 +16,7 @@ public final class IngredientManager {
 	private final EntityManager manager;
 	
 	
-	public IngredientManager(final String persistenceUnitName) {
-		final EntityManagerFactory factory = Persistence.createEntityManagerFactory(persistenceUnitName);
+	public IngredientManager(EntityManagerFactory factory) {
 		this.manager = factory.createEntityManager();
 	}
 	

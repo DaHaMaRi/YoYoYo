@@ -18,8 +18,7 @@ public final class UserManager {
 	private final EntityManager manager;
 	
 	
-	public UserManager(final String persistenceUnitName) {
-		final EntityManagerFactory factory = Persistence.createEntityManagerFactory(persistenceUnitName);
+	public UserManager(EntityManagerFactory factory) {
 		this.manager = factory.createEntityManager();
 	}
 	

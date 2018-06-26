@@ -16,8 +16,7 @@ public final class CategoryManager {
 	private final EntityManager manager;
 	
 	
-	public CategoryManager(final String persistenceUnitName) {
-		EntityManagerFactory factory = Persistence.createEntityManagerFactory(persistenceUnitName);
+	public CategoryManager(EntityManagerFactory factory) {
 		this.manager = factory.createEntityManager();
 	}
 	

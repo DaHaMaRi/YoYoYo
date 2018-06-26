@@ -14,4 +14,5 @@
 <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
 <fullyQualifiedTypeName name="entity.OrderItem"/>
 <fullyQualifiedTypeName name="manager.OrderItemManager"/>
+<fullyQualifiedTypeName name="javax.persistence.EntityManagerFactory"/>
 </qualifiedTypeNameHistroy>

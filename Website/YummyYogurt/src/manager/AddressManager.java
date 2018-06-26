@@ -16,8 +16,7 @@ public final class AddressManager {
 	private final EntityManager manager;
 	
 	
-	public AddressManager(final String persistenceUnitName) {
-		final EntityManagerFactory factory = Persistence.createEntityManagerFactory(persistenceUnitName);
+	public AddressManager(EntityManagerFactory factory) {
 		this.manager = factory.createEntityManager();
 	}
 	
