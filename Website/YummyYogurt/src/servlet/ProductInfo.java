@@ -1,6 +1,9 @@
 package servlet;
 
 import java.io.IOException;
+
+import javax.persistence.EntityManagerFactory;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -25,7 +28,11 @@ public final class ProductInfo extends HttpServlet {
 
 	
 	protected void doGet(final HttpServletRequest request, final HttpServletResponse response) throws ServletException, IOException {
-		final YogurtManager manager = new YogurtManager("YummyYogurt");
+		final ServletContext context = request.getServletContext();
+		final EntityManagerFactory factory = (EntityManagerFactory) context.getAttribute("factory");
+		
+		final YogurtManager manager = new YogurtManager(factory);
+		
 		final ObjectMapper mapper = new ObjectMapper();
 		mapper.findAndRegisterModules();
 
@@ -33,7 +40,6 @@ public final class ProductInfo extends HttpServlet {
 			final int index = Integer.parseInt(request.getParameter("id"));
 			final Yogurt yogurt = manager.findByID(index);
 			final String json = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(yogurt);
-			System.out.println(json);
 			
 			
 			response.setContentType("application/json");

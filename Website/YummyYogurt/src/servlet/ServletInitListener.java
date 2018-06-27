@@ -6,33 +6,18 @@ import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 
-/**
- * Application Lifecycle Listener implementation class ServletInitListener
- *
- */
+
 @WebListener
 public class ServletInitListener implements ServletContextListener {
 
-    /**
-     * Default constructor. 
-     */
-    public ServletInitListener() {
-        // TODO Auto-generated constructor stub
-    }
+    public ServletInitListener() {}
 
-	/**
-     * @see ServletContextListener#contextDestroyed(ServletContextEvent)
-     */
-    public void contextDestroyed(ServletContextEvent sce)  { 
-         // TODO Auto-generated method stub
-    }
+    public void contextDestroyed(ServletContextEvent sce)  {}
 
-	/**
-     * @see ServletContextListener#contextInitialized(ServletContextEvent)
-     */
-    public void contextInitialized(ServletContextEvent sce)  { 
+	
+    public void contextInitialized(ServletContextEvent contextEvent)  { 
     	EntityManagerFactory factory = Persistence.createEntityManagerFactory("YummyYogurt");
-    	sce.getServletContext().setAttribute("emf", factory);
+    	contextEvent.getServletContext().setAttribute("factory", factory);
     }
 	
 }

@@ -6,6 +6,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import javax.persistence.EntityManagerFactory;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -32,8 +34,12 @@ public class Ordering extends HttpServlet{
 	}
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		final UserManager manager = new UserManager("YummyYogurt");
-		YogurtManager yogurtManager = new YogurtManager("YummyYogurt");
+		final ServletContext context = request.getServletContext();
+		final EntityManagerFactory factory = (EntityManagerFactory) context.getAttribute("factory");
+		
+		final UserManager manager = new UserManager(factory);
+		final YogurtManager yogurtManager = new YogurtManager(factory);
+		
 		final ObjectMapper mapper = new ObjectMapper();
 		mapper.findAndRegisterModules();
 

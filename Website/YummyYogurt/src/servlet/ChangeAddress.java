@@ -3,6 +3,7 @@ package servlet;
 import java.io.IOException;
 
 import javax.persistence.EntityManagerFactory;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -25,7 +26,8 @@ public class ChangeAddress extends HttpServlet{
 	}
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		EntityManagerFactory factory = (EntityManagerFactory)request.getServletContext().getAttribute("emf");
+		ServletContext context = request.getServletContext();
+		EntityManagerFactory factory = (EntityManagerFactory) context.getAttribute("factory");
 		
 		AddressManager addressManager = new AddressManager(factory);
 		UserManager userManager = new UserManager(factory);

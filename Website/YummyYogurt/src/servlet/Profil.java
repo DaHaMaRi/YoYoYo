@@ -1,9 +1,10 @@
 package servlet;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.EntityManagerFactory;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -13,7 +14,6 @@ import javax.servlet.http.HttpSession;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import entity.Category;
 import entity.User;
 import entity.Yogurt;
 import exception.NoSuchRowException;
@@ -28,8 +28,12 @@ public class Profil extends HttpServlet{
 	}
 	
 	protected void doGet(final HttpServletRequest request, final HttpServletResponse response) throws ServletException, IOException {
-		final UserManager userManager = new UserManager("YummyYogurt");
-		final YogurtManager yogurtManager = new YogurtManager("YummyYogurt");
+		final ServletContext context = request.getServletContext();
+		final EntityManagerFactory factory = (EntityManagerFactory) context.getAttribute("factory");
+		
+		final UserManager userManager = new UserManager(factory);
+		final YogurtManager yogurtManager = new YogurtManager(factory);
+		
 		final ObjectMapper mapper = new ObjectMapper();
 		mapper.findAndRegisterModules();
 
@@ -61,7 +65,10 @@ public class Profil extends HttpServlet{
 	}
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		final YogurtManager yogurtManager = new YogurtManager("YummyYogurt");
+		final ServletContext context = request.getServletContext();
+		final EntityManagerFactory factory = (EntityManagerFactory) context.getAttribute("factory");
+		
+		final YogurtManager yogurtManager = new YogurtManager(factory);
 		
 		try {
 			final int index = Integer.parseInt(request.getParameter("YID"));

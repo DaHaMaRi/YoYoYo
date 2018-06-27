@@ -3,6 +3,8 @@ package servlet;
 import java.io.IOException;
 import java.time.LocalDate;
 
+import javax.persistence.EntityManagerFactory;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -11,8 +13,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import entity.Address;
 import entity.User;
-import exception.NoSuchRowException;
-import manager.AddressManager;
 import manager.UserManager;
 
 @WebServlet("/sign-up.html")
@@ -25,7 +25,10 @@ public class SignUp extends HttpServlet{
 	}
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		UserManager userManager = new UserManager("YummyYogurt");
+		final ServletContext context = request.getServletContext();
+		final EntityManagerFactory factory = (EntityManagerFactory) context.getAttribute("factory");
+		
+		UserManager userManager = new UserManager(factory);
 		System.out.println("doGet test");
 
 		try {

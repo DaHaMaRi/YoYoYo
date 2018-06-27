@@ -1,10 +1,10 @@
 package servlet;
 
 import java.io.IOException;
-import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.HashMap;
 
+import javax.persistence.EntityManagerFactory;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,10 +12,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import entity.Address;
 import entity.User;
 import exception.NoSuchRowException;
-import manager.AddressManager;
 import manager.UserManager;
 
 @WebServlet("/log-in.html")
@@ -28,7 +26,10 @@ private static final long serialVersionUID = 5L;
 	}
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		UserManager userManager = new UserManager("YummyYogurt");
+		ServletContext context = request.getServletContext();
+		EntityManagerFactory factory = (EntityManagerFactory) context.getAttribute("factory");
+		
+		UserManager userManager = new UserManager(factory);
 		//System.out.println("doGet test");
 
 		try {

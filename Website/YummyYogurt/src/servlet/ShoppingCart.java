@@ -1,11 +1,12 @@
 package servlet;
 
 import java.io.IOException;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import javax.persistence.EntityManagerFactory;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -15,16 +16,13 @@ import javax.servlet.http.HttpSession;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import entity.Address;
-import entity.User;
 import entity.Yogurt;
 import exception.NoSuchRowException;
-import manager.AddressManager;
-import manager.UserManager;
 import manager.YogurtManager;
 
 @WebServlet("/shopping-cart.html")
 public class ShoppingCart extends HttpServlet{
+	private static final long serialVersionUID = 4151464703212835757L;
 
 	public ShoppingCart() {
 		super();
@@ -32,7 +30,10 @@ public class ShoppingCart extends HttpServlet{
 	
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		YogurtManager yogurtManager = new YogurtManager("YummyYogurt");
+		final ServletContext context = request.getServletContext();
+		final EntityManagerFactory factory = (EntityManagerFactory) context.getAttribute("factory");
+		
+		final YogurtManager yogurtManager = new YogurtManager(factory);
 		final ObjectMapper mapper = new ObjectMapper();
 		mapper.findAndRegisterModules();
 

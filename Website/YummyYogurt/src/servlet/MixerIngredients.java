@@ -3,6 +3,8 @@ package servlet;
 import java.io.IOException;
 import java.util.List;
 
+import javax.persistence.EntityManagerFactory;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -26,13 +28,16 @@ public class MixerIngredients extends HttpServlet {
 
 
 	protected void doGet(final HttpServletRequest request, final HttpServletResponse response) throws ServletException, IOException {
-		final IngredientManager manager = new IngredientManager("YummyYogurt");
+		final ServletContext context = request.getServletContext();
+		final EntityManagerFactory factory = (EntityManagerFactory) context.getAttribute("factory");
+		
+		final IngredientManager manager = new IngredientManager(factory);
+		
 		final ObjectMapper mapper = new ObjectMapper();
 		mapper.findAndRegisterModules();
 		
 		final List<Ingredient> ingredients = manager.listAll();
 		final String json = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(ingredients);
-		System.out.println(json);
 		
 		response.setContentType("application/json");
 		response.getWriter().append(json);
