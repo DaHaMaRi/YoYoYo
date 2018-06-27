@@ -65,10 +65,10 @@
 
             <div class="row">
                 <div class="col-md-8">
-                    <form action="localhost:8080/YummyYogurt/Mixer" method="post" id="saveFrozenYogurtAndOrder">
+                    <form action="localhost:8080/YummyYogurt/Mixer" method="post" id="saveFrozenYogurt">
                         <div class="control-group form-group">
                             <div class="controls">
-                                <input type="text" class="form-control" id="yogurtname" placeholder="Geben Sie Ihrer Kreation einen Namen" required data-validation-required-message="Bitte geben Sie Ihrer Kreation einen Namen">
+                                <input type="text" class="form-control" name="yogurtname" placeholder="Geben Sie Ihrer Kreation einen Namen" required data-validation-required-message="Bitte geben Sie Ihrer Kreation einen Namen">
                             </div>
                         </div>
 
@@ -125,12 +125,12 @@
                                 
                             </div>
                         </section>
-
-                        <hr />
-                        <h5><strong>Gesammtpreis: 2,50 €</strong></h5>
-                        <p><small>inkl. MwSt. von 0,40€ + kostenloser Versand</small></p>
                     </form>
-					<button class="btn non-hover-button" type="submit" form="saveFrozenYogurtAndOrder" value="Submit">Fertig</button>
+                    
+                     <hr />
+                     <h5><strong>Gesammtpreis: 2,50 €</strong></h5>
+                     <p><small>inkl. MwSt. von 0,40€ + kostenloser Versand</small></p>
+					<button class="btn non-hover-button" type="submit" form="saveFrozenYogurt" value="Submit" id="submitForm">Fertig</button>
                 </div>
             </div>
 

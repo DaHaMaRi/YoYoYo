@@ -16,22 +16,53 @@ function editIngredients(ingredients) {
 	$.each(ingredients, function(index, ingredient) {
 		switch(ingredient.category.name) {
 			case "Joghurtbasis":
-				$("#base").append("<label class=\"btn btn-primary mb-2 mr-1\"><input type=\"radio\" name=\"options\" id=\"option"+ index + "\" autocomplete=\"off\">" + ingredient.name + "</label>");
+				$("#base").append("<label><input>" + ingredient.name + "</label>");
+				$("#base label").addClass("btn btn-primary mb-2 mr-1");
+				
+				$("#base input").attr("type", "radio");
+				$("#base input").attr("name", ingredient.name);
+				$("#base input").attr("id", "option" + index);
+				$("#base input").attr("autocomplete", "off");
 				break;
 	 		case "Früchte":			
-	 			$("#fruits").append("<label class=\"btn btn-danger mb-2 mr-1\"><input type=\"checkbox\" autocomplete=\"off\">" + ingredient.name + "</label>");	
+	 			$("#fruits").append("<label><input>" + ingredient.name + "</label>");
+	 			$("#fruits label").addClass("btn btn-danger mb-2 mr-1");
+	 			
+	 			$("#fruits input").attr("type", "checkbox");
+	 			$("#fruits input").attr("name", ingredient.name);
+	 			$("#fruits input").attr("autocomplete", "off");
 	 			break;
 	 		case "Nüsse und Kerne":	
-	 			$("#nuts").append("<label class=\"btn btn-warning text-white mb-2 mr-1\"><input type=\"checkbox\" autocomplete=\"off\">" + ingredient.name + "</label>");	
+	 			$("#nuts").append("<label><input>" + ingredient.name + "</label>");	
+	 			$("#nuts label").addClass("btn btn-warning text-white mb-2 mr-1")
+	 			
+	 			$("#nuts input").attr("type", "checkbox");
+	 			$("#nuts input").attr("name", ingredient.name);
+	 			$("#nuts input").attr("autocomplete", "off");
 	 			break;
 	 		case "Schoko":			
-	 			$("#chocolate").append("<label class=\"btn btn-chocolate mb-2 mr-1\"><input type=\"checkbox\" autocomplete=\"off\">" + ingredient.name + "</label>"); 	
+	 			$("#chocolate").append("<label><input>" + ingredient.name + "</label>"); 	
+	 			$("#chocolate label").addClass("btn btn-chocolate mb-2 mr-1")
+	 			
+	 			$("#chocolate input").attr("type", "checkbox");
+	 			$("#chocolate input").attr("name", ingredient.name);
+	 			$("#chocolate input").attr("autocomplete", "off");
 	 			break;
-	 		case "Süßigkeiten":		
-	 			$("#sweets").append("<label class=\"btn btn-sweets mb-2 mr-1\"><input type=\"checkbox\" autocomplete=\"off\">" + ingredient.name + "</label>");
+	 		case "Süßigkeiten":
+	 			$("#sweets").append("<label><input>" + ingredient.name + "</label>");
+	 			$("#sweets label").addClass("btn btn-sweets mb-2 mr-1")
+	 			
+	 			$("#sweets input").attr("type", "checkbox");
+	 			$("#sweets input").attr("name", ingredient.name);
+	 			$("#sweets input").attr("autocomplete", "off");
 	 			break;
 	 		case "Soßen":
-	 			$("#sauce").append("<label class=\"btn btn-info mb-2 mr-1\"><input type=\"checkbox\" autocomplete=\"off\">" + ingredient.name + "</label>");
+	 			$("#sauce").append("<label><input>" + ingredient.name + "</label>");
+	 			$("#sauce label").addClass("btn btn-info mb-2 mr-1")
+	 			
+	 			$("#sauce input").attr("type", "checkbox");
+	 			$("#sauce input").attr("name", ingredient.name);
+	 			$("#sauce input").attr("autocomplete", "off");
 	 			break;
 	 	}
 	});
@@ -60,6 +91,23 @@ function editCategories(categories) {
 		$("h4").eq(index).html(title);
 	});
 }
+
+$("#submitForm").on("click", function() {
+	$.ajax({
+		url: "http://localhost:8080/YummyYogurt/Mixer",
+	    data: $("#saveFrozenYogurt").serialize(),
+	    method: "POST",
+	    
+	    contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+	})
+	.done(function(data, textStatus, jqXHR) {
+		console.log('Data sent.');
+	})
+	.fail(function(jqXHR, textStatus, errorThrown) {
+		console.log('There was an error.');
+	}); 
+	return false;
+});
 
 function handleError(xhr, status, errorThrown) {
 	alert("Sorry, there was a problem!");
