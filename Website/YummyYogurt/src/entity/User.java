@@ -7,13 +7,10 @@ import java.util.Objects;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQuery;
-import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 
@@ -36,8 +33,9 @@ import javax.persistence.Table;
 public final class User implements Serializable {
 	
 	private static final long serialVersionUID = 4102446862783691913L;
-	private static int generator = 20;
+	private static int numberOfUsers = 20;
 
+	
 	@Id
 	@Column(name="ID")
 	private int userID;
@@ -70,14 +68,13 @@ public final class User implements Serializable {
 	
 	public User() {}
 
-	public User(final String firstname, final String familyname, final String username, 
-				final String email, final LocalDate birthday, final Address address, final LocalDate accessiondate, final String password) {
+	public User(final String firstname, final String familyname, final String username, final String email, 
+			    final LocalDate birthday, final Address address, final LocalDate accessiondate, final String password) {
 		Objects.requireNonNull(birthday, "birthday is null");
 		Objects.requireNonNull(address, "address is null");
 		Objects.requireNonNull(accessiondate, "accessiondate is null");
 		
-		this.userID = this.generator;
-		this.generator++;
+		this.userID = numberOfUsers;
 		this.firstname = firstname;
 		this.familyname = familyname;
 		this.username = username;
@@ -86,8 +83,8 @@ public final class User implements Serializable {
 		this.address = address;
 		this.accessiondate = accessiondate;
 		this.password = password;
+		numberOfUsers++;
 	}
-	
 	
 
 	@Override

@@ -19,7 +19,7 @@ import manager.YogurtManager;
 @WebServlet("/product-info.html")
 public final class ProductInfo extends HttpServlet {
 
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 311248899817719950L;
 
 	
 	public ProductInfo() {
@@ -41,15 +41,18 @@ public final class ProductInfo extends HttpServlet {
 			final Yogurt yogurt = manager.findByID(index);
 			final String json = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(yogurt);
 			
-			
 			response.setContentType("application/json");
 			response.getWriter().append(json);
-		} catch (NumberFormatException | NoSuchRowException e) {
+			
+		} catch (NumberFormatException e) {
+			response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
 			System.out.println(e.getMessage());
+		} catch (NoSuchRowException e) {
 			response.setStatus(HttpServletResponse.SC_NOT_FOUND);
+			System.out.println(e.getMessage());
+		} finally {
+			manager.close();
 		}
-		
-		manager.close();
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

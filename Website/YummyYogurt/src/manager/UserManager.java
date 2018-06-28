@@ -5,8 +5,6 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
-import javax.persistence.Persistence;
-import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 
 import entity.User;
@@ -18,7 +16,7 @@ public final class UserManager {
 	private final EntityManager manager;
 	
 	
-	public UserManager(EntityManagerFactory factory) {
+	public UserManager(final EntityManagerFactory factory) {
 		this.manager = factory.createEntityManager();
 	}
 	
@@ -47,9 +45,7 @@ public final class UserManager {
 	
 	public List<Yogurt> getAllYogurts(final int user) throws NoSuchRowException{
 		TypedQuery<Yogurt> query = manager.createQuery("select yogurt from Yogurt yogurt where yogurt.owner = :ID", Yogurt.class);
-		System.out.println("Test22");
 		query.setParameter("ID", findByID(user));
-		System.out.println("Test23");
 		List<Yogurt> yogurts = query.getResultList();
 		return yogurts;
 	}

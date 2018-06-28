@@ -10,15 +10,18 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/Mixer")
 public class Mixer extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-       
+
+	private static final long serialVersionUID = -1033141283317370043L;
+
 	
-    public Mixer() {
+	public Mixer() {
         super();
     }
 
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {}
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.setStatus(HttpServletResponse.SC_NOT_IMPLEMENTED);
+	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("Test1");

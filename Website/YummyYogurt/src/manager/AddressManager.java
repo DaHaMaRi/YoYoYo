@@ -5,7 +5,6 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
-import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
 
 import entity.Address;
@@ -16,7 +15,7 @@ public final class AddressManager {
 	private final EntityManager manager;
 	
 	
-	public AddressManager(EntityManagerFactory factory) {
+	public AddressManager(final EntityManagerFactory factory) {
 		this.manager = factory.createEntityManager();
 	}
 	
@@ -41,18 +40,6 @@ public final class AddressManager {
 				manager.persist(address);
 			else
 				manager.merge(address);
-		transaction.commit();
-	}
-	
-	public void add(final Address address) {
-		final EntityTransaction transaction = manager.getTransaction();
-		transaction.begin();
-			final Address temp = manager.find(Address.class, address.getID());
-			if(temp == null)
-				manager.persist(address);
-			else
-				//manager.merge(address);
-				System.out.println("Addresse existiert schon");
 		transaction.commit();
 	}
 	

@@ -32,6 +32,7 @@ public final class Ingredient implements Serializable {
 	
 	private static final long serialVersionUID = -4899690730111444088L;
 
+	
 	@Id
 	@Column(name="ID")
 	private int ingredientID;

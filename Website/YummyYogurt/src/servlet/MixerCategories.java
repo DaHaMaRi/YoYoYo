@@ -19,10 +19,11 @@ import manager.CategoryManager;
 
 @WebServlet("/Mixer/Kategorie")
 public class MixerCategories extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-       
+	
+	private static final long serialVersionUID = 660091985999568445L;
 
-    public MixerCategories() {
+	
+	public MixerCategories() {
         super();
     }
 

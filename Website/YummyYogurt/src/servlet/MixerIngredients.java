@@ -19,10 +19,11 @@ import manager.IngredientManager;
 
 @WebServlet("/Mixer/Zutaten")
 public class MixerIngredients extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-       
-	
-    public MixerIngredients() {
+
+	private static final long serialVersionUID = 2530791228504623487L;
+
+
+	public MixerIngredients() {
         super();
     }
 

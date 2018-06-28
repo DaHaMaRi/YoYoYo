@@ -27,7 +27,7 @@ import javax.persistence.Table;
 public final class Order implements Serializable {
 	
 	private static final long serialVersionUID = 1019596392287525485L;
-	private static int generator = 20;
+	private static int numberOfOrders = 20;
 
 	@Id
 	@Column(name="ID")
@@ -50,11 +50,11 @@ public final class Order implements Serializable {
 		Objects.requireNonNull(purchaser, "purchaser is null");
 		Objects.requireNonNull(orderdate, "oderdate is null");
 		
-		this.orderID = this.generator;
-		this.generator++;
+		this.orderID = numberOfOrders;
 		this.purchaser = purchaser;
 		this.totalPrice = totalPrice;
 		this.orderdate = orderdate;
+		numberOfOrders++;
 	}
 
 	

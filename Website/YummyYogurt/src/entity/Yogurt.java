@@ -38,7 +38,7 @@ public final class Yogurt implements Serializable {
 	@JoinColumn(name="BenutzerID", nullable=false)
 	private User owner;
 	
-	@Column(name="VerÃ¶ffentlicht", nullable=false)
+	@Column(name="Veröffentlicht", nullable=false)
 	private String visible;
 	
 	@ManyToMany

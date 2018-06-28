@@ -5,7 +5,6 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
-import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
 
 import entity.OrderItem;
@@ -17,7 +16,7 @@ public final class OrderItemManager {
 	private final EntityManager manager;
 	
 	
-	public OrderItemManager(EntityManagerFactory factory) {
+	public OrderItemManager(final EntityManagerFactory factory) {
 		this.manager = factory.createEntityManager();
 	}
 	

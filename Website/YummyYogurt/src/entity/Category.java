@@ -29,6 +29,7 @@ public final class Category implements Serializable {
 	
 	private static final long serialVersionUID = 7610617292935816641L;
 
+	
 	@Id
 	@Column(name="ID")
 	private int categoryID;
@@ -43,6 +44,7 @@ public final class Category implements Serializable {
 	@OneToMany(mappedBy="category")
 	private List<Ingredient> ingredients;
 	
+	
 	public Category() {}
 
 	public Category(final int categoryID, final String name, final int priceInCents) {
@@ -51,8 +53,6 @@ public final class Category implements Serializable {
 		this.priceInCents = priceInCents;
 		this.ingredients = new ArrayList<>();
 	}
-
-	
 
 	
 	@Override
