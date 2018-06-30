@@ -7,19 +7,22 @@ import java.util.Objects;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQuery;
+import javax.persistence.SequenceGenerator;
 
 
 /*create table Yogurt(
 	    ID              int          primary key,
 	    Name            varchar(64)  unique not null,
 	    BenutzerID      int          not null,
-	    Ver�ffentlicht  varchar(8)   not null,
+	    Veroeffentlicht  varchar(8)   not null,
 );*/
 
 @Entity
@@ -29,6 +32,9 @@ public final class Yogurt implements Serializable {
 	private static final long serialVersionUID = -6134440095691454868L;
 
 	@Id
+	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="YogurtGenerator")
+	@SequenceGenerator(name="YogurtGenerator", 
+		sequenceName="YogurtSequence", allocationSize=1)
 	@Column(name="ID")
 	private int yogurtID;
 	
@@ -46,9 +52,18 @@ public final class Yogurt implements Serializable {
 	@JoinTable(name="Zutatenliste", joinColumns={@JoinColumn(name="YogurtID")}, 
 		inverseJoinColumns={@JoinColumn(name="ZutatenID")})
 	private List<Ingredient> recipe;
-
+	
 	
 	public Yogurt() {}
+	
+	public Yogurt(final String name, final User owner, final boolean visibility) {
+		Objects.requireNonNull(owner, "owner is null");
+		
+		this.name = name;
+		this.owner = owner;
+		this.visible = Boolean.toString(visibility);
+		this.recipe = new ArrayList<>();
+	}
 
 	public Yogurt(final int yogurtID, final String name, final User owner, final boolean visibility) {
 		Objects.requireNonNull(owner, "owner is null");

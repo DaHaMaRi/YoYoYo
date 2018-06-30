@@ -48,7 +48,7 @@ public final class Mixer extends HttpServlet {
 			final String yogurtname = this.parseYogurtname(payload);
 			final User owner = userManager.findByID(1);
 			
-			final Yogurt yogurt = new Yogurt(4711, yogurtname, owner, true);
+			final Yogurt yogurt = new Yogurt(yogurtname, owner, true);
 			
 			final List<String> nameOfIngredients = this.parseIngredientnames(payload);
 			for(String ingredientname : nameOfIngredients) {
@@ -60,6 +60,10 @@ public final class Mixer extends HttpServlet {
 		} catch (NoSuchRowException e) {
 			response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
 			System.out.println(e.getMessage());
+		} finally {
+			userManager.close();
+			yogurtManager.close();
+			ingredientManager.close();
 		}
 	}
 	

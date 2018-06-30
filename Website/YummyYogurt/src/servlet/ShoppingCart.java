@@ -72,7 +72,6 @@ public class ShoppingCart extends HttpServlet{
 		} catch (NumberFormatException | NoSuchRowException  e) {
 			System.out.println(e.getMessage());
 			response.setStatus(HttpServletResponse.SC_NOT_FOUND);
-			//response.setStatus(HttpServletResponse.SC_OK);
 			yogurtManager.close();
 		}
 		
