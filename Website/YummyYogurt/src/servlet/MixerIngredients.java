@@ -18,14 +18,9 @@ import manager.IngredientManager;
 
 
 @WebServlet("/Mixer/Zutaten")
-public class MixerIngredients extends HttpServlet {
+public final class MixerIngredients extends HttpServlet {
 
 	private static final long serialVersionUID = 2530791228504623487L;
-
-
-	public MixerIngredients() {
-        super();
-    }
 
 
 	protected void doGet(final HttpServletRequest request, final HttpServletResponse response) throws ServletException, IOException {

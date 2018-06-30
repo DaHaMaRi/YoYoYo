@@ -32,6 +32,17 @@ public final class IngredientManager {
 		return ingredient;
 	}
 	
+	public Ingredient findByName(final String ingredientname) throws NoSuchRowException {
+		final TypedQuery<Ingredient> query = manager.createNamedQuery("Ingredient.findByName", Ingredient.class);
+		query.setParameter("name", ingredientname);
+		
+		final Ingredient ingredient = query.getSingleResult();
+		
+		if(ingredient == null)
+			throw new NoSuchRowException();
+		return ingredient;
+	}
+	
 	public void save(final Ingredient ingredient) {
 		final EntityTransaction transaction = manager.getTransaction();
 		transaction.begin();

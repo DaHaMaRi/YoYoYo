@@ -2,19 +2,29 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="javax.persistence.SequenceGenerator"/>
 <fullyQualifiedTypeName name="javax.persistence.Query"/>
-<fullyQualifiedTypeName name="exception.NoSuchRowException"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
 <fullyQualifiedTypeName name="java.util.HashMap"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="servlet.ShoppingCart"/>
-<fullyQualifiedTypeName name="entity.Yogurt"/>
-<fullyQualifiedTypeName name="manager.YogurtManager"/>
 <fullyQualifiedTypeName name="manager.OrderManager"/>
 <fullyQualifiedTypeName name="entity.Order"/>
 <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
 <fullyQualifiedTypeName name="entity.OrderItem"/>
 <fullyQualifiedTypeName name="manager.OrderItemManager"/>
-<fullyQualifiedTypeName name="javax.persistence.EntityManagerFactory"/>
+<fullyQualifiedTypeName name="java.util.Objects"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="javax.servlet.ServletContext"/>
+<fullyQualifiedTypeName name="javax.persistence.EntityManagerFactory"/>
+<fullyQualifiedTypeName name="manager.YogurtManager"/>
+<fullyQualifiedTypeName name="manager.IngredientManager"/>
+<fullyQualifiedTypeName name="manager.UserManager"/>
+<fullyQualifiedTypeName name="javax.persistence.TypedQuery"/>
+<fullyQualifiedTypeName name="exception.NoSuchRowException"/>
+<fullyQualifiedTypeName name="entity.User"/>
+<fullyQualifiedTypeName name="entity.Yogurt"/>
+<fullyQualifiedTypeName name="entity.Ingredient"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
+<fullyQualifiedTypeName name="javax.persistence.NamedQueries"/>
+<fullyQualifiedTypeName name="javax.persistence.NamedQuery"/>
 </qualifiedTypeNameHistroy>

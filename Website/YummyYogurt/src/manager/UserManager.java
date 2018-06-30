@@ -36,7 +36,7 @@ public final class UserManager {
 	public User findByUsername(final String username) throws NoSuchRowException {
 		TypedQuery<User> query = manager.createQuery("select user from User user where user.username = :username", User.class);
 		query.setParameter("username", username);
-		User user = query.getResultList().get(0);
+		User user = query.getSingleResult();
 		
 		if(user == null)
 			throw new NoSuchRowException();

@@ -40,10 +40,6 @@ public final class Category implements Serializable {
 	@Column(name="preis", nullable=false)
 	private int priceInCents;
 	
-	@JsonBackReference
-	@OneToMany(mappedBy="category")
-	private List<Ingredient> ingredients;
-	
 	
 	public Category() {}
 
@@ -51,14 +47,12 @@ public final class Category implements Serializable {
 		this.categoryID = categoryID;
 		this.name = name;
 		this.priceInCents = priceInCents;
-		this.ingredients = new ArrayList<>();
 	}
 
 	
 	@Override
 	public String toString() {
-		return "Category [categoryID=" + categoryID + ", name=" + name + ", priceInCents=" + priceInCents
-				+ ", ingredients=" + ingredients + "]";
+		return "Category [categoryID=" + categoryID + ", name=" + name + ", priceInCents=" + priceInCents + "]";
 	}
 
 	@Override
@@ -94,14 +88,6 @@ public final class Category implements Serializable {
 
 	public void setPriceInCents(final int priceInCents) {
 		this.priceInCents = priceInCents;
-	}
-
-	public List<Ingredient> getIngredients() {
-		return ingredients;
-	}
-
-	public void setIngredients(List<Ingredient> ingredients) {
-		this.ingredients = ingredients;
 	}
 	
 }

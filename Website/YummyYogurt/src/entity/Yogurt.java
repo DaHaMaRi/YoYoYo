@@ -1,6 +1,7 @@
 package entity;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -38,7 +39,7 @@ public final class Yogurt implements Serializable {
 	@JoinColumn(name="BenutzerID", nullable=false)
 	private User owner;
 	
-	@Column(name="Veröffentlicht", nullable=false)
+	@Column(name="Veroeffentlicht", nullable=false)
 	private String visible;
 	
 	@ManyToMany
@@ -56,6 +57,7 @@ public final class Yogurt implements Serializable {
 		this.name = name;
 		this.owner = owner;
 		this.visible = Boolean.toString(visibility);
+		this.recipe = new ArrayList<>();
 	}
 	
 	
@@ -104,6 +106,11 @@ public final class Yogurt implements Serializable {
 
 	public User getOwner() {
 		return owner;
+	}
+	
+	public void addToRecipe(final Ingredient ingredient) {
+		Objects.requireNonNull(ingredient);
+		this.recipe.add(ingredient);
 	}
 
 	public List<Ingredient> getRecipe() {

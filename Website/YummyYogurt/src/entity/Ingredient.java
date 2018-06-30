@@ -9,6 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
@@ -27,7 +28,10 @@ import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
 @Table(name="Zutat")
-@NamedQuery(name="Ingredient.listAll", query="select i from Ingredient i")
+@NamedQueries({
+	@NamedQuery(name="Ingredient.listAll", query="select i from Ingredient i"),
+	@NamedQuery(name="Ingredient.findByName", query="select i from Ingredient i where i.name = :name")
+})
 public final class Ingredient implements Serializable {
 	
 	private static final long serialVersionUID = -4899690730111444088L;
@@ -46,7 +50,6 @@ public final class Ingredient implements Serializable {
 	@Column(name="Haram", nullable=false)
 	private String haram;
 	
-	@JsonManagedReference
 	@ManyToOne(cascade=CascadeType.PERSIST)
 	@JoinColumn(name="ZutatenkategorieID", nullable=false)
 	private Category category;
