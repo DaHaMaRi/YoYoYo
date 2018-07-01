@@ -41,11 +41,13 @@ public final class ShoppingCart extends HttpServlet {
 		try {
 			final HttpSession session = request.getSession();
 			if (!session.isNew()) {
-				Integer yid =  Integer.parseInt(request.getParameter("id"));
-				Integer m = Integer.parseInt(request.getParameter("m"));
+				String yidS =  request.getParameter("id");
+				String mS = request.getParameter("m");
 
 				HashMap<Integer,Integer> einkaufSession = (HashMap<Integer, Integer>) session.getAttribute("Einkaufswagen");
-				if(yid!=-999 && m != -999) {
+				if(yidS != null && mS != null) {
+					Integer yid = Integer.parseInt(yidS);
+					Integer m = Integer.parseInt(mS);
 					einkaufSession.put(yid, m);
 				}
 				session.setAttribute("Einkaufswagen", einkaufSession);

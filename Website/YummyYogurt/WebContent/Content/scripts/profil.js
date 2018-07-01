@@ -31,7 +31,7 @@ function editPage(profil) {
 }
 
 function loadYogurt(Yogurt) {
-	$("#myYogurts").append('<div class="col-lg-3 col-md-4 col-sm-6 portfolio-item"><div class="card h-100"><a href="#"><img class="card-img-top" src="../images/Yogurt5.jpg" height="200px" alt=""></a>              <div class="card-body"><h4 class="card-title"><a href="product-info.html">'+Yogurt.name+'</a></h4><p class="card-text"><p id="ingrediant'+Yogurt.id+'"></p></p><p><strong id=preis'+Yogurt.id+'></strong></p><div id="category'+Yogurt.id+'"></div> </div><div class="card-footer text-center">/*creat rating*/               <label class="switch"><input type="checkbox" class="visebel" id="'+Yogurt.id+'"><span class="slider round"></span> </label></div></div></div>');
+	$("#myYogurts").append('<div class="col-lg-3 col-md-4 col-sm-6 portfolio-item"><div class="card h-100"><a href="product-info.html?id='+Yogurt.id+'"><img class="card-img-top" src="../images/Yogurt5.jpg" height="200px" alt=""></a>              <div class="card-body"><h4 class="card-title"><a href="product-info.html?id='+Yogurt.id+'">'+Yogurt.name+'</a></h4><p class="card-text"><p id="ingrediant'+Yogurt.id+'"></p></p><p><strong id=preis'+Yogurt.id+'></strong></p><div id="category'+Yogurt.id+'"></div> </div><div class="card-footer text-center">/*creat rating*/               <label class="switch"><input type="checkbox" class="visebel" id="'+Yogurt.id+'"><span class="slider round"></span> </label></div></div></div>');
 	//alert("vor insert");
 	createIngredientList(Yogurt);
 	calculatePrice(Yogurt);

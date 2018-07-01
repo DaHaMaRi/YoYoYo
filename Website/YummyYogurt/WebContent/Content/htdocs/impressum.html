@@ -33,22 +33,8 @@
                         <li class="nav-item"><a class="nav-link" href="discover.html">Entdecken  <span class="fa fa-search"></span></a></li>
                         <li class="nav-item"><a class="nav-link" href="shopping-cart.html">Warenkorb  <span class="fa fa-shopping-cart"></span></a></li>
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownLogIn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Anmelden  <span class="fa fa-user"></span>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right p-2" aria-labelledby="navbarDropdownLogIn">
-                                <form action="log-in.html" method="post">
-                                    <label>Benutzername</label>
-                                    <input type="text" name="hallo" value="" />
-
-                                    <label>Passwort</label>
-                                    <input type="text" name="hallo" value="" />
-
-                                    <button type="submit" class="button">Anmelden</button>
-                                </form>
-                                <a href="sign-up.html"><small>Ich habe noch keinen Account</small></a>
-                            </div>
+                        <li id="dynamicNavbar" class="nav-item dropdown">
+                            
                         </li>
 
                     </ul>
@@ -172,5 +158,6 @@
         <!-- Do not edit these files! In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
         <script src="../scripts/jqBootstrapValidation.js"></script>
         <script src="../scripts/contact_me.js"></script>
+        <script src="../scripts/loadNavbar.js"></script>
     </body>
 </html>

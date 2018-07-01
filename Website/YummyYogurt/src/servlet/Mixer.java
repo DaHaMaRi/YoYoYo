@@ -11,6 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import entity.Ingredient;
 import entity.User;
@@ -45,22 +46,30 @@ public final class Mixer extends HttpServlet {
 		final IngredientManager ingredientManager = new IngredientManager(factory);
 		
 		try {
-			final String yogurtname = this.parseYogurtname(payload);
-			final User owner = userManager.findByID(1);
+			HttpSession session = request.getSession();
+			if(!session.isNew()) {
+				int index = (Integer) session.getAttribute("UID");
+				final User owner = userManager.findByID(index);
+				final String yogurtname = this.parseYogurtname(payload);
 			
-			final Yogurt yogurt = new Yogurt(yogurtname, owner, true);
+				final Yogurt yogurt = new Yogurt(yogurtname, owner, true);
+				System.out.println(payload);
 			
-			final List<String> nameOfIngredients = this.parseIngredientnames(payload);
-			for(String ingredientname : nameOfIngredients) {
-				Ingredient ingredient = ingredientManager.findByName(ingredientname);
-				yogurt.addToRecipe(ingredient);
+				final List<Integer> nameOfIngredients = this.parseIngredientnames(payload);
+				for(Integer ingredientname : nameOfIngredients) {
+					Ingredient ingredient = ingredientManager.findByID(ingredientname);
+					yogurt.addToRecipe(ingredient);
+				}
+			
+				yogurtManager.save(yogurt);
+			
+				response.setStatus(HttpServletResponse.SC_OK);
+				response.setContentType("application/json");
+				response.getWriter().append("{\"id\": \"" + yogurt.getID() + "\"}");
+			}else {
+				response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+				session.invalidate();
 			}
-			
-			yogurtManager.save(yogurt);
-			
-			response.setStatus(HttpServletResponse.SC_OK);
-			response.setContentType("application/json");
-			response.getWriter().append("{\"id\": \"" + yogurt.getID() + "\"}");
 			
 		} catch (NoSuchRowException e) {
 			response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
@@ -86,18 +95,16 @@ public final class Mixer extends HttpServlet {
 		return yogurtname;
 	}
 	
-	private List<String> parseIngredientnames(final String payload) 
+	private List<Integer> parseIngredientnames(final String payload) 
 	{
-		final List<String> nameOfIngredients = new ArrayList<>();
+		final List<Integer> nameOfIngredients = new ArrayList<>();
 		
 		String[] formValues = payload.split("&");
 		for(int i = 1; i < formValues.length; i++) {
 			String[] values = formValues[i].split("=");
 			
-			if(values[0].contains("%C3%9F"))
-				values[0] = values[0].replace("%C3%9F", "ß");
 			
-			nameOfIngredients.add(values[0]);
+			nameOfIngredients.add(Integer.parseInt(values[0]));
 		}
 		
 		return nameOfIngredients;

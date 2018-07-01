@@ -11,7 +11,7 @@ $.ajax({
     },
     
     error: function(xhr, status, errorThrown) {
-		handleError(xhr, status, errorThrown);
+    	window.location.href = "http://localhost:8080/YummyYogurt/Content/htdocs/log-in.html";
 	}
 });
 
@@ -110,6 +110,7 @@ function unique(array) {
 }
 
 function handleError(xhr, status, errorThrown) {
+	
 	alert("Sorry, there was a problem!");
     console.log("Error: " + errorThrown);
     console.log("Status: " + status );

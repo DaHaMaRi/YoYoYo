@@ -26,6 +26,10 @@ private static final long serialVersionUID = 5L;
 	}
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.setStatus(HttpServletResponse.SC_NOT_IMPLEMENTED);
+	}
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		ServletContext context = request.getServletContext();
 		EntityManagerFactory factory = (EntityManagerFactory) context.getAttribute("factory");
 		
@@ -46,9 +50,6 @@ private static final long serialVersionUID = 5L;
 				session.setAttribute("Einkaufswagen", new HashMap<Integer,Integer>());
 				@SuppressWarnings("unchecked")
 				HashMap<Integer,Integer> einkauf = (HashMap<Integer, Integer>) session.getAttribute("Einkaufswagen");
-				einkauf.put(1,1);
-				einkauf.put(2,2);
-				einkauf.put(3,1);
 				session.setAttribute("Einkaufswagen", einkauf);
 			}else{
 				response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
@@ -66,8 +67,5 @@ private static final long serialVersionUID = 5L;
 		userManager.close();
 	}
 	
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		doGet(request, response);
-	}
 	
 }

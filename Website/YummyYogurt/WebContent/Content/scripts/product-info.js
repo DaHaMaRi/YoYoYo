@@ -20,7 +20,11 @@ $("#AddToCart").on("click", function() {
 	var amount = $("#amount").val();
 	
 	querystring = querystring + "&m=" + amount; 
-	window.location.href = "http://localhost:8080/YummyYogurt/Content/htdocs/shopping-cart.html" + querystring;
+	
+	
+	 window.location.href = "http://localhost:8080/YummyYogurt/Content/htdocs/shopping-cart.html?"+querystring;
+	    
+	
 });
 
 

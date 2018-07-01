@@ -16,7 +16,7 @@ function editIngredients(ingredients) {
 	$.each(ingredients, function(index, ingredient) {
 		switch(ingredient.category.name) {
 			case "Joghurtbasis":
-				$("#base").append("<label><input name=\""+ingredient.name+"\">" + ingredient.name + "</label>");
+				$("#base").append("<label><input name=\""+ingredient.id+"\">" + ingredient.name + "</label>");
 				$("#base label").addClass("btn btn-primary mb-2 mr-1");
 				
 				$("#base input").attr("type", "radio");
@@ -24,35 +24,35 @@ function editIngredients(ingredients) {
 				$("#base input").attr("autocomplete", "off");
 				break;
 	 		case "Früchte":			
-	 			$("#fruits").append("<label><input name=\""+ingredient.name+"\">" + ingredient.name + "</label>");
+	 			$("#fruits").append("<label><input name=\""+ingredient.id+"\">" + ingredient.name + "</label>");
 	 			$("#fruits label").addClass("btn btn-danger mb-2 mr-1");
 	 			
 	 			$("#fruits input").attr("type", "checkbox");
 	 			$("#fruits input").attr("autocomplete", "off");
 	 			break;
 	 		case "Nüsse und Kerne":	
-	 			$("#nuts").append("<label><input name=\""+ingredient.name+"\">" + ingredient.name + "</label>");	
+	 			$("#nuts").append("<label><input name=\""+ingredient.id+"\">" + ingredient.name + "</label>");	
 	 			$("#nuts label").addClass("btn btn-warning text-white mb-2 mr-1")
 	 			
 	 			$("#nuts input").attr("type", "checkbox");
 	 			$("#nuts input").attr("autocomplete", "off");
 	 			break;
 	 		case "Schoko":			
-	 			$("#chocolate").append("<label><input name=\""+ingredient.name+"\">" + ingredient.name + "</label>"); 	
+	 			$("#chocolate").append("<label><input name=\""+ingredient.id+"\">" + ingredient.name + "</label>"); 	
 	 			$("#chocolate label").addClass("btn btn-chocolate mb-2 mr-1")
 	 			
 	 			$("#chocolate input").attr("type", "checkbox");
 	 			$("#chocolate input").attr("autocomplete", "off");
 	 			break;
 	 		case "Süßigkeiten":
-	 			$("#sweets").append("<label><input name=\""+ingredient.name+"\">" + ingredient.name + "</label>");
+	 			$("#sweets").append("<label><input name=\""+ingredient.id+"\">" + ingredient.name + "</label>");
 	 			$("#sweets label").addClass("btn btn-sweets mb-2 mr-1")
 	 			
 	 			$("#sweets input").attr("type", "checkbox");
 	 			$("#sweets input").attr("autocomplete", "off");
 	 			break;
 	 		case "Soßen":
-	 			$("#sauce").append("<label><input name=\""+ingredient.name+"\">" + ingredient.name + "</label>");
+	 			$("#sauce").append("<label><input name=\""+ingredient.id+"\">" + ingredient.name + "</label>");
 	 			$("#sauce label").addClass("btn btn-info mb-2 mr-1")
 	 			
 	 			$("#sauce input").attr("type", "checkbox");
@@ -98,7 +98,7 @@ $("#submitForm").on("click", function() {
 		window.location.href = "http://localhost:8080/YummyYogurt/Content/htdocs/product-info.html" + "?id=" + data.id;
 	})
 	.fail(function(xhr, textStatus, errorThrown) {
-		handleError(xhr, textStatus, errorThrown);
+		window.location.href = "http://localhost:8080/YummyYogurt/Content/htdocs/log-in.html";
 	}); 
 	return false;
 });

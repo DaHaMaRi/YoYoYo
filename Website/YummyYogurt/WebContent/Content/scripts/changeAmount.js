@@ -11,7 +11,7 @@ function changeAmount(yid, m){
     method: "GET",
     dataType: "json",
     data: {
-    	yid : yid,
+    	id : yid,
     	m : m
     },
     

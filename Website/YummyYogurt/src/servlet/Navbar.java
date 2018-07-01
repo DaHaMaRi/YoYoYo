@@ -39,12 +39,12 @@ public class Navbar extends HttpServlet{
 		try {
 			HttpSession session = request.getSession();
 			String message = "";
-			int index = -999;
+			Integer index;
 			
 			if(!session.isNew()) {
-				index = (int) session.getAttribute("UID");
+				index = (Integer) session.getAttribute("UID");
 				System.out.println("id1 ="+index);
-				if(index!=-999) {
+				if(index!=null) {
 					final User user = userManager.findByID(index);
 					System.out.println("id2 ="+index);
 					final String json = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(user);
