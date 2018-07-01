@@ -23,7 +23,9 @@ public final class MixerIngredients extends HttpServlet {
 	private static final long serialVersionUID = 2530791228504623487L;
 
 
-	protected void doGet(final HttpServletRequest request, final HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(final HttpServletRequest request, final HttpServletResponse response) 
+			throws ServletException, IOException 
+	{
 		final ServletContext context = request.getServletContext();
 		final EntityManagerFactory factory = (EntityManagerFactory) context.getAttribute("factory");
 		
@@ -42,7 +44,9 @@ public final class MixerIngredients extends HttpServlet {
 	}
 
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(final HttpServletRequest request, final HttpServletResponse response) 
+			throws ServletException, IOException 
+	{
 		doGet(request, response);
 	}
 

@@ -14,6 +14,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.SequenceGenerator;
 
@@ -26,7 +27,10 @@ import javax.persistence.SequenceGenerator;
 );*/
 
 @Entity
-@NamedQuery(name="Yogurt.listAll", query="select y from Yogurt y")
+@NamedQueries({
+	@NamedQuery(name="Yogurt.listAll", query="select y from Yogurt y"),
+	@NamedQuery(name="Yogurt.findByName", query="select y from Yogurt y where y.name = :name")
+})
 public final class Yogurt implements Serializable {
 	
 	private static final long serialVersionUID = -6134440095691454868L;

@@ -94,10 +94,11 @@ $("#submitForm").on("click", function() {
 	    
 	    contentType: "application/x-www-form-urlencoded; charset=UTF-8",
 	})
-	.done(function(data, textStatus, jqXHR) {
-		console.log("Data sent.");
+	.done(function(data, textStatus, xhr) {
+		var yogurtname = $("#yogurtname").val();
+		window.location.href = "http://localhost:8080/YummyYogurt/Content/htdocs/product-info.html" + "?name=" + yogurtname;
 	})
-	.fail(function(jqXHR, textStatus, errorThrown) {
+	.fail(function(xhr, textStatus, errorThrown) {
 		console.log("There was an error.");
 	}); 
 	return false;

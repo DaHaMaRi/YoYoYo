@@ -32,6 +32,17 @@ public final class YogurtManager {
 		return yogurt;
 	}
 	
+	public Yogurt findByName(final String yogurtname) throws NoSuchRowException {
+		final TypedQuery<Yogurt> query = manager.createNamedQuery("Yogurt.findByName", Yogurt.class);
+		query.setParameter("name", yogurtname);
+		
+		final Yogurt yogurt = query.getSingleResult();
+		
+		if(yogurt == null)
+			throw new NoSuchRowException();
+		return yogurt;
+	}
+	
 	public void save(final Yogurt yogurt) {
 		final EntityTransaction transaction = manager.getTransaction();
 		transaction.begin();

@@ -1,6 +1,9 @@
+var url = window.location.href;
+var querystring = url.split("?")[1];
+
+
 $.ajax({
-	url: "http://localhost:8080/YummyYogurt/product-info.html",
-    data: {id: 1},
+	url: "http://localhost:8080/YummyYogurt/product-info.html?" + querystring,
     method: "GET",
     dataType: "json",
     

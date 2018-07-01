@@ -20,14 +20,11 @@ import manager.YogurtManager;
 public final class ProductInfo extends HttpServlet {
 
 	private static final long serialVersionUID = 311248899817719950L;
-
 	
-	public ProductInfo() {
-		super();
-	}
-
 	
-	protected void doGet(final HttpServletRequest request, final HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(final HttpServletRequest request, final HttpServletResponse response) 
+			throws ServletException, IOException 
+	{
 		final ServletContext context = request.getServletContext();
 		final EntityManagerFactory factory = (EntityManagerFactory) context.getAttribute("factory");
 		
@@ -37,8 +34,8 @@ public final class ProductInfo extends HttpServlet {
 		mapper.findAndRegisterModules();
 
 		try {
-			final int index = Integer.parseInt(request.getParameter("id"));
-			final Yogurt yogurt = manager.findByID(index);
+			final String name = request.getParameter("name");
+			final Yogurt yogurt = manager.findByName(name);
 			final String json = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(yogurt);
 			
 			response.setContentType("application/json");
@@ -55,7 +52,9 @@ public final class ProductInfo extends HttpServlet {
 		}
 	}
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(final HttpServletRequest request, final HttpServletResponse response) 
+			throws ServletException, IOException 
+	{
 		doGet(request, response);
 	}
 

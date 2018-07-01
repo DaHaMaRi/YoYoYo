@@ -57,6 +57,10 @@ public final class Mixer extends HttpServlet {
 			}
 			
 			yogurtManager.save(yogurt);
+			
+			response.setContentType("application/json");
+			response.getWriter().append(String.valueOf(yogurt.getID()));
+			
 		} catch (NoSuchRowException e) {
 			response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
 			System.out.println(e.getMessage());
