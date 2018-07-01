@@ -20,34 +20,30 @@ import entity.Yogurt;
 import exception.NoSuchRowException;
 import manager.YogurtManager;
 
+
 @WebServlet("/shopping-cart.html")
-public class ShoppingCart extends HttpServlet{
+public final class ShoppingCart extends HttpServlet {
+	
 	private static final long serialVersionUID = 4151464703212835757L;
 
-	public ShoppingCart() {
-		super();
-	}
-	
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(final HttpServletRequest request, final HttpServletResponse response) 
+			throws ServletException, IOException 
+	{
 		final ServletContext context = request.getServletContext();
 		final EntityManagerFactory factory = (EntityManagerFactory) context.getAttribute("factory");
 		
 		final YogurtManager yogurtManager = new YogurtManager(factory);
+		
 		final ObjectMapper mapper = new ObjectMapper();
 		mapper.findAndRegisterModules();
 
 		try {
-			System.out.println("Test1");
-			HttpSession session = request.getSession();
+			final HttpSession session = request.getSession();
 			if (!session.isNew()) {
-				System.out.println("Test2");
-				Integer yid =  Integer.parseInt(request.getParameter("yid"));
+				Integer yid =  Integer.parseInt(request.getParameter("id"));
 				Integer m = Integer.parseInt(request.getParameter("m"));
-				System.out.println("yid "+yid);
-				System.out.println("m "+m);
-				
-				@SuppressWarnings("unchecked")
+
 				HashMap<Integer,Integer> einkaufSession = (HashMap<Integer, Integer>) session.getAttribute("Einkaufswagen");
 				if(yid!=-999 && m != -999) {
 					einkaufSession.put(yid, m);
@@ -69,16 +65,21 @@ public class ShoppingCart extends HttpServlet{
 			}else{
 				response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
 			}
-		} catch (NumberFormatException | NoSuchRowException  e) {
+			
+		} catch (NumberFormatException e) {
+			response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
 			System.out.println(e.getMessage());
+		} catch (NoSuchRowException  e) {
 			response.setStatus(HttpServletResponse.SC_NOT_FOUND);
+			System.out.println(e.getMessage());
+		} finally {
 			yogurtManager.close();
 		}
-		
-		yogurtManager.close();
 	}
 	
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(final HttpServletRequest request, final HttpServletResponse response) 
+			throws ServletException, IOException 
+	{
 		doGet(request, response);
 	}
 	

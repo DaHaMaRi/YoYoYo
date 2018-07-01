@@ -78,7 +78,6 @@ $.ajax({
 });
 
 function editCategories(categories) {
-	console.log(categories.name);
 	$.each(categories, function(index,category) {
 		var price = category.priceInCents/100;
 		var title = category.name + " - " + price.toFixed(2) + "€";
@@ -93,18 +92,18 @@ $("#submitForm").on("click", function() {
 	    method: "POST",
 	    
 	    contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+	    dataType: "json"
 	})
 	.done(function(data, textStatus, xhr) {
-		var yogurtname = $("#yogurtname").val();
-		window.location.href = "http://localhost:8080/YummyYogurt/Content/htdocs/product-info.html" + "?name=" + yogurtname;
+		window.location.href = "http://localhost:8080/YummyYogurt/Content/htdocs/product-info.html" + "?id=" + data.id;
 	})
 	.fail(function(xhr, textStatus, errorThrown) {
-		console.log("There was an error.");
+		handleError(xhr, textStatus, errorThrown);
 	}); 
 	return false;
 });
 
-function handleError(xhr, status, errorThrown) {
+function handleError(xhr, textStatus, errorThrown) {
 	alert("Sorry, there was a problem!");
     console.log("Error: " + errorThrown);
     console.log("Status: " + status );

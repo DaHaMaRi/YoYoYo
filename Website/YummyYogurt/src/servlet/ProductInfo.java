@@ -34,8 +34,8 @@ public final class ProductInfo extends HttpServlet {
 		mapper.findAndRegisterModules();
 
 		try {
-			final String name = request.getParameter("name");
-			final Yogurt yogurt = manager.findByName(name);
+			final int yogurtID = Integer.parseInt(request.getParameter("id"));
+			final Yogurt yogurt = manager.findByID(yogurtID);
 			final String json = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(yogurt);
 			
 			response.setContentType("application/json");
