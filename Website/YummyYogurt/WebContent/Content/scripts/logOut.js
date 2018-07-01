@@ -29,7 +29,11 @@ function logOut() {
           }, 1000);
         }
       });
-    
 }
+
+
+$('.logOut').click(function() {
+    			logOut();  //-->this will alert id of checked checkbox
+});
     
 
