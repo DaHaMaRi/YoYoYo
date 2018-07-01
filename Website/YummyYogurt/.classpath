@@ -23,5 +23,7 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="ojdbc7.jar"/>
+	<classpathentry kind="lib" path="/home/martin/Downloads/apache-tomcat-9.0.8/lib/annotations-api.jar"/>
+	<classpathentry kind="lib" path="/home/martin/Downloads/apache-tomcat-9.0.8/lib/servlet-api.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
