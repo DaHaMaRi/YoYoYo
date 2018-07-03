@@ -1,0 +1,47 @@
+package entity;
+
+import java.sql.Timestamp;
+import java.text.DateFormat;
+import java.time.LocalDateTime;
+
+import javax.persistence.*;
+
+/*create table Bestellung(
+	    ID           int  primary key,
+	    BenutzerID   int  not null,
+	    Gesamtpreis  int  not null,
+	    Bestelldatum timestamp not null,
+	    constraint checkGesamtpreis check(Gesamtpreis > 0)
+);*/
+
+@Entity
+@Table(name="Bestellung")
+public class Order {
+	
+	@Id
+	@Column(name="ID")
+	private int orderID;
+	
+	@ManyToOne
+	@JoinColumn(name="BenutzerID")
+	private User user;
+	
+	@Column(name="Gesamtpreis")
+	private int totalPrice;
+	
+	@Column(name="Bestelldatum")
+	private LocalDateTime orderdate;
+
+	public Order() {}
+
+	public Order(int orderID, User user, int totalPrice, LocalDateTime orderdate) {
+		this.orderID = orderID;
+		this.user = user;
+		this.totalPrice = totalPrice;
+		this.orderdate = orderdate;
+	}
+
+	
+	
+
+}

@@ -1,0 +1,121 @@
+package entity;
+
+import javax.persistence.*;
+
+/*create table Benutzer(
+	    ID              int           primary key,
+	    Vorname         varchar(64)   not null,
+	    Nachname        varchar(64)   not null,
+	    Benutzername    varchar(64)   not null unique,
+	    Email           varchar(64)   not null unique,
+	    Geburtsdatum    date          not null,
+	    AdressID        int           not null,
+	    Passwort        varchar(1024) not null,
+	    Beitrittsdatum  date          not null,
+	    constraint checkDatum check(Geburtsdatum < Beitrittsdatum)
+);*/
+
+@Entity
+@Table(name="Benutzer")
+@NamedQuery(name="User.listAll", query="select u from User u")
+public class User {
+	
+	@Id
+	@Column(name="ID")
+	private int userID;
+	
+	@Column(name="Vorname")
+	private String firstname;
+	
+	@Column(name="Nachname")
+	private String familyname;
+
+	@Column(name="Email")
+	private String email;
+	
+	@Column(name="Geburtsdatum")
+	private String birthday;
+	
+	@ManyToOne
+	@JoinColumn(name="AdressID")
+	private Address address;
+	
+	@Column(name="Beitrittsdatum")
+	private String accessiondate;
+	
+	public User() {}
+
+	public User(int userID, String name, String surname, String email, String birthday, 
+			Address address, String accessiondate) {
+		this.userID = userID;
+		this.firstname = name;
+		this.familyname = surname;
+		this.email = email;
+		this.birthday = birthday;
+		this.address = address;
+		this.accessiondate = accessiondate;
+	}
+	
+	@Override
+	public String toString() {
+		return "User [userID=" + userID + ", firstname=" + firstname + ", familyname=" + familyname + ", email=" + email
+				+ ", birthday=" + birthday + ", address=" + address + ", accessiondate=" + accessiondate + "]";
+	}
+
+	public int getUserID() {
+		return userID;
+	}
+
+	public void setUserID(int userID) {
+		this.userID = userID;
+	}
+
+	public String getFirstname() {
+		return firstname;
+	}
+
+	public void setFirstname(String firstname) {
+		this.firstname = firstname;
+	}
+
+	public String getFamilyname() {
+		return familyname;
+	}
+
+	public void setFamilyname(String familyname) {
+		this.familyname = familyname;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getBirthday() {
+		return birthday;
+	}
+
+	public void setBirthday(String birthday) {
+		this.birthday = birthday;
+	}
+
+	public Address getAddress() {
+		return address;
+	}
+
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+
+	public String getAccessiondate() {
+		return accessiondate;
+	}
+
+	public void setAccessiondate(String accessiondate) {
+		this.accessiondate = accessiondate;
+	}
+
+}

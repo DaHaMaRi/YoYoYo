@@ -1,0 +1,63 @@
+package entity;
+
+import java.time.LocalDate;
+
+import javax.persistence.*;
+
+/*create table Benutzer(
+	    ID              int           primary key,
+	    Vorname         varchar(64)   not null,
+	    Nachname        varchar(64)   not null,
+	    Benutzername    varchar(64)   not null unique,
+	    Email           varchar(64)   not null unique,
+	    Geburtsdatum    date          not null,
+	    AdressID        int           not null,
+	    Passwort        varchar(1024) not null,
+	    Beitrittsdatum  date          not null,
+	    constraint checkDatum check(Geburtsdatum < Beitrittsdatum)
+);*/
+
+@Entity
+@Table(name="Benutzer")
+@NamedQuery(name="User.listAll", query="select u from User u")
+public class User {
+	
+	@Id
+	@Column(name="ID")
+	private int userID;
+	
+	@Column(name="Vorname")
+	private String firstname;
+	
+	@Column(name="Nachname")
+	private String familyname;
+
+	@Column(name="Email")
+	private String email;
+	
+	@Column(name="Geburtsdatum")
+	private LocalDate birthday;
+	
+	@ManyToOne
+	@JoinColumn(name="AdressID")
+	private Address address;
+	
+	@Column(name="Beitrittsdatum")
+	private LocalDate accessiondate;
+	
+	public User() {}
+
+	public User(int userID, String firstname, String familyname, String email, 
+			LocalDate birthday, Address address, LocalDate accessiondate) {
+		this.userID = userID;
+		this.firstname = firstname;
+		this.familyname = familyname;
+		this.email = email;
+		this.birthday = birthday;
+		this.address = address;
+		this.accessiondate = accessiondate;
+	}
+
+	
+
+}

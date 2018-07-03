@@ -1,0 +1,21 @@
+package client;
+
+import java.util.List;
+
+import entity.Address;
+import manager.AddressManager;
+
+public class Test {
+
+	public static void main(String[] args) {
+		AddressManager addressManager = new AddressManager("YummyYogurt");
+		
+		List<Address> addresses = addressManager.listAll();
+		
+		for(Address address : addresses)
+			System.out.println(address);
+
+		addressManager.close();
+	}
+
+}

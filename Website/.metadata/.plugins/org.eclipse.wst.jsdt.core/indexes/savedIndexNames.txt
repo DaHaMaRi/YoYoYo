@@ -1,0 +1,6 @@
+INDEX VERSION 1.4+/home/martin/Schreibtisch/Yummy-Yogurt/Website/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+3117120259.index
+1692641573.index
+3246809615.index
+3327582978.index
+2342294451.index

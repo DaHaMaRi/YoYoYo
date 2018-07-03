@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="author" content="Dardan Rrafshi" />
+        <meta name="keywords" content="Frozen Yogurt, Joghurt, Eis, Toppings, Mixen" />
+        <meta name="description" content="Eine Website um sich seinen eigenen Frozen Yogurt zu mixen" />
+
+        <title>Yummy Yogurt - Mixer</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+        <!-- Custom styles for this template -->
+        <link href="../css/modern-business.css" rel="stylesheet" />
+        <link href="../css/icon.css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <!-- Navigation -->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Yummy Yogurt</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="about.html">Über uns</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Kontakt  <span class="fa fa-address-book"></span></a></li>
+                        <li class="nav-item"><a class="nav-link active" href="service.html">Mixer</a></li>
+                        <li class="nav-item"><a class="nav-link" href="discover.html">Entdecken  <span class="fa fa-search"></span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="shopping-cart.html">Warenkorb  <span class="fa fa-shopping-cart"></span></a></li>
+
+                        <li id="dynamicNavbar" class="nav-item dropdown">
+                            
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+
+        <!-- Page Content -->
+        <main class="container">
+
+            <!-- Page Heading/Breadcrumbs -->
+            <h1 class="mt-4 mb-3">Mixer</h1>
+
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="index.html">Home</a>
+                </li>
+                <li class="breadcrumb-item active">Services</li>
+            </ol>
+
+            <div class="row">
+                <div class="col-md-8">
+                    <form action="localhost:8080/YummyYogurt/Mixer" method="post" id="saveFrozenYogurt">
+                        <div class="control-group form-group">
+                            <div class="controls">
+                                <input type="text" class="form-control" id="yogurtname" name="yogurtname" placeholder="Geben Sie Ihrer Kreation einen Namen" required>
+                            </div>
+                        </div>
+
+                        <section class="mb-4">
+                            <h4></h4>
+                            <hr />
+
+                            <div class="btn-group-toggle" data-toggle="buttons" id="base">
+                                
+                            </div>
+                        </section>
+
+                        <section class="mb-4">
+                            <h4></h4>
+                            <hr />
+
+                            <div class="btn-group-toggle" data-toggle="buttons" id="fruits">
+  
+                            </div>
+                        </section>
+
+                        <section class="mb-4">
+                            <h4></h4>
+                            <hr />
+
+                            <div class="btn-group-toggle" data-toggle="buttons" id="nuts">
+                                
+                            </div>
+                        </section>
+
+                        <section class="mb-4">
+                            <h4></h4>
+                            <hr />
+
+                            <div class="btn-group-toggle" data-toggle="buttons" id="chocolate">
+                                
+                            </div>
+                        </section>
+
+                        <section class="mb-4">
+                            <h4></h4>
+                            <hr />
+
+                            <div class="btn-group-toggle" data-toggle="buttons" id="sweets">
+                                
+                            </div>
+                        </section>
+
+                        <section class="mb-4">
+                            <h4></h4>
+                            <hr />
+
+                            <div class="btn-group-toggle" data-toggle="buttons" id="sauce">
+                                
+                            </div>
+                        </section>
+                    </form>
+                    
+                     <hr />
+                     <h5><strong>Gesammtpreis: 2,50 €</strong></h5>
+                     <p><small>inkl. MwSt. von 0,40€ + kostenloser Versand</small></p>
+					<button class="btn non-hover-button" type="submit" form="saveFrozenYogurt" value="Submit" id="submitForm">Fertig</button>
+                </div>
+            </div>
+
+        </main>
+        <!-- /.container -->
+
+        <!-- Footer -->
+        <footer class="nice-fix pt-2 pb-5 bg-secondary text-center">
+            <div class="container">
+                <div class="mt-2">
+                    <a class="social-media-icon fa fa-linkedin" href="#" target="_blank"></a>
+                    <a class="social-media-icon fa fa-twitter-square" href="#" target="_blank"></a>
+                    <a class="social-media-icon fa fa-facebook-square" href="https://www.facebook.com/dardan.rrafshi.31" target="_blank"></a>
+                    <a class="social-media-icon fa fa-instagram" href="https://www.instagram.com/dr.kolumbus/" target="_blank"></a>
+                    <a class="social-media-icon fa fa-youtube" href="https://www.youtube.com/channel/UCoOaD0du25LCn8NOBgV7rCw" target="_blank"></a>
+                </div>
+                <p class="mt-2 text-white"><small>Copyright &copy; DaHaMaRi 2018</small></p>
+                <div class="mt-2">
+                    <a class="mr-2 text-white" href="contact.html">Kontakt</a>
+                    <a class="mr-2 text-white" href="impressum.html">Impressum</a>
+                    <a class="mr-2 text-white" href="about.html">Über uns</a>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Bootstrap core JavaScript -->
+        <script src="../vendor/jquery/jquery.min.js"></script>
+        <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="../scripts/jqBootstrapValidation.js"></script>
+        
+        <!-- Own Scripts -->
+        <script src="../scripts/service.js"></script>
+        <script src="../scripts/loadNavbar.js"></script>
+    </body>
+</html>

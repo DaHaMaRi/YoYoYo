@@ -1,0 +1,75 @@
+package entity;
+
+import javax.persistence.*;
+
+/*create table Bestellposition(
+    BestellungID  int,
+    YogurtID      int,
+    primary key(BestellungID,YogurtID),
+    
+    Menge         int not null,
+    constraint checkMenge check(Menge > 0)
+);*/
+
+
+@Entity
+@Table(name="Bestellposition")
+public class OrderItem {
+	
+	@EmbeddedId
+	private OrderItemID orderItemID;
+	
+	@ManyToOne(cascade=CascadeType.ALL)
+	@JoinColumn(name="BestellungID", insertable=false, updatable=false)
+	private Order order;
+	
+	@ManyToOne(cascade=CascadeType.ALL)
+	@JoinColumn(name="YogurtID", insertable=false, updatable=false)
+	private Yogurt yogurt;
+	
+	@Column(name="Menge")
+	private int amount;
+
+	public OrderItem() {}
+
+	public OrderItem(Order order, Yogurt yogurt, int amount) {
+		this.orderItemID = new OrderItemID(order.getOrderID(), yogurt.getYogurtID());
+		this.orderItemID = orderItemID;
+		this.order = order;
+		this.yogurt = yogurt;
+		this.amount = amount;
+	}
+
+	public OrderItemID getOrderItemID() {
+		return orderItemID;
+	}
+
+	public void setOrderItemID(OrderItemID orderItemID) {
+		this.orderItemID = orderItemID;
+	}
+
+	public Order getOrder() {
+		return order;
+	}
+
+	public void setOrder(Order order) {
+		this.order = order;
+	}
+
+	public Yogurt getYogurt() {
+		return yogurt;
+	}
+
+	public void setYogurt(Yogurt yogurt) {
+		this.yogurt = yogurt;
+	}
+
+	public int getAmount() {
+		return amount;
+	}
+
+	public void setAmount(int amount) {
+		this.amount = amount;
+	}
+
+}
