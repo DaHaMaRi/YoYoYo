@@ -33,6 +33,12 @@ public final class RatingManager {
 		return rating;
 	}
 	
+	public List<Rating> findByYogurt(final String yogurtname) {
+		TypedQuery<Rating> query = manager.createQuery("select r from Rating r where r.yogurt.name = :yogurtname", Rating.class);
+		query.setParameter("yogurtname", yogurtname);
+		return query.getResultList();
+	}
+	
 	public void save(final Rating rating) {
 		final EntityTransaction transaction = manager.getTransaction();
 		transaction.begin();

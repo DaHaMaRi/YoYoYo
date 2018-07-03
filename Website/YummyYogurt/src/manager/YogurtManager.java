@@ -1,10 +1,12 @@
 package manager;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
+import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 
 import entity.Yogurt;
@@ -30,6 +32,30 @@ public final class YogurtManager {
 		if(yogurt == null)
 			throw new NoSuchRowException();
 		return yogurt;
+	}
+	
+	public List<Yogurt> listBestYogurts() {
+		Query query = manager.createNativeQuery(
+				"select y.name "
+				+ "from yogurt y, bewertung b "
+				+ "where y.id = b.yogurtid "
+				+ "group by y.name "
+				+ "order by avg(b.wertung) desc"
+		);
+		
+		List<String> namesOfYogurts = query.getResultList();
+		List<Yogurt> bestYogurts = new ArrayList<>();
+		
+		try {
+			for(String name : namesOfYogurts) {
+				Yogurt yogurt = this.findByName(name);
+				bestYogurts.add(yogurt);
+			}
+		} catch (NoSuchRowException e) {
+			System.out.println(e.getMessage());
+		}
+		
+		return bestYogurts;
 	}
 	
 	public Yogurt findByName(final String yogurtname) throws NoSuchRowException {

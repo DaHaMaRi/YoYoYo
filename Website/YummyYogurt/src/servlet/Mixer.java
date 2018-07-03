@@ -72,7 +72,7 @@ public final class Mixer extends HttpServlet {
 			}
 			
 		} catch (NoSuchRowException e) {
-			response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+			response.setStatus(HttpServletResponse.SC_NOT_FOUND);
 			System.out.println(e.getMessage());
 		} finally {
 			userManager.close();
