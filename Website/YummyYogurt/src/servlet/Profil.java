@@ -1,6 +1,7 @@
 package servlet;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.EntityManagerFactory;
@@ -14,9 +15,11 @@ import javax.servlet.http.HttpSession;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import entity.Rating;
 import entity.User;
 import entity.Yogurt;
 import exception.NoSuchRowException;
+import manager.RatingManager;
 import manager.UserManager;
 import manager.YogurtManager;
 
@@ -33,6 +36,7 @@ public class Profil extends HttpServlet{
 		
 		final UserManager userManager = new UserManager(factory);
 		final YogurtManager yogurtManager = new YogurtManager(factory);
+		final RatingManager ratingManager = new RatingManager(factory);
 		
 		final ObjectMapper mapper = new ObjectMapper();
 		mapper.findAndRegisterModules();
@@ -45,7 +49,27 @@ public class Profil extends HttpServlet{
 				final String json = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(user);
 				final List<Yogurt>  yogurts = userManager.getAllYogurts(index);
 				final String json2 = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(yogurts);
-				String message = "[ " +json+ " , "+json2 +"]";
+				
+				List<Double> averageRating = new ArrayList<>();
+				
+				for(int i = 0; i < yogurts.size(); i++) {
+					Yogurt yogurt = yogurts.get(i);
+					
+					double average = 0;
+					
+					List<Rating> ratings = ratingManager.findByYogurt(yogurt.getName());
+					for(Rating rating : ratings) {
+						average += rating.getRating();
+					}
+					average /= ratings.size();
+					averageRating.add(average);
+				}
+				
+				final String json3 = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(averageRating);
+				
+				
+				
+				String message = "[ " +json+ " , "+json2 +" , "+json3 +"]";
 				System.out.println(message);
 				response.setContentType("application/json");
 				response.getWriter().append(message);
@@ -53,15 +77,20 @@ public class Profil extends HttpServlet{
 				
 			}else {
 				response.setStatus(HttpServletResponse.SC_PARTIAL_CONTENT);
+				session.invalidate();
 			}
 			
 		} catch (NumberFormatException | NoSuchRowException e) {
 			System.out.println(e.getMessage());
 			response.setStatus(HttpServletResponse.SC_NOT_FOUND);
 			userManager.close();
+			yogurtManager.close();
+			ratingManager.close();
 		}
 		
 		userManager.close();
+		yogurtManager.close();
+		ratingManager.close();
 	}
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -76,7 +105,7 @@ public class Profil extends HttpServlet{
 			final Yogurt yogurt = yogurtManager.findByID(index);
 			System.out.println(yogurt.getName()+" is "+state);
 			yogurt.setVisibility(state);
-			
+			yogurtManager.save(yogurt);
 			
 			response.setContentType("text/html");
 			response.getWriter().append(" ");

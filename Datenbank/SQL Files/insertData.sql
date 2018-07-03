@@ -50,49 +50,49 @@ insert into Zutatenkategorie
     
     
 insert into Zutat
-    values(1, 'Bananen Joghurt', 'false', 'false', 1);
+    values(1, 'Bananen-Joghurt', 'false', 'false', 1);
   
 insert into Zutat
-    values(2, 'Ananas Joghurt', 'false', 'false', 1);
+    values(2, 'Ananas-Joghurt', 'false', 'false', 1);
     
 insert into Zutat
-    values(3, 'Pfirsich Joghurt', 'false', 'false', 1);
+    values(3, 'Pfirsich-Joghurt', 'false', 'false', 1);
   
 insert into Zutat
-    values(4, 'Aprikose Joghurt', 'false', 'false', 1);  
+    values(4, 'Aprikose-Joghurt', 'false', 'false', 1);  
   
 insert into Zutat
-    values(5, 'Mango Joghurt', 'false', 'false', 1);  
+    values(5, 'Mango-Joghurt', 'false', 'false', 1);  
   
 insert into Zutat
-    values(6, 'Maracuja Joghurt', 'false', 'false', 1);  
+    values(6, 'Maracuja-Joghurt', 'false', 'false', 1);  
   
 insert into Zutat
-    values(7, 'Erdbeer Joghurt', 'false', 'false', 1);  
+    values(7, 'Erdbeer-Joghurt', 'false', 'false', 1);  
   
 insert into Zutat
-    values(8, 'Kirsch Joghurt', 'false', 'false', 1);  
+    values(8, 'Kirsch-Joghurt', 'false', 'false', 1);  
   
 insert into Zutat
-    values(9, 'Himbeer Joghurt', 'false', 'false', 1);  
+    values(9, 'Himbeer-Joghurt', 'false', 'false', 1);  
   
 insert into Zutat
-    values(10, 'Apfel Joghurt', 'false', 'false', 1);  
+    values(10, 'Apfel-Joghurt', 'false', 'false', 1);  
   
 insert into Zutat
-    values(11, 'Birnen Joghurt', 'false', 'false', 1);  
+    values(11, 'Birnen-Joghurt', 'false', 'false', 1);  
   
 insert into Zutat
-    values(12, 'Nuccio Joghurt', 'false', 'false', 1); 
+    values(12, 'Nuccio-Joghurt', 'false', 'false', 1); 
     
 insert into Zutat
-    values(13, 'Schoko Joghurt', 'false', 'false', 1);
+    values(13, 'Schoko-Joghurt', 'false', 'false', 1);
     
 insert into Zutat
-    values(14, 'Vanille Joghurt', 'false', 'false', 1);
+    values(14, 'Vanille-Joghurt', 'false', 'false', 1);
     
 insert into Zutat
-    values(15, 'Light Joghurt', 'true', 'false', 1);
+    values(15, 'Light-Joghurt', 'true', 'false', 1);
     
 insert into Zutat
     values(16, 'Banane', 'true', 'false', 2);  
@@ -197,7 +197,7 @@ insert into Zutat
     values(49, 'Schokoplättchen', 'false', 'false', 4);    
     
 insert into Zutat
-    values(50, 'Weiße Schokoplättchen', 'false', 'false', 4);    
+    values(50, 'Weiße-Schokoplättchen', 'false', 'false', 4);    
     
 insert into Zutat
     values(51, 'Chocolate Boons', 'true', 'false', 4);
@@ -206,22 +206,22 @@ insert into Zutat
     values(52, 'Kakaosplitter', 'true', 'false', 4); 
     
 insert into Zutat
-    values(53, 'Schoko Cornflakes', 'false', 'false', 4);     
+    values(53, 'Schoko-Cornflakes', 'false', 'false', 4);     
     
 insert into Zutat
     values(54, 'Schokoherzen', 'false', 'false', 4);     
     
 insert into Zutat
-    values(55, 'Schokoholic Crunchy', 'false', 'false', 4);     
+    values(55, 'Schokoholic-Crunchy', 'false', 'false', 4);     
     
 insert into Zutat
-    values(56, 'Froot Loops', 'true', 'false', 5);     
+    values(56, 'Froot-Loops', 'true', 'false', 5);     
     
 insert into Zutat
     values(57, 'Haribo', 'false', 'true', 5);      
     
 insert into Zutat
-    values(58, 'Saure Schlangen', 'false', 'true', 5);      
+    values(58, 'Saure-Schlangen', 'false', 'true', 5);      
     
 insert into Zutat
     values(59, 'MM', 'false', 'false', 5);      
@@ -242,13 +242,13 @@ insert into Zutat
     values(64, 'Raffaello', 'false', 'false', 5);
   
 insert into Zutat
-    values(65, 'Ferero Küsschen', 'false', 'false', 5);   
+    values(65, 'Ferero-Küsschen', 'false', 'false', 5);   
   
 insert into Zutat
     values(66, 'Mon Cherie', 'false', 'true', 5);     
   
 insert into Zutat
-    values(67, 'Ferero Rocher', 'false', 'false', 5);
+    values(67, 'Ferero-Rocher', 'false', 'false', 5);
     
 insert into Zutat
     values(68, 'Schokosoße', 'false', 'false', 6);   
@@ -270,9 +270,6 @@ insert into Zutat
 
 insert into Zutat
     values(74, 'Kirschsoße', 'true', 'false', 6); 
-
-insert into Zutat
-    values(75, 'Eierlikör', 'true', 'true', 6); 
     
     
 insert into Yogurt
@@ -397,6 +394,247 @@ insert into Zutatenliste
     values(8, 37);     
     
 insert into Zutatenliste
-    values(8, 70);     
- 
+    values(8, 70);
+    
+    
+insert into Bewertung
+    values(1, 1, 5);
+    
+insert into Bewertung
+    values(2, 1, 4);
+    
+insert into Bewertung
+    values(3, 1, 5);
+    
+insert into Bewertung
+    values(4, 1, 3);
+    
+insert into Bewertung
+    values(1, 2, 5);
+    
+insert into Bewertung
+    values(2, 2, 4);
+    
+insert into Bewertung
+    values(3, 2, 5);
+    
+insert into Bewertung
+    values(4, 2, 3);   
+    
+insert into Bewertung
+    values(1, 3, 3);
+    
+insert into Bewertung
+    values(2, 3, 4);
+    
+insert into Bewertung
+    values(3, 3, 2);
+    
+insert into Bewertung
+    values(4, 3, 5);    
+    
+insert into Bewertung
+    values(1, 4, 5);
+    
+insert into Bewertung
+    values(2, 4, 3);
+    
+insert into Bewertung
+    values(3, 4, 5);
+    
+insert into Bewertung
+    values(4, 4, 3);    
+    
+insert into Bewertung
+    values(1, 5, 1);
+    
+insert into Bewertung
+    values(2, 5, 4);
+    
+insert into Bewertung
+    values(3, 5, 5);
+    
+insert into Bewertung
+    values(4, 5, 3);    
+    
+insert into Bewertung
+    values(1, 6, 5);
+    
+insert into Bewertung
+    values(2, 6, 4);
+    
+insert into Bewertung
+    values(3, 6, 5);
+    
+insert into Bewertung
+    values(4, 6, 5);    
+    
+insert into Bewertung
+    values(1, 7, 4);
+    
+insert into Bewertung
+    values(2, 7, 2);
+    
+insert into Bewertung
+    values(3, 7, 5);
+    
+insert into Bewertung
+    values(4, 7, 3);    
+    
+insert into Bewertung
+    values(1, 8, 1);
+    
+insert into Bewertung
+    values(2, 8, 2);
+    
+insert into Bewertung
+    values(3, 8, 4);
+    
+insert into Bewertung
+    values(4, 8, 5);   
+    
+insert into Bewertung
+    values(1, 10, 2);
+    
+insert into Bewertung
+    values(2, 10, 1);
+    
+insert into Bewertung
+    values(3, 10, 5);
+    
+insert into Bewertung
+    values(4, 10, 1);   
+
+insert into Bewertung
+    values(1, 11, 1);
+    
+insert into Bewertung
+    values(2, 11, 2);
+    
+insert into Bewertung
+    values(3, 11, 4);
+    
+insert into Bewertung
+    values(4, 11, 3); 
+
+insert into Bewertung
+    values(1, 12, 4);
+    
+insert into Bewertung
+    values(2, 12, 1);
+    
+insert into Bewertung
+    values(3, 12, 1);
+    
+insert into Bewertung
+    values(4, 12, 2);
+    
+insert into Bewertung
+    values(1, 13, 4);
+    
+insert into Bewertung
+    values(2, 13, 5);
+    
+insert into Bewertung
+    values(3, 13, 4);
+    
+insert into Bewertung
+    values(4, 13, 5);
+
+insert into Bewertung
+    values(1, 14, 2);
+    
+insert into Bewertung
+    values(2, 14, 2);
+    
+insert into Bewertung
+    values(3, 14, 3);
+    
+insert into Bewertung
+    values(4, 14, 3);    
+
+insert into Bewertung
+    values(1, 15, 2);
+    
+insert into Bewertung
+    values(2, 15, 1);
+    
+insert into Bewertung
+    values(3, 15, 5);
+    
+insert into Bewertung
+    values(4, 15, 1);   
+
+insert into Bewertung
+    values(1, 16, 1);
+    
+insert into Bewertung
+    values(2, 16, 2);
+    
+insert into Bewertung
+    values(3, 16, 4);
+    
+insert into Bewertung
+    values(4, 16, 3); 
+
+insert into Bewertung
+    values(1, 17, 4);
+    
+insert into Bewertung
+    values(2, 17, 1);
+    
+insert into Bewertung
+    values(3, 17, 1);
+    
+insert into Bewertung
+    values(4, 17, 2);
+    
+insert into Bewertung
+    values(1, 18, 4);
+    
+insert into Bewertung
+    values(2, 18, 5);
+    
+insert into Bewertung
+    values(3, 18, 4);
+    
+insert into Bewertung
+    values(4, 18, 5);
+
+insert into Bewertung
+    values(1, 19, 2);
+    
+insert into Bewertung
+    values(2, 19, 2);
+    
+insert into Bewertung
+    values(3, 19, 3);
+    
+insert into Bewertung
+    values(4, 19, 3);  
+
+insert into Bewertung
+    values(1, 20, 1);
+    
+insert into Bewertung
+    values(2, 20, 2);
+    
+insert into Bewertung
+    values(3, 20, 4);
+    
+insert into Bewertung
+    values(4, 20, 5);
+
+insert into Bewertung
+    values(1, 21, 1);
+    
+insert into Bewertung
+    values(2, 21, 2);
+    
+insert into Bewertung
+    values(3, 21, 3);
+    
+insert into Bewertung
+    values(4, 21, 4); 
+    
 commit;

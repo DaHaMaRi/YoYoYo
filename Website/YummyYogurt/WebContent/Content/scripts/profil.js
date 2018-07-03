@@ -24,19 +24,31 @@ function editPage(profil) {
     $("#email").html(profil[0].email);
     $.each(profil[1], function(index, yogurt) {
     	//alert(JSON.stringify(yogurt));
-    	loadYogurt(yogurt);
+    	loadYogurt(yogurt, profil[2][index]);
 	});
     
     
 }
 
-function loadYogurt(Yogurt) {
-	$("#myYogurts").append('<div class="col-lg-3 col-md-4 col-sm-6 portfolio-item"><div class="card h-100"><a href="product-info.html?id='+Yogurt.id+'"><img class="card-img-top" src="../images/Yogurt5.jpg" height="200px" alt=""></a>              <div class="card-body"><h4 class="card-title"><a href="product-info.html?id='+Yogurt.id+'">'+Yogurt.name+'</a></h4><p class="card-text"><p id="ingrediant'+Yogurt.id+'"></p></p><p><strong id=preis'+Yogurt.id+'></strong></p><div id="category'+Yogurt.id+'"></div> </div><div class="card-footer text-center">/*creat rating*/               <label class="switch"><input type="checkbox" class="visebel" id="'+Yogurt.id+'"><span class="slider round"></span> </label></div></div></div>');
+function loadYogurt(Yogurt, rating) {
+	$("#myYogurts").append('<div class="col-lg-3 col-md-4 col-sm-6 portfolio-item"><div class="card h-100"><a href="product-info.html?id='+Yogurt.id+'"><img class="card-img-top" src="../images/Yogurt5.jpg" height="200px" alt=""></a>              <div class="card-body"><h4 class="card-title"><a href="product-info.html?id='+Yogurt.id+'">'+Yogurt.name+'</a></h4><p class="card-text"><p id="ingrediant'+Yogurt.id+'"></p></p><p><strong id=preis'+Yogurt.id+'></strong></p><div id="category'+Yogurt.id+'"></div> </div><div class="card-footer text-center"><div id="rating'+Yogurt.id+'"></div><label class="switch"><input type="checkbox" class="visebel" id="'+Yogurt.id+'"><span class="slider round"></span> </label></div></div></div>');
 	//alert("vor insert");
 	createIngredientList(Yogurt);
 	calculatePrice(Yogurt);
 	createCategorySection(Yogurt);
+	createRatings(Yogurt, rating);
 	//alert("nach insert");
+}
+
+function createRatings(Yogurt, rating) {
+	var value = Math.round(rating);
+	for(var i = 0; i < value; i++) {
+		$("#rating"+Yogurt.id).append('<span class="fa fa-star"></span>');
+	}
+	var limit = 5 - value
+	for(var k = 0; k < limit; k++) {
+		$("#rating"+Yogurt.id).append('<span class="fa fa-star-o"></span>');
+	}
 }
 
 function createIngredientList(Yogurt) {

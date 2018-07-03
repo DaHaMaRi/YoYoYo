@@ -23,7 +23,7 @@ create table Benutzer(
 
 create table Zutatenkategorie(
     ID    int         primary key,
-    Name  varchar(64) unique not null,
+    Name  varchar(64) not null,
     Preis int         not null,
     constraint checkPreis check(Preis > 0)
 );
@@ -43,8 +43,8 @@ create table Yogurt(
     ID              int          primary key,
     Name            varchar(64)  unique not null,
     BenutzerID      int          not null,
-    Veröffentlicht  varchar(8)   not null,
-    constraint checkVeröffentlicht check(Veröffentlicht in ('true', 'false'))
+    Veroeffentlicht  varchar(8)   not null,
+    constraint checkVeröffentlicht check(Veroeffentlicht in ('true', 'false'))
 );
 
 create table Zutatenliste(

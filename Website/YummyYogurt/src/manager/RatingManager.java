@@ -5,6 +5,7 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
+import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 
 import entity.Rating;
@@ -38,6 +39,16 @@ public final class RatingManager {
 		query.setParameter("yogurtname", yogurtname);
 		return query.getResultList();
 	}
+	
+	/*
+	public double getAvgForUser(int userid) {
+		Query query = manager.createNativeQuery("select avg(wertung) from bewertung WHERE benutzerid=1");
+		Object obj = query.getSingleResult();
+		if (obj == null)
+			lFEhlet
+			
+		obj
+	}*/
 	
 	public void save(final Rating rating) {
 		final EntityTransaction transaction = manager.getTransaction();
